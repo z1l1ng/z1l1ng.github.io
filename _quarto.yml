@@ -1,0 +1,19 @@
+project:
+  type: website
+
+website:
+  title: "z1l1ng.github.io"
+  navbar:
+    left:
+      - href: index.qmd
+        text: Home
+      - about.qmd
+
+format:
+  html:
+    theme: cosmo
+    css: styles.css
+    toc: true
+
+editor: visual
+
