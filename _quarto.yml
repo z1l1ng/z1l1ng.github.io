@@ -8,8 +8,10 @@ website:
     left:
       - href: index.qmd
         text: Home
-      - creatingmaps.qmd
-      - dataacquistion.qmd
+      - href: creatingmaps.qmd
+        text: Creating Maps
+      - href: dataacquisition.qmd
+        text: Data Acquisition
 
 format:
   html:
