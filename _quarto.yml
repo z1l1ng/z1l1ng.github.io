@@ -8,13 +8,14 @@ website:
     left:
       - href: index.qmd
         text: Home
-      - about.qmd
+      - MiniProject1.qmd
 
 format:
   html:
     theme: cosmo
     css: styles.css
     toc: true
+    page-layout: full
 
 editor: source
 
