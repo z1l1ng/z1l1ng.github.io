@@ -8,7 +8,7 @@ editor_options:
   chunk_output_type: console
 ---
 
-This was a mini-project done for SDS 264 - Data Science 2 where we are creating informative maps, 2 choropleth and 2 interactive. To view the qmd, click [here](https://github.com/proback/264_fall_2024/blob/main/02_maps.qmd).
+This was a mini-project done for SDS 264 - Data Science 2 where we are creating informative maps, 2 choropleth and 2 interactive. To view the qmd, click [here](https://github.com/z1l1ng/z1l1ng.github.io/blob/main/creatingmaps.qmd).
 
 ## Load in Libraries & Datasets
 

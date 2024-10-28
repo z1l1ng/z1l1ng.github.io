@@ -8,9 +8,11 @@ editor_options:
   chunk_output_type: console
 ---
 
-This was a mini-project done for SDS 264 - Data Science 2 where we are creating informative maps, 2 choropleth and 2 interactive. To view the qmd, click [here](https://github.com/proback/264_fall_2024/blob/main/02_maps.qmd).
+
+This was a mini-project done for SDS 264 - Data Science 2 where we are creating informative maps, 2 choropleth and 2 interactive. To view the qmd, click [here](https://github.com/z1l1ng/z1l1ng.github.io/blob/main/creatingmaps.qmd).
 
 ## Load in Libraries & Datasets
+
 
 ```{r}
 # Load in libraries
@@ -39,7 +41,9 @@ states <- read_sf("https://rstudio.github.io/leaflet/json/us-states.geojson")  #
 states
 ```
 
+
 ## Joining Datasets & Calculating Percent Change
+
 
 ```{r}
 # Data wrangling
@@ -67,7 +71,9 @@ census_sf <- decennial_census10 |>
 census_sf
 ```
 
+
 ## Percentage Change in Population of the US from 2010 to 2020
+
 
 ```{r, out.width= "100%"}
 # First static plot
@@ -84,9 +90,11 @@ census_sf
   theme_bw()
 ```
 
+
 This is a map of the United States showing the percent change in population of the United States from 2010 to 2020 by state. On the y-axis is longitude and on the x-axis is latitude. Percent change varies from a decrease of -3% of the population to an increase of 18%, with red representing a decrease in population (a negative percentage) and green representing an increase in population (a positive percentage). We can see from this map that Utah, Idaho, and Texas had the largest percent increase in population. The states in the Midwest, such as Illinois, Iowa, Minnesota, South Dakota, Wisconsin, etc. (the 90W and 45N area), the states also had an increase in population however it is a smaller percentage. West Virginia is the only visible state that is red and this represents a decrease in population by 3.19%. For the population increase in states, this could be caused by people moving states, and more people in the United States overall. 
 
 ## Same Map, but Interactive!
+
 
 ```{r}
 # First interactive plot
@@ -130,7 +138,9 @@ leaflet(census_sf) |>
 
 ```
 
+
 ## Creating New "legality" Column
+
 
 ```{r}
 # Data wrangling pt. 2
@@ -168,7 +178,9 @@ marijuana_laws2024_sf <- marijuana_laws2024 |>
 marijuana_laws2024_sf
 ```
 
+
 ## Legalization of Marijuana in the US 2022
+
 
 ```{r, out.width= "100%"}
 # Second static plot
@@ -181,9 +193,11 @@ ggplot(marijuana_laws2024_sf) +
   theme_bw()
 ```
 
+
 This is a map of the United States showing the legalization of marijuana in 2022. On the y-axis is longitude and on the x-axis is latitude. The categories of legality are "Illegal", "Legalized", and "Mixed", with the associated colors on the map being red, green, and blue, respectively. There are 6 states where marijuana is illegal, these states are Idaho, Kansas, Nebraska, North and South Carolina, and Wyoming. On the map, 2 of these states are on the East Coast and the rest are in the middle of the US. For the rest of the US, marijuana is either legalized or has mixed laws. A lot of the states in the west have legalized marijuana, this includes Oregon, Washington, California, along with Nevada and Arizona. There are also some states on the East Coast have also legalized marijuana. Where as states in the south and in the Midwest have mixed laws. Note that this is data from 2022, and some states with mixed laws, are now fully legalized.
 
 ## Same Map, but Interactive!
+
 
 ```{r}
 # Second interactive plot
