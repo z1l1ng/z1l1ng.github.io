@@ -9,6 +9,7 @@ website:
       - href: index.qmd
         text: Home
       - creatingmaps.qmd
+      - dataacquistion.qmd
 
 format:
   html:
