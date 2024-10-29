@@ -1,10 +1,11 @@
 ---
-title: "About Me:"
+title: "Ziling Zhen"
 toc: false
 about:
   id: hero-heading
-  template: broadside
+  template: jolla
   image: images/headshot.jpg
+  image-width: 20em
   links:
     - icon: envelope
       href: mailto:zilingzhen11@gamil.com
@@ -13,29 +14,5 @@ about:
     - icon: linkedin
       href: https://www.linkedin.com/in/zilingzhen/
 ---
-## Ziling Zhen
 
 Hi! I'm Ziling, however most know me as Z! I'm currently a senior math major with a statistics and data science concentration at St. Olaf College. I'm also #2 on the NCAA women's basketball team here. Outside of my commitments as a college student I love socializing with friends, going to sporting events and trying new foods! This is a place where I'll be sharing some of my work!
-
-:::{#hero-heading}
-
-## Education
-
-St. Olaf College | Northfield, MN <br>
-B.A in Mathematics | Sept 2022 - May 2025
-
-Portland Community College | Portland, OR <br>
-Transfer | Sept 2021 - June 2022
-
-## Experience
-
-Incoming Analytics LDP Associate <br>
-Ameriprise Financial | Minneapolis, MN | June 2024
-
-Data Science 1 Tutor <br>
-St. Olaf College | Northfield, MN | Sept 2023 - Present
-
-Service Desk Intern <br>
-Cambria | Eden Praire, MN | May 2023 - August 2023
-
-:::

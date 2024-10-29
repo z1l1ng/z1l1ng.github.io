@@ -1,9 +1,23 @@
 ---
-title: "About"
+title: "About Me"
 ---
 
-About this site
+## Education
 
-```{r}
-1 + 1
-```
+St. Olaf College | Northfield, MN <br>
+B.A in Mathematics | Sept 2022 - May 2025
+
+Portland Community College | Portland, OR <br>
+Transfer | Sept 2021 - June 2022
+
+## Experience
+
+Incoming Analytics LDP Associate <br>
+Ameriprise Financial | Minneapolis, MN | June 2024
+
+Data Science 1 Tutor <br>
+St. Olaf College | Northfield, MN | Sept 2023 - Present
+
+Service Desk Intern <br>
+Cambria | Eden Praire, MN | May 2023 - August 2023
+

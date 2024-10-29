@@ -3,15 +3,11 @@ project:
   output-dir: docs
 
 website:
-  title: "z1l1ng.github.io"
+  title: "Ziling Zhen"
   navbar:
-    left:
+    right:
       - href: index.qmd
         text: Home
-      - href: creatingmaps.qmd
-        text: Creating Maps
-      - href: dataacquisition.qmd
-        text: Data Acquisition
 
 format:
   html:
