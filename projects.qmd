@@ -1,0 +1,9 @@
+---
+title: Projects
+listing:
+    contents: projects
+    type: grid
+page-layout: full
+---
+
+
