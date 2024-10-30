@@ -19,5 +19,54 @@
     "title": "About Me",
     "section": "Experience",
     "text": "Experience\nIncoming Analytics LDP Associate  Ameriprise Financial | Minneapolis, MN | June 2024\nData Science 1 Tutor  St. Olaf College | Northfield, MN | Sept 2023 - Present\nService Desk Intern  Cambria | Eden Praire, MN | May 2023 - August 2023"
+  },
+  {
+    "objectID": "projects.html",
+    "href": "projects.html",
+    "title": "Projects",
+    "section": "",
+    "text": "Creating Informative Maps\n\n\nThis was a mini-project done for SDS 264 - Data Science 2 where we create 4 informative maps, 2 choropleth and 2 interactive.\n\n\n\n\n\n\n\n\n\n\n\n\nNo matching items"
+  },
+  {
+    "objectID": "projects/Creating Maps/creatingmaps.html",
+    "href": "projects/Creating Maps/creatingmaps.html",
+    "title": "Creating Informative Maps",
+    "section": "",
+    "text": "This project uses R to create static and interactive maps visualizing US state-level data on population change from 2010 to 2020 and marijuana laws in 2022. Using libraries like tidyverse, maps, leaflet, and sf. Interactive maps allow users to explore state-level differences dynamically, adding a layer of accessibility and engagement.\nTo view the qmd, click here."
+  },
+  {
+    "objectID": "projects/Creating Maps/creatingmaps.html#percentage-change-in-population-of-the-us-from-2010-to-2020",
+    "href": "projects/Creating Maps/creatingmaps.html#percentage-change-in-population-of-the-us-from-2010-to-2020",
+    "title": "Creating Informative Maps",
+    "section": "Percentage Change in Population of the US from 2010 to 2020",
+    "text": "Percentage Change in Population of the US from 2010 to 2020\n\n\n\n\n\n\n\n\n\nThis is a map of the United States showing the percent change in population of the United States from 2010 to 2020 by state. On the y-axis is longitude and on the x-axis is latitude. Percent change varies from a decrease of -3% of the population to an increase of 18%, with red representing a decrease in population (a negative percentage) and green representing an increase in population (a positive percentage). We can see from this map that Utah, Idaho, and Texas had the largest percent increase in population. The states in the Midwest, such as Illinois, Iowa, Minnesota, South Dakota, Wisconsin, etc. (the 90W and 45N area), the states also had an increase in population however it is a smaller percentage. West Virginia is the only visible state that is red and this represents a decrease in population by 3.19%. For the population increase in states, this could be caused by people moving states, and more people in the United States overall."
+  },
+  {
+    "objectID": "projects/Creating Maps/creatingmaps.html#same-map-but-interactive",
+    "href": "projects/Creating Maps/creatingmaps.html#same-map-but-interactive",
+    "title": "Creating Informative Maps",
+    "section": "Same Map, but Interactive!",
+    "text": "Same Map, but Interactive!"
+  },
+  {
+    "objectID": "projects/Creating Maps/creatingmaps.html#legalization-of-marijuana-in-the-us-2022",
+    "href": "projects/Creating Maps/creatingmaps.html#legalization-of-marijuana-in-the-us-2022",
+    "title": "Creating Informative Maps",
+    "section": "Legalization of Marijuana in the US 2022",
+    "text": "Legalization of Marijuana in the US 2022\n\n\n\n\n\n\n\n\n\nThis is a map of the United States showing the legalization of marijuana in 2022. On the y-axis is longitude and on the x-axis is latitude. The categories of legality are “Illegal”, “Legalized”, and “Mixed”, with the associated colors on the map being red, green, and blue, respectively. There are 6 states where marijuana is illegal, these states are Idaho, Kansas, Nebraska, North and South Carolina, and Wyoming. On the map, 2 of these states are on the East Coast and the rest are in the middle of the US. For the rest of the US, marijuana is either legalized or has mixed laws. A lot of the states in the west have legalized marijuana, this includes Oregon, Washington, California, along with Nevada and Arizona. There are also some states on the East Coast have also legalized marijuana. Where as states in the south and in the Midwest have mixed laws. Note that this is data from 2022, and some states with mixed laws, are now fully legalized."
+  },
+  {
+    "objectID": "projects/Creating Maps/creatingmaps.html#same-map-but-interactive-1",
+    "href": "projects/Creating Maps/creatingmaps.html#same-map-but-interactive-1",
+    "title": "Creating Informative Maps",
+    "section": "Same Map, but Interactive!",
+    "text": "Same Map, but Interactive!"
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Ziling Zhen",
+    "section": "",
+    "text": "Hi! I’m Ziling, however most know me as Z! I’m currently a senior math major with a statistics and data science concentration at St. Olaf College. I’m also #2 on the NCAA women’s basketball team here. Outside of my commitments as a college student I love socializing with friends, going to sporting events and trying new foods! This is a place where I’ll be sharing some of my work!"
   }
 ]
