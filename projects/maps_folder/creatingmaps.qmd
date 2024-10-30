@@ -6,7 +6,7 @@ format:
 editor_options: 
   chunk_output_type: console
 image: mapsimage.png
-description: "This was a mini-project done for SDS 264 - Data Science 2 where we create 4 informative maps, 2 choropleth and 2 interactive."
+description: "This was a mini-project for SDS 264 - Data Science 2 where we created 4 informative maps, 2 choropleth maps and 2 interactive maps."
 freeze: true
 ---
 

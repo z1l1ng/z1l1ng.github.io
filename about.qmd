@@ -1,23 +1,67 @@
 ---
 title: "About Me"
+description: "I'm Z, currently a senior at St. Olaf College. This about me page is to share some things that I've done regarding my work experience, school, and fun things! Scroll down to skip the *boring stuff* and learn some cool things about me!"
+toc: false
+about:
+  template: trestles
+  id: intro-heading
+  image: images/bigheadz.jpg
+  image-shape: round
 ---
+A little more about me + some fun facts & photos!
 
-## Education
+:::{#intro-heading}
 
-St. Olaf College | Northfield, MN <br>
-B.A in Mathematics | Sept 2022 - May 2025
+### Experience
 
-Portland Community College | Portland, OR <br>
-Transfer | Sept 2021 - June 2022
+Incoming Analytics LDP Associate <br> Ameriprise Financial \| Minneapolis, MN \| June 2024
 
-## Experience
+-   Engage in 3 rotations over the span of 24 months in various key areas of the business, enhancing analytical skills and collaboration.
 
-Incoming Analytics LDP Associate <br>
-Ameriprise Financial | Minneapolis, MN | June 2024
+Data Science 1 Tutor <br> St. Olaf College \| Northfield, MN \| Sept 2023 - Present <br>
 
-Data Science 1 Tutor <br>
-St. Olaf College | Northfield, MN | Sept 2023 - Present
+-   Serve as an academic role model for students taking Data Science 1 (Introduction to R) by exhibiting positive study strategies, and time management skills
+-   Schedule and host tutoring sessions
+-   Complete administrative tasks in a timely and efficient manner (emails, timecards, tutoring notes, etc.)
 
-Service Desk Intern <br>
-Cambria | Eden Praire, MN | May 2023 - August 2023
+Service Desk Intern <br> Cambria \| Eden Praire, MN \| May 2023 - August 2023 <br>
 
+-   Capstone Project: Windows 11 Implementation: Collaborate with Cambria Security & System Engineering Team to rollout strategies and group policy configurations to satisfy company needs
+-   Utilize software such as: Windows Active Directory Administration for onboarding, offboarding & employee management, Jamf to manage and secure Apple devices, Jira administration for resolving tickets, Asset Panda to manage IT assets (quantity, location, cost, etc.)
+
+### Education
+
+St. Olaf College \| Northfield, MN <br> 
+B.A in Mathematics \| Sept 2022 - May 2025
+
+Portland Community College \| 
+Portland, OR <br> Transfer \| Sept 2021 - June 2022
+:::
+
+### Fun Fact #1
+
+I super enjoy going to sporting events, particularly basketball and baseball games. The atmosphere in the arena and the intensity of the competition is super fun. I went to my first MLB game this summer and was absolutely hooked.
+
+:::{.column-margin}
+```{r, out.width = "60%"}
+#| echo: false
+knitr::include_graphics("images/mlb.jpg")
+```
+::: {.center-text .extra-small-text .dark-gray-text .topbr}
+My first baseball game!
+:::
+:::
+
+### Fun Fact #2
+
+My second fun fact is that I love going to concerts and music! My very first concert was in 2021 and since then I've been to 24 total concerts and 1 3-day long festival. I have a shoe that I call my concert shoe in which I get artists to sign. I was also featured in a YouTube short video posted by Dean Lewis that has 5+ million views and 315k likes.
+
+:::{.column-margin}
+```{r, out.width = "60%"}
+#| echo: false
+knitr::include_graphics("images/concert.jpg")
+```
+::: {.center-text .extra-small-text .dark-gray-text .topbr}
+A super blurry photo of me seeing The Kid Laroi.
+:::
+:::
