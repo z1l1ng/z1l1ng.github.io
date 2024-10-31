@@ -1,12 +1,13 @@
 ---
 title: "Creating Informative Maps"
+date: "2024-09-20"
 sidebar: false
 format:
   html: default
 editor_options: 
   chunk_output_type: console
 image: mapsimage.png
-description: "This was a mini-project for SDS 264 - Data Science 2 where we created 4 informative maps, 2 choropleth maps and 2 interactive maps."
+description: "Mini-project for SDS 264 - Data Science 2 where 4 informative maps were created, 2 choropleth and 2 interactive"
 freeze: true
 ---
 

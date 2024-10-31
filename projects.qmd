@@ -3,6 +3,8 @@ title: Projects
 listing:
     contents: projects
     type: grid
+    sort: 
+      - "date"
 page-layout: full
 ---
 

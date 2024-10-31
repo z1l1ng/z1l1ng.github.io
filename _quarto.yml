@@ -5,6 +5,7 @@ project:
 website:
   title: "Ziling Zhen"
   navbar:
+    background: dark
     right:
       - href: index.qmd
         text: Home
@@ -12,6 +13,11 @@ website:
         text: About Me
       - href: projects.qmd
         text: Projects
+  page-footer: 
+    background: dark
+    left: © Ziling Zhen, 2024
+    right: This website is built in [Quarto](https://quarto.org/){target=_blank}
+
 
 format:
   html:
