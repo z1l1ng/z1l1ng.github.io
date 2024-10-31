@@ -40,7 +40,7 @@ Portland, OR <br> Transfer \| Sept 2021 - June 2022
 knitr::include_graphics("images/sports.png")
 ```
 ::: {.center-text .extra-small-text .dark-gray-text .topbr} 
-Photos of sports events I've attended and a photos of me playing sports!
+Photos of sports events I've attended and photos of me playing sports!
 ::: 
 
 - I love going to concerts and music! My very first concert was in 2021 and since then I've been to 24 total concerts and one 3-day long festival. I have a shoe that I call my concert shoe in which I get artists to sign. I was also featured in a YouTube short video posted by Dean Lewis that has 5+ million views and 315k likes.
