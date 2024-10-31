@@ -12,7 +12,7 @@ bibliography: stattheory.bib
 freeze: true
 ---
 
-To view the qmd of this project, click [here](https://github.com/z1l1ng/z1l1ng.github.io/blob/main/projects/maps_folder/creatingmaps.qmd).
+To view the qmd of this project, click [here](https://github.com/z1l1ng/z1l1ng.github.io/blob/main/projects/shotchart_folder/shotchart.qmd).
 
 # Introduction
 Basketball shot charts have gained much popularity over the years; a shot chart is a spatial representation of where a shot is taken, ‘o’s’ represent a success/make, and ‘x’s’ represent failure/missed shot. The best teams and players are now utilizing this chart to show shooting preferences, abilities, and tendencies of where a player likes to shoot. Brian J. Reich, James S. Hodges, Bradley P. Carlin, and Adam M. Reich knew that an accurate inference with information from a shot chart consisting of statistical models containing covariates, these are also known as our predictors, and in our case, they are both time-varying and not. Shot frequency, shot location and shot selection were the three different response variables looked at, with a different type of model created for each one. 

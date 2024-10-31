@@ -3,8 +3,9 @@ title: Projects
 listing:
     contents: projects
     type: grid
-    sort: 
-      - "date"
+    sort: "title desc"
+    sort-ui: true
+title-block-banner: true
 page-layout: full
 ---
 

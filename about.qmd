@@ -10,26 +10,29 @@ about:
 
 ### Experience
 
-Incoming Analytics LDP Associate <br> Ameriprise Financial \| Minneapolis, MN \| June 2024
+**Incoming Analytics LDP Associate** <br> 
+Ameriprise Financial \| Minneapolis, MN \| June 2024
 
-Data Science 1 Tutor <br> St. Olaf College \| Northfield, MN \| Sept 2023 - Present <br>
+**Data Science 1 Tutor** <br> 
+St. Olaf College \| Northfield, MN \| Sept 2023 - Present <br>
 
 -   Serve as an academic role model for students taking Data Science 1 (Introduction to R) by exhibiting positive study strategies, and time management skills
 -   Schedule and host tutoring sessions
 -   Complete administrative tasks in a timely and efficient manner (emails, timecards, tutoring notes, etc.)
 
-Service Desk Intern <br> Cambria \| Eden Praire, MN \| May 2023 - August 2023 <br>
+**Service Desk Intern** <br> 
+Cambria \| Eden Praire, MN \| May 2023 - August 2023 <br>
 
 -   Capstone Project: Windows 11 Implementation: Collaborate with Cambria Security & System Engineering Team to rollout strategies and group policy configurations to satisfy company needs
 -   Utilize software such as: Windows Active Directory Administration for onboarding, offboarding & employee management, Jamf to manage and secure Apple devices, Jira administration for resolving tickets, Asset Panda to manage IT assets (quantity, location, cost, etc.)
 
 ### Education
 
-St. Olaf College \| Northfield, MN <br> 
+**St. Olaf College \| Northfield, MN** <br> 
 B.A in Mathematics \| Sept 2022 - May 2025
 
-Portland Community College \| 
-Portland, OR <br> Transfer \| Sept 2021 - June 2022
+**Portland Community College \| Portland, OR** <br> 
+Transfer \| Sept 2021 - June 2022
 
 
 ### Fun Facts!
@@ -52,6 +55,6 @@ Photos of sports events I've attended and photos of me playing sports!
 knitr::include_graphics("images/yellowstone.jpg")
 ```
 ::: {.center-text .extra-small-text .dark-gray-text .topbr} 
-One of my top 5 favorite photos I've ever taken, located at Yellowstone National Park, my dad standing in a grass field
+One of my top 5 favorite photos I've ever taken. Located at Yellowstone National Park, my dad standing in a grass field
 ::: 
 
