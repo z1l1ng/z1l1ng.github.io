@@ -1,22 +1,16 @@
 ---
 title: "About Me"
-description: "I'm Z, currently a senior at St. Olaf College. This about me page is to share some things that I've done regarding my work experience, school, and fun things! Scroll down to skip the *boring stuff* and learn some cool things about me!"
+description: "I’m Ziling—most people just call me Z! I’m currently a senior at St. Olaf College, where I transferred in as a sophomore. Coming from Portland, Oregon, transferring to a small college like this was a unique experience, but it’s been an incredible fit. I’m also a member of the NCAA women’s basketball team here at St. Olaf. People would say I have a great work ethic, easy to get along with, and fun to be around. After graduation, I will be joining Ameriprise Financial’s Analytics Leadership Development Program, where I’ll dive into three rotations over 24 months, exploring different parts of the business and strengthening my analytical skills. Though finance is a new field for me, I’m excited about using data to tackle real-world problems and work on data-driven projects that make a difference. This about me page gives a glimpse into my work experience, college journey, and some things I love to do for fun. Scroll down to skip the *boring stuff* and check out the cool things about me!"
 toc: false
 about:
-  template: trestles
+  template: solana
   id: intro-heading
   image: images/bigheadz.jpg
-  image-shape: round
 ---
-A little more about me + some fun facts & photos!
-
-:::{#intro-heading}
 
 ### Experience
 
 Incoming Analytics LDP Associate <br> Ameriprise Financial \| Minneapolis, MN \| June 2024
-
--   Engage in 3 rotations over the span of 24 months in various key areas of the business, enhancing analytical skills and collaboration.
 
 Data Science 1 Tutor <br> St. Olaf College \| Northfield, MN \| Sept 2023 - Present <br>
 
@@ -36,32 +30,28 @@ B.A in Mathematics \| Sept 2022 - May 2025
 
 Portland Community College \| 
 Portland, OR <br> Transfer \| Sept 2021 - June 2022
-:::
 
-### Fun Fact #1
 
-I super enjoy going to sporting events, particularly basketball and baseball games. The atmosphere in the arena and the intensity of the competition is super fun. I went to my first MLB game this summer and was absolutely hooked.
+### Fun Facts!
 
-:::{.column-margin}
-```{r, out.width = "60%"}
+- I super enjoy going to sporting events, particularly basketball and baseball games. The atmosphere in the arena and the intensity of the competition is super fun. I went to my first MLB game this summer and was absolutely hooked. I also play Division 3 basketball so I love playing in sporting events as well! 
+```{r}
 #| echo: false
-knitr::include_graphics("images/mlb.jpg")
+knitr::include_graphics("images/sports.png")
 ```
-::: {.center-text .extra-small-text .dark-gray-text .topbr}
-My first baseball game!
-:::
-:::
+::: {.center-text .extra-small-text .dark-gray-text .topbr} 
+Photos of sports events I've attended and a photos of me playing sports!
+::: 
 
-### Fun Fact #2
+- I love going to concerts and music! My very first concert was in 2021 and since then I've been to 24 total concerts and one 3-day long festival. I have a shoe that I call my concert shoe in which I get artists to sign. I was also featured in a YouTube short video posted by Dean Lewis that has 5+ million views and 315k likes.
 
-My second fun fact is that I love going to concerts and music! My very first concert was in 2021 and since then I've been to 24 total concerts and 1 3-day long festival. I have a shoe that I call my concert shoe in which I get artists to sign. I was also featured in a YouTube short video posted by Dean Lewis that has 5+ million views and 315k likes.
+- Two of my favorite hobbies are taking photos and hiking. These work very well together because I can take photos while hiking. I hope to rekindle my passion for these hobbies and maybe even get into some sports photography. 
 
-:::{.column-margin}
-```{r, out.width = "60%"}
+```{r}
 #| echo: false
-knitr::include_graphics("images/concert.jpg")
+knitr::include_graphics("images/yellowstone.jpg")
 ```
-::: {.center-text .extra-small-text .dark-gray-text .topbr}
-A super blurry photo of me seeing The Kid Laroi.
-:::
-:::
+::: {.center-text .extra-small-text .dark-gray-text .topbr} 
+One of my top 5 favorite photos I've ever taken, located at Yellowstone National Park, my dad standing in a grass field
+::: 
+
