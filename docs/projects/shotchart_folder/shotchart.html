@@ -88,6 +88,8 @@ div.csl-indent {
     "search-label": "Search"
   }
 }</script>
+<script src="../../site_libs/kePrint-0.0.1/kePrint.js"></script>
+<link href="../../site_libs/lightable-0.0.1/lightable.css" rel="stylesheet">
 
   <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
   <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
@@ -210,7 +212,7 @@ window.Quarto = {
 </header>
 
 
-<p>To view the qmd of this project, click <a href="https://github.com/z1l1ng/z1l1ng.github.io/blob/main/projects/maps_folder/creatingmaps.qmd">here</a>.</p>
+<p>To view the qmd of this project, click <a href="https://github.com/z1l1ng/z1l1ng.github.io/blob/main/projects/shotchart_folder/shotchart.qmd">here</a>.</p>
 <section id="introduction" class="level1">
 <h1>Introduction</h1>
 <p>Basketball shot charts have gained much popularity over the years; a shot chart is a spatial representation of where a shot is taken, ‘o’s’ represent a success/make, and ‘x’s’ represent failure/missed shot. The best teams and players are now utilizing this chart to show shooting preferences, abilities, and tendencies of where a player likes to shoot. Brian J. Reich, James S. Hodges, Bradley P. Carlin, and Adam M. Reich knew that an accurate inference with information from a shot chart consisting of statistical models containing covariates, these are also known as our predictors, and in our case, they are both time-varying and not. Shot frequency, shot location and shot selection were the three different response variables looked at, with a different type of model created for each one.</p>
@@ -663,7 +665,8 @@ window.Quarto = {
 <p><strong>Logistic Regression</strong></p>
 <div class="cell">
 <div class="cell-output-display">
-<table class="caption-top table table-sm table-striped small" data-quarto-postprocess="true">
+<div style="border: 1px solid #ddd; padding: 5px; overflow-x: scroll; width:95%; ">
+<table class="table caption-top table-sm table-striped small" data-quarto-postprocess="true">
 <thead>
 <tr class="header">
 <th style="text-align: left;" data-quarto-table-cell-role="th">term</th>
@@ -711,14 +714,15 @@ window.Quarto = {
 </tr>
 </tbody>
 </table>
-
+</div>
 
 </div>
 </div>
 <p>These are the exponentiated coefficients of the model.</p>
 <div class="cell">
 <div class="cell-output-display">
-<table class="caption-top table table-sm table-striped small" data-quarto-postprocess="true">
+<div style="border: 1px solid #ddd; padding: 5px; overflow-x: scroll; width:95%; ">
+<table class="table caption-top table-sm table-striped small" data-quarto-postprocess="true">
 <thead>
 <tr class="header">
 <th style="text-align: left;" data-quarto-table-cell-role="th"></th>
@@ -748,14 +752,15 @@ window.Quarto = {
 </tr>
 </tbody>
 </table>
-
+</div>
 
 </div>
 </div>
 <p>I ran a model with all of my predictors I had in my dataset to see if any them were significant, the only one that was, was miss_last, this was weird however because its standard error was the largest out of all of the predictors. The predicted odds that I make my shot decrease by 99.97% if I missed the shot before that, and you keep the predictors home, behind and no rest constant. This feels very accurate in that I know my confidence decreases when I miss a shot therefore contributing bad feelings that could potentially cause me to miss the next one, but shooters got to shoot. The predicted odds that I make my shot are 3.66, if it is not a home game, if we got more than 3 days of rest, if we were behind in the game and if I missed the shot previous to this attempt.</p>
 <div class="cell">
 <div class="cell-output-display">
-<table class="caption-top table table-sm table-striped small" data-quarto-postprocess="true">
+<div style="border: 1px solid #ddd; padding: 5px; overflow-x: scroll; width:95%; ">
+<table class="table caption-top table-sm table-striped small" data-quarto-postprocess="true">
 <thead>
 <tr class="header">
 <th style="text-align: left;" data-quarto-table-cell-role="th">term</th>
@@ -908,14 +913,15 @@ window.Quarto = {
 </tr>
 </tbody>
 </table>
-
+</div>
 
 </div>
 </div>
 <p>These are the exponentiated coefficients of the model.</p>
 <div class="cell">
 <div class="cell-output-display">
-<table class="caption-top table table-sm table-striped small" data-quarto-postprocess="true">
+<div style="border: 1px solid #ddd; padding: 5px; overflow-x: scroll; width:95%; ">
+<table class="table caption-top table-sm table-striped small" data-quarto-postprocess="true">
 <thead>
 <tr class="header">
 <th style="text-align: left;" data-quarto-table-cell-role="th"></th>
@@ -1005,7 +1011,7 @@ window.Quarto = {
 </tr>
 </tbody>
 </table>
-
+</div>
 
 </div>
 </div>

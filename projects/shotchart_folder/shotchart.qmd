@@ -392,7 +392,9 @@ shots_sf2 <- shots_sf |>
 predictors_model <- glm(shot_made_factor ~ home + norest + behind + miss_last, family = binomial(link = "logit"), data = shots_sf2)
 
 tidy(predictors_model) %>%
-kable(format = "html")
+kable(format = "html") |>
+    kable_styling(full_width = FALSE) |>
+    scroll_box(width = "95%")
 ```
 \doublespacing
 
@@ -402,7 +404,9 @@ These are the exponentiated coefficients of the model.
 ```{r, echo = FALSE}
 pm <- summary(predictors_model)
 pm_coefficients <- exp(predictors_model$coefficients)
-kable(pm_coefficients, format = "html")
+kable(pm_coefficients, format = "html") |>
+    kable_styling(full_width = FALSE) |>
+    scroll_box(width = "95%")
 ```
 \doublespacing
 
@@ -414,7 +418,9 @@ model1 <- glm(shot_made_factor ~ zones, family = binomial(link = "logit"),
               data = shots_sf2)
 
 tidy(model1) %>%
-kable(format = "html")
+kable(format = "html") |>
+    kable_styling(full_width = FALSE) |>
+    scroll_box(width = "95%")
 ```
 \doublespacing
 
@@ -424,7 +430,9 @@ These are the exponentiated coefficients of the model.
 ```{r, echo = FALSE}
 m1 <- summary(model1)
 m1_coefficients <- exp(model1$coefficients)
-kable(m1_coefficients, format = "html")
+kable(m1_coefficients, format = "html") |>
+    kable_styling(full_width = FALSE) |>
+    scroll_box(width = "95%")
 ```
 \doublespacing
 
