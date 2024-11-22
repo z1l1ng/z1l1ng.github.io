@@ -156,15 +156,17 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <ul>
   <li><a href="#introduction" id="toc-introduction" class="nav-link active" data-scroll-target="#introduction">Introduction</a></li>
   <li><a href="#genres-of-movies" id="toc-genres-of-movies" class="nav-link" data-scroll-target="#genres-of-movies">Genres of Movies</a></li>
-  <li><a href="#length-content-of-title" id="toc-length-content-of-title" class="nav-link" data-scroll-target="#length-content-of-title">Length &amp; Content of Title</a>
+  <li><a href="#locations" id="toc-locations" class="nav-link" data-scroll-target="#locations">Locations</a></li>
+  <li><a href="#length-content-of-titles" id="toc-length-content-of-titles" class="nav-link" data-scroll-target="#length-content-of-titles">Length &amp; Content of Titles</a>
   <ul class="collapse">
   <li><a href="#length-of-title" id="toc-length-of-title" class="nav-link" data-scroll-target="#length-of-title">Length of Title</a></li>
   <li><a href="#sequels" id="toc-sequels" class="nav-link" data-scroll-target="#sequels">Sequels</a></li>
   <li><a href="#sentiment-joy-and-sadness" id="toc-sentiment-joy-and-sadness" class="nav-link" data-scroll-target="#sentiment-joy-and-sadness">Sentiment: Joy and Sadness</a></li>
+  <li><a href="#sentiment-fear-and-trust" id="toc-sentiment-fear-and-trust" class="nav-link" data-scroll-target="#sentiment-fear-and-trust">Sentiment: Fear and Trust</a></li>
   <li><a href="#sentiment-positivenegative-trajectory-of-top-4-genres-by-year" id="toc-sentiment-positivenegative-trajectory-of-top-4-genres-by-year" class="nav-link" data-scroll-target="#sentiment-positivenegative-trajectory-of-top-4-genres-by-year">Sentiment: Positive/Negative trajectory of Top 4 Genres by Year</a></li>
+  </ul></li>
   <li><a href="#lda-2-topic-model" id="toc-lda-2-topic-model" class="nav-link" data-scroll-target="#lda-2-topic-model">LDA 2-topic model</a></li>
   <li><a href="#conclusion" id="toc-conclusion" class="nav-link" data-scroll-target="#conclusion">Conclusion</a></li>
-  </ul></li>
   </ul>
 </nav>
     </div>
@@ -201,8 +203,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </header>
 
 
-<p>This project uses R to create explore titles, genres, and ratings of movies and tv shows of different streaming services.</p>
-<p>To view the qmd, click <a href="PUT QMD INSIDE">here</a>.</p>
+<p>This project uses R to create explore the frequency of words in titles and genres of movies and tv shows of different streaming services by creating visuals such as bar plots, wordclouds and tables.</p>
+<p>To view the qmd, click <a href="https://github.com/z1l1ng/z1l1ng.github.io/blob/main/projects/text_analysis_folder/text_analysis.qmd">here</a>.</p>
 <section id="introduction" class="level1">
 <h1>Introduction</h1>
 <p>Do you ever wonder specifically what types of movies or tv shows are on the streaming services you pay for? We will be exploring a comprehensive collection of all titles for Amazon Prime, Apple TV, HBO, Hulu, and Netflix using data collected from IMDB and published on Kaggle. Merging together these datasets we end up with 120,930 rows and 9 columns. Each row being title, and some columns representing the type, being movie or tv show, the year it was released, genre of the title, etc.</p>
@@ -256,8 +258,29 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 <p>The genres are all pretty similar for movies between our streaming services with Drama, Comedy, and Action taking the top 3 for most titles with that genre, and Thriller, Romance, and Adventure for 4th, 5th and 6th, depending on the streaming service. For TV shows we see more of a variety for top 10 genres, we see an increase in Animation, Reality-TV, Crime, Documentary, and Family, however the genres are still very similar by streaming service.</p>
 </section>
-<section id="length-content-of-title" class="level1">
-<h1>Length &amp; Content of Title</h1>
+<section id="locations" class="level1">
+<h1>Locations</h1>
+<p>Using another str_split() we can split up the lists of locations that the title is available to, titles like <em>The Queen’s Gambit</em> is available to countries such as AD, AE, AG, AL, AO, AR, AT, AU, AZ, BA, BB, BE, BG and much more. After splitting our genres we find that we have 138 distinct countries that our streaming services are available in. We’ll now look what countries offer the most titles.</p>
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="text_analysis_files/figure-html/unnamed-chunk-7-1.png" style="height:80.0%" width="672" class="figure-img"></p>
+</figure>
+</div>
+</div>
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="text_analysis_files/figure-html/unnamed-chunk-7-2.png" style="height:80.0%" width="672" class="figure-img"></p>
+</figure>
+</div>
+</div>
+</div>
+<p>The country with the most titles available is the US, then followed by Great Britain and Guernsey. For the faceted by services plot this is very interesting because I did not know that Hulu is only available in the US and Japan before this project. We can see that Japan has more titles available compared to the US. The US is the has the most titles available for Apple Tv and Amazon Prime. Slovakia for Netflix, and Nicaragua for HBO.</p>
+</section>
+<section id="length-content-of-titles" class="level1">
+<h1>Length &amp; Content of Titles</h1>
 <section id="length-of-title" class="level2">
 <h2 class="anchored" data-anchor-id="length-of-title">Length of Title</h2>
 <p>For the length of the titles, I am interested if titles the are longer or shorter over time, we will do this by looking at the word count of the titles and the actual character length of the title. By using str_length() we can calculate the how many characters are in the title and str_count() to count the number of words in our title.</p>
@@ -280,13 +303,13 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <div class="cell-output-display">
 <div>
 <figure class="figure">
-<p><img src="text_analysis_files/figure-html/unnamed-chunk-8-1.png" class="img-fluid figure-img" width="672"></p>
+<p><img src="text_analysis_files/figure-html/unnamed-chunk-9-1.png" class="img-fluid figure-img" width="672"></p>
 </figure>
 </div>
 </div>
 </div>
-<p>The average length of the title increases over time from average length of 15 in 1925 to average length of 22ish in 2024. We can see that our line of best fit is nearly identical since the length is depends on the words. The average title is around 4.4 words in 2024. This means that the average word is around 5 characters since the average length of our title is 20 in 2024 and the average number of words is 4.</p>
-<p>Exploring the inside our titles, these are the top ten most common words in our titles.</p>
+<p>The average length of the title stays consistent over time from average length of 17ish characters in 1900 to 2024. We can see that our line of best fit is nearly identical since the length is depends on the words. The average title is around 3.4 words in 2024. This means that the average word is around 5 characters since the average length of our title is 17 in 2024 and the average number of words is 3.4. However, these plots don’t tell us too much important information about our titles other than the fact that they are consistently around 3 to 4 words throughout the years.</p>
+<p>Something more exciting would be exploring the content our titles, these are the top ten most common words in our titles.</p>
 <div class="cell">
 <div class="cell-output-display">
 <div style="border: 1px solid #ddd; padding: 0px; overflow-y: scroll; height:200px; overflow-x: scroll; width:100%; ">
@@ -2086,263 +2109,263 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </tr>
 <tr class="odd">
 <td style="text-align: left;">Spider-Man 2</td>
-<td style="text-align: left;">Hbo</td>
+<td style="text-align: left;">HBO</td>
 </tr>
 <tr class="even">
 <td style="text-align: left;">Shrek 2</td>
-<td style="text-align: left;">Hbo</td>
+<td style="text-align: left;">HBO</td>
 </tr>
 <tr class="odd">
 <td style="text-align: left;">Gremlins 2: The New Batch</td>
-<td style="text-align: left;">Hbo</td>
+<td style="text-align: left;">HBO</td>
 </tr>
 <tr class="even">
 <td style="text-align: left;">Lethal Weapon 2</td>
-<td style="text-align: left;">Hbo</td>
+<td style="text-align: left;">HBO</td>
 </tr>
 <tr class="odd">
 <td style="text-align: left;">Taxi 2</td>
-<td style="text-align: left;">Hbo</td>
+<td style="text-align: left;">HBO</td>
 </tr>
 <tr class="even">
 <td style="text-align: left;">American Pie 2</td>
-<td style="text-align: left;">Hbo</td>
+<td style="text-align: left;">HBO</td>
 </tr>
 <tr class="odd">
 <td style="text-align: left;">Rush Hour 2</td>
-<td style="text-align: left;">Hbo</td>
+<td style="text-align: left;">HBO</td>
 </tr>
 <tr class="even">
 <td style="text-align: left;">RoboCop 2</td>
-<td style="text-align: left;">Hbo</td>
+<td style="text-align: left;">HBO</td>
 </tr>
 <tr class="odd">
 <td style="text-align: left;">Mad Max 2: The Road Warrior</td>
-<td style="text-align: left;">Hbo</td>
+<td style="text-align: left;">HBO</td>
 </tr>
 <tr class="even">
 <td style="text-align: left;">Free Willy 2: The Adventure Home</td>
-<td style="text-align: left;">Hbo</td>
+<td style="text-align: left;">HBO</td>
 </tr>
 <tr class="odd">
 <td style="text-align: left;">Final Destination 2</td>
-<td style="text-align: left;">Hbo</td>
+<td style="text-align: left;">HBO</td>
 </tr>
 <tr class="even">
 <td style="text-align: left;">A Nightmare on Elm Street 2: Freddy's Revenge</td>
-<td style="text-align: left;">Hbo</td>
+<td style="text-align: left;">HBO</td>
 </tr>
 <tr class="odd">
 <td style="text-align: left;">Miss Congeniality 2: Armed &amp; Fabulous</td>
-<td style="text-align: left;">Hbo</td>
+<td style="text-align: left;">HBO</td>
 </tr>
 <tr class="even">
 <td style="text-align: left;">Police Academy 2: Their First Assignment</td>
-<td style="text-align: left;">Hbo</td>
+<td style="text-align: left;">HBO</td>
 </tr>
 <tr class="odd">
 <td style="text-align: left;">Stuart Little 2</td>
-<td style="text-align: left;">Hbo</td>
+<td style="text-align: left;">HBO</td>
 </tr>
 <tr class="even">
 <td style="text-align: left;">Scooby-Doo 2: Monsters Unleashed</td>
-<td style="text-align: left;">Hbo</td>
+<td style="text-align: left;">HBO</td>
 </tr>
 <tr class="odd">
 <td style="text-align: left;">My Girl 2</td>
-<td style="text-align: left;">Hbo</td>
+<td style="text-align: left;">HBO</td>
 </tr>
 <tr class="even">
 <td style="text-align: left;">Harry Potter and the Deathly Hallows: Part 2</td>
-<td style="text-align: left;">Hbo</td>
+<td style="text-align: left;">HBO</td>
 </tr>
 <tr class="odd">
 <td style="text-align: left;">Open Season 2</td>
-<td style="text-align: left;">Hbo</td>
+<td style="text-align: left;">HBO</td>
 </tr>
 <tr class="even">
 <td style="text-align: left;">Sex and the City 2</td>
-<td style="text-align: left;">Hbo</td>
+<td style="text-align: left;">HBO</td>
 </tr>
 <tr class="odd">
 <td style="text-align: left;">Minuscule 2: Mandibles from Far Away</td>
-<td style="text-align: left;">Hbo</td>
+<td style="text-align: left;">HBO</td>
 </tr>
 <tr class="even">
 <td style="text-align: left;">The Legend of the Christmas Witch 2: The Origins</td>
-<td style="text-align: left;">Hbo</td>
+<td style="text-align: left;">HBO</td>
 </tr>
 <tr class="odd">
 <td style="text-align: left;">R.I.P.D. 2: Rise of the Damned</td>
-<td style="text-align: left;">Hbo</td>
+<td style="text-align: left;">HBO</td>
 </tr>
 <tr class="even">
 <td style="text-align: left;">The Conjuring 2</td>
-<td style="text-align: left;">Hbo</td>
+<td style="text-align: left;">HBO</td>
 </tr>
 <tr class="odd">
 <td style="text-align: left;">The Twilight Saga: Breaking Dawn - Part 2</td>
-<td style="text-align: left;">Hbo</td>
+<td style="text-align: left;">HBO</td>
 </tr>
 <tr class="even">
 <td style="text-align: left;">Kick-Ass 2</td>
-<td style="text-align: left;">Hbo</td>
+<td style="text-align: left;">HBO</td>
 </tr>
 <tr class="odd">
 <td style="text-align: left;">Fimfárum 2</td>
-<td style="text-align: left;">Hbo</td>
+<td style="text-align: left;">HBO</td>
 </tr>
 <tr class="even">
 <td style="text-align: left;">Journey 2: The Mysterious Island</td>
-<td style="text-align: left;">Hbo</td>
+<td style="text-align: left;">HBO</td>
 </tr>
 <tr class="odd">
 <td style="text-align: left;">The Expendables 2</td>
-<td style="text-align: left;">Hbo</td>
+<td style="text-align: left;">HBO</td>
 </tr>
 <tr class="even">
 <td style="text-align: left;">The Smurfs 2</td>
-<td style="text-align: left;">Hbo</td>
+<td style="text-align: left;">HBO</td>
 </tr>
 <tr class="odd">
 <td style="text-align: left;">Catcher: Cat City 2</td>
-<td style="text-align: left;">Hbo</td>
+<td style="text-align: left;">HBO</td>
 </tr>
 <tr class="even">
 <td style="text-align: left;">Taken 2</td>
-<td style="text-align: left;">Hbo</td>
+<td style="text-align: left;">HBO</td>
 </tr>
 <tr class="odd">
 <td style="text-align: left;">How to Train Your Dragon 2</td>
-<td style="text-align: left;">Hbo</td>
+<td style="text-align: left;">HBO</td>
 </tr>
 <tr class="even">
 <td style="text-align: left;">Back in the Hood: Gang War 2</td>
-<td style="text-align: left;">Hbo</td>
+<td style="text-align: left;">HBO</td>
 </tr>
 <tr class="odd">
 <td style="text-align: left;">Insidious: Chapter 2</td>
-<td style="text-align: left;">Hbo</td>
+<td style="text-align: left;">HBO</td>
 </tr>
 <tr class="even">
 <td style="text-align: left;">The Amazing Spider-Man 2</td>
-<td style="text-align: left;">Hbo</td>
+<td style="text-align: left;">HBO</td>
 </tr>
 <tr class="odd">
 <td style="text-align: left;">Grown Ups 2</td>
-<td style="text-align: left;">Hbo</td>
+<td style="text-align: left;">HBO</td>
 </tr>
 <tr class="even">
 <td style="text-align: left;">Cloudy with a Chance of Meatballs 2</td>
-<td style="text-align: left;">Hbo</td>
+<td style="text-align: left;">HBO</td>
 </tr>
 <tr class="odd">
 <td style="text-align: left;">The Hunger Games: Mockingjay - Part 2</td>
-<td style="text-align: left;">Hbo</td>
+<td style="text-align: left;">HBO</td>
 </tr>
 <tr class="even">
 <td style="text-align: left;">Batman: The Dark Knight Returns, Part 2</td>
-<td style="text-align: left;">Hbo</td>
+<td style="text-align: left;">HBO</td>
 </tr>
 <tr class="odd">
 <td style="text-align: left;">Hotel Transylvania 2</td>
-<td style="text-align: left;">Hbo</td>
+<td style="text-align: left;">HBO</td>
 </tr>
 <tr class="even">
 <td style="text-align: left;">The Raid 2</td>
-<td style="text-align: left;">Hbo</td>
+<td style="text-align: left;">HBO</td>
 </tr>
 <tr class="odd">
 <td style="text-align: left;">Ghost in the Shell: Arise - Border 2: Ghost Whispers</td>
-<td style="text-align: left;">Hbo</td>
+<td style="text-align: left;">HBO</td>
 </tr>
 <tr class="even">
 <td style="text-align: left;">The Trip 2</td>
-<td style="text-align: left;">Hbo</td>
+<td style="text-align: left;">HBO</td>
 </tr>
 <tr class="odd">
 <td style="text-align: left;">Ted 2</td>
-<td style="text-align: left;">Hbo</td>
+<td style="text-align: left;">HBO</td>
 </tr>
 <tr class="even">
 <td style="text-align: left;">Golden Oldies 2</td>
-<td style="text-align: left;">Hbo</td>
+<td style="text-align: left;">HBO</td>
 </tr>
 <tr class="odd">
 <td style="text-align: left;">Horrible Bosses 2</td>
-<td style="text-align: left;">Hbo</td>
+<td style="text-align: left;">HBO</td>
 </tr>
 <tr class="even">
 <td style="text-align: left;">Dolphin Tale 2</td>
-<td style="text-align: left;">Hbo</td>
+<td style="text-align: left;">HBO</td>
 </tr>
 <tr class="odd">
 <td style="text-align: left;">The Lego Movie 2: The Second Part</td>
-<td style="text-align: left;">Hbo</td>
+<td style="text-align: left;">HBO</td>
 </tr>
 <tr class="even">
 <td style="text-align: left;">Neighbors 2: Sorority Rising</td>
-<td style="text-align: left;">Hbo</td>
+<td style="text-align: left;">HBO</td>
 </tr>
 <tr class="odd">
 <td style="text-align: left;">The Nut Job 2: Nutty by Nature</td>
-<td style="text-align: left;">Hbo</td>
+<td style="text-align: left;">HBO</td>
 </tr>
 <tr class="even">
 <td style="text-align: left;">S.O.S. Women to the Sea 2</td>
-<td style="text-align: left;">Hbo</td>
+<td style="text-align: left;">HBO</td>
 </tr>
 <tr class="odd">
 <td style="text-align: left;">Arabian Nights: Volume 2 - The Desolate One</td>
-<td style="text-align: left;">Hbo</td>
+<td style="text-align: left;">HBO</td>
 </tr>
 <tr class="even">
 <td style="text-align: left;">The Equalizer 2</td>
-<td style="text-align: left;">Hbo</td>
+<td style="text-align: left;">HBO</td>
 </tr>
 <tr class="odd">
 <td style="text-align: left;">Spanish Affair 2</td>
-<td style="text-align: left;">Hbo</td>
+<td style="text-align: left;">HBO</td>
 </tr>
 <tr class="even">
 <td style="text-align: left;">Uno al año no hace daño 2</td>
-<td style="text-align: left;">Hbo</td>
+<td style="text-align: left;">HBO</td>
 </tr>
 <tr class="odd">
 <td style="text-align: left;">Usted No Sabe Quien Soy Yo 2</td>
-<td style="text-align: left;">Hbo</td>
+<td style="text-align: left;">HBO</td>
 </tr>
 <tr class="even">
 <td style="text-align: left;">The Frog Kingdom 2: Sub-Zero Mission</td>
-<td style="text-align: left;">Hbo</td>
+<td style="text-align: left;">HBO</td>
 </tr>
 <tr class="odd">
 <td style="text-align: left;">Deep Blue Sea 2</td>
-<td style="text-align: left;">Hbo</td>
+<td style="text-align: left;">HBO</td>
 </tr>
 <tr class="even">
 <td style="text-align: left;">Peter Rabbit 2: The Runaway</td>
-<td style="text-align: left;">Hbo</td>
+<td style="text-align: left;">HBO</td>
 </tr>
 <tr class="odd">
 <td style="text-align: left;">Sonic the Hedgehog 2</td>
-<td style="text-align: left;">Hbo</td>
+<td style="text-align: left;">HBO</td>
 </tr>
 <tr class="even">
 <td style="text-align: left;">Meg 2: The Trench</td>
-<td style="text-align: left;">Hbo</td>
+<td style="text-align: left;">HBO</td>
 </tr>
 <tr class="odd">
 <td style="text-align: left;">Sex, Shame and Tears 2</td>
-<td style="text-align: left;">Hbo</td>
+<td style="text-align: left;">HBO</td>
 </tr>
 <tr class="even">
 <td style="text-align: left;">Reunion 2</td>
-<td style="text-align: left;">Hbo</td>
+<td style="text-align: left;">HBO</td>
 </tr>
 <tr class="odd">
 <td style="text-align: left;">Kung Fu Panda 2</td>
-<td style="text-align: left;">Hbo</td>
+<td style="text-align: left;">HBO</td>
 </tr>
 <tr class="even">
 <td style="text-align: left;">Terminator 2: Judgment Day</td>
@@ -5415,7 +5438,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <div class="cell-output-display">
 <div>
 <figure class="figure">
-<p><img src="text_analysis_files/figure-html/unnamed-chunk-16-1.png" style="height:75.0%" width="672" class="figure-img"></p>
+<p><img src="text_analysis_files/figure-html/unnamed-chunk-17-1.png" style="height:75.0%" width="672" class="figure-img"></p>
 </figure>
 </div>
 </div>
@@ -5424,7 +5447,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <div class="cell-output-display">
 <div>
 <figure class="figure">
-<p><img src="text_analysis_files/figure-html/unnamed-chunk-17-1.png" style="height:75.0%" width="672" class="figure-img"></p>
+<p><img src="text_analysis_files/figure-html/unnamed-chunk-18-1.png" style="height:75.0%" width="672" class="figure-img"></p>
 </figure>
 </div>
 </div>
@@ -5438,26 +5461,12 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <div class="cell-output-display">
 <div>
 <figure class="figure">
-<p><img src="text_analysis_files/figure-html/unnamed-chunk-19-1.png" class="img-fluid figure-img" width="672"></p>
-</figure>
-</div>
-</div>
-</div>
-<p>Are there more words associated with joy or with sadness in our titles?</p>
-<div class="cell">
-<div class="cell-output-display">
-<div>
-<figure class="figure">
 <p><img src="text_analysis_files/figure-html/unnamed-chunk-20-1.png" class="img-fluid figure-img" width="672"></p>
 </figure>
 </div>
 </div>
 </div>
-<p>There are more about 200 more words associated with sadness compared to joy in our titles.</p>
-</section>
-<section id="sentiment-positivenegative-trajectory-of-top-4-genres-by-year" class="level2">
-<h2 class="anchored" data-anchor-id="sentiment-positivenegative-trajectory-of-top-4-genres-by-year">Sentiment: Positive/Negative trajectory of Top 4 Genres by Year</h2>
-<p>The bing lexicon dataset has 6,786 words that are identidied as negative or postive, for the genres Action, Comedy, Drama, and Thriller we’re going to count the number of negative or positive words and calculate the what we call the sentiment value which is the number of positive words minus the negative words. Our bar will extend up from 0 if there are more positive than negative words in a year and it will extend down from 0 if there are more negative than positive words.</p>
+<p>A word cloud of the top 75 words associated with pink (joy) and top 75 words associated with sadness (blue). Are there more words associated with joy or with sadness in our titles?</p>
 <div class="cell">
 <div class="cell-output-display">
 <div>
@@ -5467,10 +5476,49 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 </div>
 </div>
+<p>There are more about 200 more words associated with sadness compared to joy in our titles.</p>
+</section>
+<section id="sentiment-fear-and-trust" class="level2">
+<h2 class="anchored" data-anchor-id="sentiment-fear-and-trust">Sentiment: Fear and Trust</h2>
+<p>What about words associated with fear and trust?</p>
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="text_analysis_files/figure-html/unnamed-chunk-22-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+</div>
+<p>A word cloud of the top 75 words associated with fear (red) and top 75 words associated with trust (green). Are there more words associated with joy or with sadness in our titles?</p>
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="text_analysis_files/figure-html/unnamed-chunk-23-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+</div>
+<p>There are more about 120 more words associated with fear compared to trust in our titles.</p>
+</section>
+<section id="sentiment-positivenegative-trajectory-of-top-4-genres-by-year" class="level2">
+<h2 class="anchored" data-anchor-id="sentiment-positivenegative-trajectory-of-top-4-genres-by-year">Sentiment: Positive/Negative trajectory of Top 4 Genres by Year</h2>
+<p>The bing lexicon dataset has 6,786 words that are identidied as negative or postive, for the genres Action, Comedy, Drama, and Thriller we’re going to count the number of negative or positive words and calculate the what we call the sentiment value which is the number of positive words minus the negative words. Our bar will extend up from 0 if there are more positive than negative words in a year and it will extend down from 0 if there are more negative than positive words.</p>
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="text_analysis_files/figure-html/unnamed-chunk-24-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+</div>
 <p>We can see that for Action and Thriller the sentiment values are very negative, and for Drama there are 2 years in which the titles have more postive words than negative. For Comedy, it is almost split between negative and positive, which is nice to see since most would consider comedic movie or tv show be light-hearted.</p>
 </section>
-<section id="lda-2-topic-model" class="level2">
-<h2 class="anchored" data-anchor-id="lda-2-topic-model">LDA 2-topic model</h2>
+</section>
+<section id="lda-2-topic-model" class="level1">
+<h1>LDA 2-topic model</h1>
 <p>The last thing we will do is create LDA model. LDA stands for Latent Dirichlet allocation, it one of the most common algorithms for topic modeling. We need two things to make it work.</p>
 <ol type="1">
 <li><p>Every document is a mixture of topics, this is where each row represents one document (such as a book or article), in our case it would be a genre. Each document can contain words from several topics. For example, in a two-topic model we could observe “Document 1 is 75% topic A and 25% topic B, while Document 2 is 34% topic A and 66% topic B.”</p></li>
@@ -5765,7 +5813,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <div class="cell-output-display">
 <div>
 <figure class="figure">
-<p><img src="text_analysis_files/figure-html/unnamed-chunk-23-1.png" class="img-fluid figure-img" width="672"></p>
+<p><img src="text_analysis_files/figure-html/unnamed-chunk-26-1.png" class="img-fluid figure-img" width="672"></p>
 </figure>
 </div>
 </div>
@@ -5903,15 +5951,14 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <p>Topic 1 (red): Documents heavily associated with Topic 1 include genres like Adventure, Romance, Animation, Family, Fantasy, Musical, Game-Show, Comedy, Adult, and Kids. This topic seems to represent genres that are typically focused on entertainment, family-friendly content, and lighter themes. There is a range of genres that cater to various age groups and include both animated and live-action content. Topics in this category could focus on fun, adventure, humor, and fictional worlds.</p>
 <p>Topic 2 (blue): Documents heavily associated with Topic 2 include genres like Documentary, Crime, Thriller, Horror, Mystery, Biography, History, War, Film-Noir, and News. This topic seems to capture genres that are more serious, dramatic, and often grounded in real-world issues, with a focus on storytelling, historical events, real-life experiences, and suspense. These genres often explore darker, more complex, or informative themes.</p>
 </section>
-<section id="conclusion" class="level2">
-<h2 class="anchored" data-anchor-id="conclusion">Conclusion</h2>
-<p>In conclusion, this analysis provides an exploration of the genres and characteristics of movie and TV show titles across major streaming services such as Amazon Prime, Apple TV, HBO, Hulu, and Netflix. By examining over 120,000 titles, we identified patterns in genre distribution, title length trends over time, and sentiment variations across genres.</p>
+<section id="conclusion" class="level1">
+<h1>Conclusion</h1>
+<p>In conclusion, this analysis provides an exploration of the genres and characteristics of movie and TV show titles across major streaming services such as Amazon Prime, Apple TV, HBO, Hulu, and Netflix. By examining over 120,000 titles, we identified patterns in genre distribution, locations available, title length trends over time, and sentiment variations across genres.</p>
 <p>The results reveal that Drama, Comedy, and Action dominate the movie genres across all platforms, with TV shows offering a broader variety including Animation, Reality-TV, and Documentary.</p>
 <p>Our topic modeling analysis further distinguishes two overarching themes: family-friendly entertainment genres like Comedy and Adventure, and serious, real-world genres like Crime and Documentary. This highlights the diversity in content and the ability of streaming platforms to cater to both lighthearted and thought-provoking preferences.</p>
 <p>We gain a better understanding of the types of content available on streaming services by extracting data from the titles and plotting the results.</p>
 
 
-</section>
 </section>
 
 </main> <!-- /main -->

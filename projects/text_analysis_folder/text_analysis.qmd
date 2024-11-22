@@ -4,14 +4,16 @@ date: "2024-11-20"
 sidebar: false
 format:
   html: default
+image: genres.png
 editor_options: 
   chunk_output_type: console
 description: "Mini-project for SDS 264 - Data Science 2 where we use stingr functions and other text analysis methods"
+freeze: true
 ---
 
-This project uses R to create explore titles, genres, and ratings of movies and tv shows of different streaming services. 
+This project uses R to create explore the frequency of words in titles and genres of movies and tv shows of different streaming services by creating visuals such as bar plots, wordclouds and tables.
 
-To view the qmd, click [here](PUT QMD INSIDE).
+To view the qmd, click [here](https://github.com/z1l1ng/z1l1ng.github.io/blob/main/projects/text_analysis_folder/text_analysis.qmd).
 
 # Introduction
 Do you ever wonder specifically what types of movies or tv shows are on the streaming services you pay for? We will be exploring a comprehensive collection of all titles for Amazon Prime, Apple TV, HBO, Hulu, and Netflix using data collected from IMDB and published on Kaggle. Merging together these datasets we end up with 120,930 rows and 9 columns. Each row being title, and some columns representing the type, being movie or tv show, the year it was released, genre of the title, etc. 
@@ -54,7 +56,7 @@ netflix <- netflix |>
   mutate(service = "Netflix")
 
 hbo <- hbo |>
-  mutate(service = "Hbo")
+  mutate(service = "HBO")
 
 appletv <- appletv |>
   mutate(service = "AppleTv") 
@@ -136,6 +138,7 @@ big_data |>
 ```{r, echo = FALSE}
 genres_count |>
   group_by(service) |>
+  
   # filter for movie by service
   filter(type == "movie") |> 
   slice_max(n, n = 10) |>
@@ -150,6 +153,7 @@ genres_count |>
 
 genres_count |>
   group_by(service) |>
+  
   # filter for tv by service
   filter(type == "tv") |> 
   slice_max(n, n = 10) |>
@@ -165,7 +169,50 @@ genres_count |>
 
 The genres are all pretty similar for movies between our streaming services with Drama, Comedy, and Action taking the top 3 for most titles with that genre, and Thriller, Romance, and Adventure for 4th, 5th and 6th, depending on the streaming service. For TV shows we see more of a variety for top 10 genres, we see an increase in Animation, Reality-TV, Crime, Documentary, and Family, however the genres are still very similar by streaming service. 
 
-# Length & Content of Title
+# Locations
+
+Using another str_split() we can split up the lists of locations that the title is available to, titles like *The Queen's Gambit* is available to countries such as AD, AE, AG, AL, AO, AR, AT, AU, AZ, BA, BB, BE, BG and much more. After splitting our genres we find that we have 138 distinct countries that our streaming services are available in. We'll now look what countries offer the most titles. 
+
+```{r, echo = FALSE, out.height= "80%"}
+distinctcountry <- big_data |>
+  mutate(country = str_split(availableCountries, ", ")) |>
+  unnest(country) |>
+  distinct(country)
+
+big_data |>
+  mutate(country = str_split(availableCountries, ", ")) |>
+  unnest(country) |>
+  count(country) |>
+  slice_max(n, n = 10) |>
+  ggplot(aes(y = fct_reorder(country, n), x = n)) +
+    geom_bar(stat = "identity", show.legend = FALSE, fill = "orange") +
+  labs(
+    title = "Top 10 Locations",
+    y = "Country",
+    x = "Count"
+  ) + 
+  theme_bw()
+
+big_data |>
+  mutate(country = str_split(availableCountries, ", ")) |>
+  unnest(country) |>
+  group_by(service) |>
+  count(country) |>
+  slice_max(n, n = 10) |>
+  ggplot(aes(y = fct_reorder(country, n), x = n, fill = service)) +
+    geom_bar(stat = "identity", show.legend = FALSE) +
+    facet_wrap(~ service, scales = "free") +
+  labs(
+    title = "Top 10 Locations for Titles Available by Service",
+    y = "Country",
+    x = "Count"
+  ) + 
+  theme_bw()
+```
+
+The country with the most titles available is the US, then followed by Great Britain and Guernsey. For the faceted by services plot this is very interesting because I did not know that Hulu is only available in the US and Japan before this project. We can see that Japan has more titles available compared to the US. The US is the has the most titles available for Apple Tv and Amazon Prime. Slovakia for Netflix, and Nicaragua for HBO. 
+
+# Length & Content of Titles
 
 ## Length of Title
 
@@ -233,9 +280,9 @@ top_row <- plot_grid(length_plot, word_plot)
 plot_grid(top_row, word_length, ncol = 1)
 ```
 
-The average length of the title increases over time from average length of 15 in 1925 to average length of 22ish in 2024. We can see that our line of best fit is nearly identical since the length is depends on the words. The average title is around 4.4 words in 2024. This means that the average word is around 5 characters since the average length of our title is 20 in 2024 and the average number of words is 4. 
+The average length of the title stays consistent over time from average length of 17ish characters in 1900 to 2024. We can see that our line of best fit is nearly identical since the length is depends on the words. The average title is around 3.4 words in 2024. This means that the average word is around 5 characters since the average length of our title is 17 in 2024 and the average number of words is 3.4. However, these plots don't tell us too much important information about our titles other than the fact that they are consistently around 3 to 4 words throughout the years. 
 
-Exploring the inside our titles, these are the top ten most common words in our titles. 
+Something more exciting would be exploring the content our titles, these are the top ten most common words in our titles. 
 
 ```{r, echo = FALSE}
 # getting every word from title
@@ -305,7 +352,7 @@ str_subset(has_2$title, "[pP]art.2")
 # 886 titles ends with a 2
 str_subset(has_2$title, " 2$")
 
-# 336+11+7+30+63+886 = 133
+# 336+11+7+30+63+886 = 1333
 
 #all together, 1240 titles
 str_subset(has_2$title, " 2: |[vV][oO][lL].2|[vV]olume.2|[mM]ovie.2|[pP]art.2| 2$")
@@ -347,6 +394,7 @@ sequels |>
 big_data |>
   mutate(sequel = str_detect(title, " 2: |[vV][oO][lL].2|[vV]olume.2|[mM]ovie.2|[pP]art.2| 2$")) |>
   group_by(service) |>
+  
   # calculate proportion
   summarize(proportion_sequels = mean(sequel, na.rm = TRUE)) |>
   ggplot(aes(x = service, 
@@ -373,16 +421,24 @@ Now we'll look at the list of the top 75 words associated with "joy" and with "s
 ```{r, echo = FALSE}
 nrc_sentiments <- get_sentiments(lexicon = "nrc")
 
-joy_sad <- nrc_sentiments |>
-  # filter for joy or sadness
-  filter(sentiment == "joy" | sentiment == "sadness") |>
+get_sentiment <- function(emotion1, emotion2){
+  nrc_sentiments |>
+    
+  # filter for two emotions we want
+  filter(sentiment == {{emotion1}} | sentiment == {{emotion2}}) |>
+  
+  # join back in with all words from title 
   inner_join(big_data_tidy, relationship = "many-to-many", by = join_by(word)) |>
   count(sentiment, word, sort = TRUE) |>
   group_by(sentiment) 
+}
 
+#use function
+joy_sad <- get_sentiment("joy", "sadness")
 
 joy_sad_cloud <- joy_sad |>
   slice_max(n, n = 75) |>
+  
   # create color variable 
   mutate(color = ifelse(sentiment == "joy", "lightpink", "lightblue")) |>
   ungroup()
@@ -400,7 +456,7 @@ wordcloud(
     rot.per = .50)
 ```
 
-Are there more words associated with joy or with sadness in our titles?
+A word cloud of the top 75 words associated with pink (joy) and top 75 words associated with sadness (blue). Are there more words associated with joy or with sadness in our titles?
 
 ```{r, echo = FALSE}
 joy_sad |>
@@ -418,6 +474,49 @@ joy_sad |>
 
 There are more about 200 more words associated with sadness compared to joy in our titles. 
 
+## Sentiment: Fear and Trust
+
+What about words associated with fear and trust? 
+
+```{r, echo = FALSE}
+#use function
+fear_trust <- get_sentiment("fear", "trust")
+
+fear_trust_cloud <- fear_trust |>
+  slice_max(n, n = 75) |>
+  # create color variable 
+  mutate(color = ifelse(sentiment == "fear", "#CE2029", "#228B22")) |>
+  ungroup()
+
+set.seed(2222)
+wordcloud(
+    words = fear_trust_cloud$word,
+    freq = fear_trust_cloud$n,
+    random.order = FALSE,
+    ordered.colors = TRUE,
+    color = fear_trust_cloud$color,
+    scale = c(2.5, .5),
+    rot.per = .50)
+```
+
+A word cloud of the top 75 words associated with fear (red) and top 75 words associated with trust (green). Are there more words associated with joy or with sadness in our titles?
+
+```{r, echo = FALSE}
+fear_trust |>
+  count(sentiment) |>
+  ggplot(aes(x = sentiment, y = n)) +
+  geom_bar(stat = "identity", fill = c("#CE2029", "#228B22")) +
+  geom_text(aes(label = n)) +
+  labs(
+    title = "Count of Fear and Trust",
+    x = "Sentiment",
+    y = "Count"
+  ) +
+  theme_bw()
+```
+
+There are more about 120 more words associated with fear compared to trust in our titles. 
+
 ## Sentiment: Positive/Negative trajectory of Top 4 Genres by Year
 
 The bing lexicon dataset has 6,786 words that are identidied as negative or postive, for the genres Action, Comedy, Drama, and Thriller we're going to count the number of negative or positive words and calculate the what we call the sentiment value which is the number of positive words minus the negative words. Our bar will extend up from 0 if there are more positive than negative words in a year and it will extend down from 0 if there are more negative than positive words.
@@ -428,12 +527,17 @@ bigger_data_tidy <- big_data_tidy |>
   unnest(genres) |> 
   drop_na(genres)
 
+# load in bing sentiments
 bing_sentiments <- get_sentiments(lexicon = "bing")
 
 bing_sentiments |>
   inner_join(bigger_data_tidy, relationship = "many-to-many", by = join_by(word)) |>
+  
+  # count by genre, year, sentiment
   count(genres, releaseYear, sentiment, sort = TRUE) |>
   pivot_wider(names_from = sentiment, values_from = n, values_fill = 0) |>
+  
+  #create sentiment value
   mutate(sentiment = positive - negative) |>
   filter(genres %in% c("Drama", "Comedy", "Action", "Thriller")) |>
   drop_na() |>
@@ -450,7 +554,7 @@ bing_sentiments |>
 
 We can see that for Action and Thriller the sentiment values are very negative, and for Drama there are 2 years in which the titles have more postive words than negative. For Comedy, it is almost split between negative and positive, which is nice to see since most would consider comedic movie or tv show be light-hearted.
 
-## LDA 2-topic model 
+# LDA 2-topic model 
 
 The last thing we will do is create LDA model. LDA stands for Latent Dirichlet allocation, it one of the most common algorithms for topic modeling. We need two things to make it work.
 
@@ -484,6 +588,7 @@ bigger_data_topics <- tidy(bigger_data_lda, matrix = "beta")
 A table of our highest beta value, which is the probability of a word being generated by a specific topic.
 
 ```{r, echo = FALSE}
+#table for 50 words
 bigger_data_topics |>
   arrange(-beta) |>
   slice_max(beta, n = 50) |>
@@ -512,7 +617,7 @@ bigger_beta_wide <- bigger_data_topics |>
   filter(topic1 > .001 | topic2 > .001) |>
   mutate(log_ratio = log2(topic2 / topic1))
 
-# graph
+# graph of words
 bigger_beta_wide |>
   arrange(desc(abs(log_ratio))) |>
   slice_max(abs(log_ratio), n = 20) |>
@@ -546,9 +651,9 @@ Documents heavily associated with Topic 1 include genres like Adventure, Romance
 Topic 2 (blue):
 Documents heavily associated with Topic 2 include genres like Documentary, Crime, Thriller, Horror, Mystery, Biography, History, War, Film-Noir, and News. This topic seems to capture genres that are more serious, dramatic, and often grounded in real-world issues, with a focus on storytelling, historical events, real-life experiences, and suspense. These genres often explore darker, more complex, or informative themes.
 
-## Conclusion
+# Conclusion
 
-In conclusion, this analysis provides an exploration of the genres and characteristics of movie and TV show titles across major streaming services such as Amazon Prime, Apple TV, HBO, Hulu, and Netflix. By examining over 120,000 titles, we identified patterns in genre distribution, title length trends over time, and sentiment variations across genres.
+In conclusion, this analysis provides an exploration of the genres and characteristics of movie and TV show titles across major streaming services such as Amazon Prime, Apple TV, HBO, Hulu, and Netflix. By examining over 120,000 titles, we identified patterns in genre distribution, locations available, title length trends over time, and sentiment variations across genres.
 
 The results reveal that Drama, Comedy, and Action dominate the movie genres across all platforms, with TV shows offering a broader variety including Animation, Reality-TV, and Documentary.
 
