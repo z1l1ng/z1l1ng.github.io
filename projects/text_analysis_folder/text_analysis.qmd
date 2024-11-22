@@ -101,7 +101,7 @@ type_count <- count_plot(type)
 plot_grid(title_count, type_count, ncol = 1, align = "v") 
 ```
 
-We can see that for most titles to least, it ranks Amazon Prime, Netflix, Apple TV, Hulu and HBO. From our 120,930 titles, we can see we have more movies than tv shows. 
+We can see that for most titles to least, it ranks Amazon Prime, Netflix, Apple TV, Hulu and HBO. From our 120,930 titles, we have more movies than tv shows. 
 
 # Genres of Movies 
 
@@ -192,7 +192,11 @@ big_data |>
     x = "Count"
   ) + 
   theme_bw()
+```
 
+The country with the most titles available is the US, then followed by Great Britain and Guernsey. 
+
+```{r, echo = FALSE, out.height= "80%"}
 big_data |>
   mutate(country = str_split(availableCountries, ", ")) |>
   unnest(country) |>
@@ -210,7 +214,7 @@ big_data |>
   theme_bw()
 ```
 
-The country with the most titles available is the US, then followed by Great Britain and Guernsey. For the faceted by services plot this is very interesting because I did not know that Hulu is only available in the US and Japan before this project. We can see that Japan has more titles available compared to the US. The US is the has the most titles available for Apple Tv and Amazon Prime. Slovakia for Netflix, and Nicaragua for HBO. 
+This is very interesting because I did not know that Hulu is only available in the US and Japan before this project. We can see that Japan has more titles available compared to the US. The US is the has the most titles available for Apple TV and Amazon Prime. Slovakia for Netflix, and Nicaragua for HBO. 
 
 # Length & Content of Titles
 
@@ -456,7 +460,7 @@ wordcloud(
     rot.per = .50)
 ```
 
-A word cloud of the top 75 words associated with pink (joy) and top 75 words associated with sadness (blue). Are there more words associated with joy or with sadness in our titles?
+Are there more words associated with joy or with sadness in our titles?
 
 ```{r, echo = FALSE}
 joy_sad |>
@@ -499,7 +503,7 @@ wordcloud(
     rot.per = .50)
 ```
 
-A word cloud of the top 75 words associated with fear (red) and top 75 words associated with trust (green). Are there more words associated with joy or with sadness in our titles?
+Are there more words associated with joy or with sadness in our titles?
 
 ```{r, echo = FALSE}
 fear_trust |>
@@ -562,13 +566,13 @@ The last thing we will do is create LDA model. LDA stands for Latent Dirichlet a
 
 2) Every topic is a mixture of words, imagine a two-topic model with sports, Each topic would have its own set of words that define it. Here’s an example of what these could look like: 
 
-Topic 1 Words (Competitive & Physical Sports): "win," "competition," "athlete," "team," "championship," "playoff,"
+Topic 1 Words (Competitive & Physical Sports): "win", "competition", "athlete", "team", "championship" "playoff"
 
-Topic 2 Words (Lifestyle & Recreational Sports): "fitness," "health," leisure," "adventure," "outdoor," "relaxation"
+Topic 2 Words (Lifestyle & Recreational Sports): "fitness" "health" "leisure" "adventure" "outdoor" "relaxation"
 
-However, it is important to note that words can be shared between topics; a word like “game,” ""strength," or "exercise" might appear in both Topics equally.
+However, it is important to note that words can be shared between topics; a word like “game”, strength" or "exercise" might appear in both topics equally.
 
-For our dataset, we are interested in our genres and how the distribution of words within the titles of each genre reflects the underlying themes and characteristics of different types of movies and TV shows. After filtering for stop words we wil create a dtm for our words and genres, fit our lda model and then interpret our findings. 
+For our dataset, we are interested in our genres and how the distribution of words within the titles of each genre reflects the themes and characteristics of different types of movies and TV shows. After filtering for stop words we will create a dtm for our words and genres, fit our lda model and then interpret our findings. 
 
 ```{r}
 # creating dtm matrix
@@ -631,7 +635,7 @@ bigger_beta_wide |>
 
 These are the words with the greatest difference between the two topics, using the log ratio, looking at these words we can see sort of where these topics are leading us. 
 
-```{r}
+```{r, echo = FALSE}
 data_documents <- tidy(bigger_data_lda, matrix = "gamma")
 
 # Find documents for each topic
@@ -640,9 +644,7 @@ data_documents |>
   slice_max(gamma, n = 10) |>
   ungroup() |>
   arrange(topic, -gamma) |>
-  kable() |>
-    kable_styling(full_width = FALSE) |>
-    scroll_box(width = "100%", height = "200px")
+  kable()
 ```
 
 Topic 1 (red):
@@ -653,7 +655,7 @@ Documents heavily associated with Topic 2 include genres like Documentary, Crime
 
 # Conclusion
 
-In conclusion, this analysis provides an exploration of the genres and characteristics of movie and TV show titles across major streaming services such as Amazon Prime, Apple TV, HBO, Hulu, and Netflix. By examining over 120,000 titles, we identified patterns in genre distribution, locations available, title length trends over time, and sentiment variations across genres.
+In conclusion, this analysis provides an exploration of the genres and characteristics of movie and TV show titles across major streaming services such as Amazon Prime, Apple TV, HBO MAX, Hulu, and Netflix. By examining over 120,000 titles, we identified patterns in genre distribution, locations available, title length trends over time, and sentiment variations across genres.
 
 The results reveal that Drama, Comedy, and Action dominate the movie genres across all platforms, with TV shows offering a broader variety including Animation, Reality-TV, and Documentary.
 
