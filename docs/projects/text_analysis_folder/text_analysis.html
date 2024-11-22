@@ -207,7 +207,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <p>To view the qmd, click <a href="https://github.com/z1l1ng/z1l1ng.github.io/blob/main/projects/text_analysis_folder/text_analysis.qmd">here</a>.</p>
 <section id="introduction" class="level1">
 <h1>Introduction</h1>
-<p>Do you ever wonder specifically what types of movies or tv shows are on the streaming services you pay for? We will be exploring a comprehensive collection of all titles for Amazon Prime, Apple TV, HBO, Hulu, and Netflix using data collected from IMDB and published on Kaggle. Merging together these datasets we end up with 120,930 rows and 9 columns. Each row being title, and some columns representing the type, being movie or tv show, the year it was released, genre of the title, etc.</p>
+<p>Do you ever wonder specifically what types of movies or tv shows are on the streaming services you pay for? We will be exploring a comprehensive collection of all titles on Amazon Prime, Apple TV, HBO MAX, Hulu, and Netflix using data collected from IMDB and published on Kaggle. Binding together the rows of these datasets we end up with 120,930 rows and 9 columns. Each row being title, and columns representing the type, being movie or tv show, the year it was released, genre of the title, imdb rating, the streaming service, etc.</p>
 <div class="cell">
 <div class="cell-output-display">
 <div>
@@ -217,7 +217,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 </div>
 </div>
-<p>We can see that for most titles to least, it ranks Amazon Prime, Netflix, Apple TV, Hulu and HBO. From our 120,930 titles, we can see we have more movies than tv shows.</p>
+<p>We can see that for most titles to least, it ranks Amazon Prime, Netflix, Apple TV, Hulu and HBO. From our 120,930 titles, we have more movies than tv shows.</p>
 </section>
 <section id="genres-of-movies" class="level1">
 <h1>Genres of Movies</h1>
@@ -269,15 +269,18 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </figure>
 </div>
 </div>
+</div>
+<p>The country with the most titles available is the US, then followed by Great Britain and Guernsey.</p>
+<div class="cell">
 <div class="cell-output-display">
 <div>
 <figure class="figure">
-<p><img src="text_analysis_files/figure-html/unnamed-chunk-7-2.png" style="height:80.0%" width="672" class="figure-img"></p>
+<p><img src="text_analysis_files/figure-html/unnamed-chunk-8-1.png" style="height:80.0%" width="672" class="figure-img"></p>
 </figure>
 </div>
 </div>
 </div>
-<p>The country with the most titles available is the US, then followed by Great Britain and Guernsey. For the faceted by services plot this is very interesting because I did not know that Hulu is only available in the US and Japan before this project. We can see that Japan has more titles available compared to the US. The US is the has the most titles available for Apple Tv and Amazon Prime. Slovakia for Netflix, and Nicaragua for HBO.</p>
+<p>This is very interesting because I did not know that Hulu is only available in the US and Japan before this project. We can see that Japan has more titles available compared to the US. The US is the has the most titles available for Apple TV and Amazon Prime. Slovakia for Netflix, and Nicaragua for HBO.</p>
 </section>
 <section id="length-content-of-titles" class="level1">
 <h1>Length &amp; Content of Titles</h1>
@@ -303,7 +306,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <div class="cell-output-display">
 <div>
 <figure class="figure">
-<p><img src="text_analysis_files/figure-html/unnamed-chunk-9-1.png" class="img-fluid figure-img" width="672"></p>
+<p><img src="text_analysis_files/figure-html/unnamed-chunk-10-1.png" class="img-fluid figure-img" width="672"></p>
 </figure>
 </div>
 </div>
@@ -5438,7 +5441,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <div class="cell-output-display">
 <div>
 <figure class="figure">
-<p><img src="text_analysis_files/figure-html/unnamed-chunk-17-1.png" style="height:75.0%" width="672" class="figure-img"></p>
+<p><img src="text_analysis_files/figure-html/unnamed-chunk-18-1.png" style="height:75.0%" width="672" class="figure-img"></p>
 </figure>
 </div>
 </div>
@@ -5447,7 +5450,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <div class="cell-output-display">
 <div>
 <figure class="figure">
-<p><img src="text_analysis_files/figure-html/unnamed-chunk-18-1.png" style="height:75.0%" width="672" class="figure-img"></p>
+<p><img src="text_analysis_files/figure-html/unnamed-chunk-19-1.png" style="height:75.0%" width="672" class="figure-img"></p>
 </figure>
 </div>
 </div>
@@ -5461,17 +5464,17 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <div class="cell-output-display">
 <div>
 <figure class="figure">
-<p><img src="text_analysis_files/figure-html/unnamed-chunk-20-1.png" class="img-fluid figure-img" width="672"></p>
+<p><img src="text_analysis_files/figure-html/unnamed-chunk-21-1.png" class="img-fluid figure-img" width="672"></p>
 </figure>
 </div>
 </div>
 </div>
-<p>A word cloud of the top 75 words associated with pink (joy) and top 75 words associated with sadness (blue). Are there more words associated with joy or with sadness in our titles?</p>
+<p>Are there more words associated with joy or with sadness in our titles?</p>
 <div class="cell">
 <div class="cell-output-display">
 <div>
 <figure class="figure">
-<p><img src="text_analysis_files/figure-html/unnamed-chunk-21-1.png" class="img-fluid figure-img" width="672"></p>
+<p><img src="text_analysis_files/figure-html/unnamed-chunk-22-1.png" class="img-fluid figure-img" width="672"></p>
 </figure>
 </div>
 </div>
@@ -5485,17 +5488,17 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <div class="cell-output-display">
 <div>
 <figure class="figure">
-<p><img src="text_analysis_files/figure-html/unnamed-chunk-22-1.png" class="img-fluid figure-img" width="672"></p>
+<p><img src="text_analysis_files/figure-html/unnamed-chunk-23-1.png" class="img-fluid figure-img" width="672"></p>
 </figure>
 </div>
 </div>
 </div>
-<p>A word cloud of the top 75 words associated with fear (red) and top 75 words associated with trust (green). Are there more words associated with joy or with sadness in our titles?</p>
+<p>Are there more words associated with joy or with sadness in our titles?</p>
 <div class="cell">
 <div class="cell-output-display">
 <div>
 <figure class="figure">
-<p><img src="text_analysis_files/figure-html/unnamed-chunk-23-1.png" class="img-fluid figure-img" width="672"></p>
+<p><img src="text_analysis_files/figure-html/unnamed-chunk-24-1.png" class="img-fluid figure-img" width="672"></p>
 </figure>
 </div>
 </div>
@@ -5509,7 +5512,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <div class="cell-output-display">
 <div>
 <figure class="figure">
-<p><img src="text_analysis_files/figure-html/unnamed-chunk-24-1.png" class="img-fluid figure-img" width="672"></p>
+<p><img src="text_analysis_files/figure-html/unnamed-chunk-25-1.png" class="img-fluid figure-img" width="672"></p>
 </figure>
 </div>
 </div>
@@ -5524,10 +5527,10 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <li><p>Every document is a mixture of topics, this is where each row represents one document (such as a book or article), in our case it would be a genre. Each document can contain words from several topics. For example, in a two-topic model we could observe “Document 1 is 75% topic A and 25% topic B, while Document 2 is 34% topic A and 66% topic B.”</p></li>
 <li><p>Every topic is a mixture of words, imagine a two-topic model with sports, Each topic would have its own set of words that define it. Here’s an example of what these could look like:</p></li>
 </ol>
-<p>Topic 1 Words (Competitive &amp; Physical Sports): “win,” “competition,” “athlete,” “team,” “championship,” “playoff,”</p>
-<p>Topic 2 Words (Lifestyle &amp; Recreational Sports): “fitness,” “health,” leisure,” “adventure,” “outdoor,” “relaxation”</p>
-<p>However, it is important to note that words can be shared between topics; a word like “game,” ““strength,” or “exercise” might appear in both Topics equally.</p>
-<p>For our dataset, we are interested in our genres and how the distribution of words within the titles of each genre reflects the underlying themes and characteristics of different types of movies and TV shows. After filtering for stop words we wil create a dtm for our words and genres, fit our lda model and then interpret our findings.</p>
+<p>Topic 1 Words (Competitive &amp; Physical Sports): “win”, “competition”, “athlete”, “team”, “championship” “playoff”</p>
+<p>Topic 2 Words (Lifestyle &amp; Recreational Sports): “fitness” “health” “leisure” “adventure” “outdoor” “relaxation”</p>
+<p>However, it is important to note that words can be shared between topics; a word like “game”, strength” or “exercise” might appear in both topics equally.</p>
+<p>For our dataset, we are interested in our genres and how the distribution of words within the titles of each genre reflects the themes and characteristics of different types of movies and TV shows. After filtering for stop words we will create a dtm for our words and genres, fit our lda model and then interpret our findings.</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb4"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="co"># creating dtm matrix</span></span>
 <span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>bigger_data_dtm <span class="ot">&lt;-</span> bigger_data_tidy <span class="sc">|&gt;</span></span>
@@ -5813,32 +5816,20 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <div class="cell-output-display">
 <div>
 <figure class="figure">
-<p><img src="text_analysis_files/figure-html/unnamed-chunk-26-1.png" class="img-fluid figure-img" width="672"></p>
+<p><img src="text_analysis_files/figure-html/unnamed-chunk-27-1.png" class="img-fluid figure-img" width="672"></p>
 </figure>
 </div>
 </div>
 </div>
 <p>These are the words with the greatest difference between the two topics, using the log ratio, looking at these words we can see sort of where these topics are leading us.</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>data_documents <span class="ot">&lt;-</span> <span class="fu">tidy</span>(bigger_data_lda, <span class="at">matrix =</span> <span class="st">"gamma"</span>)</span>
-<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a><span class="co"># Find documents for each topic</span></span>
-<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a>data_documents <span class="sc">|&gt;</span></span>
-<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">group_by</span>(topic) <span class="sc">|&gt;</span></span>
-<span id="cb5-6"><a href="#cb5-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">slice_max</span>(gamma, <span class="at">n =</span> <span class="dv">10</span>) <span class="sc">|&gt;</span></span>
-<span id="cb5-7"><a href="#cb5-7" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ungroup</span>() <span class="sc">|&gt;</span></span>
-<span id="cb5-8"><a href="#cb5-8" aria-hidden="true" tabindex="-1"></a>  <span class="fu">arrange</span>(topic, <span class="sc">-</span>gamma) <span class="sc">|&gt;</span></span>
-<span id="cb5-9"><a href="#cb5-9" aria-hidden="true" tabindex="-1"></a>  <span class="fu">kable</span>() <span class="sc">|&gt;</span></span>
-<span id="cb5-10"><a href="#cb5-10" aria-hidden="true" tabindex="-1"></a>    <span class="fu">kable_styling</span>(<span class="at">full_width =</span> <span class="cn">FALSE</span>) <span class="sc">|&gt;</span></span>
-<span id="cb5-11"><a href="#cb5-11" aria-hidden="true" tabindex="-1"></a>    <span class="fu">scroll_box</span>(<span class="at">width =</span> <span class="st">"100%"</span>, <span class="at">height =</span> <span class="st">"200px"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
-<div style="border: 1px solid #ddd; padding: 0px; overflow-y: scroll; height:200px; overflow-x: scroll; width:100%; ">
-<table class="table caption-top table-sm table-striped small" data-quarto-postprocess="true">
+<table class="caption-top table table-sm table-striped small">
 <thead>
 <tr class="header">
-<th data-quarto-table-cell-role="th" style="text-align: left; position: sticky; top: 0; background-color: #FFFFFF;">document</th>
-<th data-quarto-table-cell-role="th" style="text-align: right; position: sticky; top: 0; background-color: #FFFFFF;">topic</th>
-<th data-quarto-table-cell-role="th" style="text-align: right; position: sticky; top: 0; background-color: #FFFFFF;">gamma</th>
+<th style="text-align: left;">document</th>
+<th style="text-align: right;">topic</th>
+<th style="text-align: right;">gamma</th>
 </tr>
 </thead>
 <tbody>
@@ -5945,15 +5936,13 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </tbody>
 </table>
 </div>
-
-</div>
 </div>
 <p>Topic 1 (red): Documents heavily associated with Topic 1 include genres like Adventure, Romance, Animation, Family, Fantasy, Musical, Game-Show, Comedy, Adult, and Kids. This topic seems to represent genres that are typically focused on entertainment, family-friendly content, and lighter themes. There is a range of genres that cater to various age groups and include both animated and live-action content. Topics in this category could focus on fun, adventure, humor, and fictional worlds.</p>
 <p>Topic 2 (blue): Documents heavily associated with Topic 2 include genres like Documentary, Crime, Thriller, Horror, Mystery, Biography, History, War, Film-Noir, and News. This topic seems to capture genres that are more serious, dramatic, and often grounded in real-world issues, with a focus on storytelling, historical events, real-life experiences, and suspense. These genres often explore darker, more complex, or informative themes.</p>
 </section>
 <section id="conclusion" class="level1">
 <h1>Conclusion</h1>
-<p>In conclusion, this analysis provides an exploration of the genres and characteristics of movie and TV show titles across major streaming services such as Amazon Prime, Apple TV, HBO, Hulu, and Netflix. By examining over 120,000 titles, we identified patterns in genre distribution, locations available, title length trends over time, and sentiment variations across genres.</p>
+<p>In conclusion, this analysis provides an exploration of the genres and characteristics of movie and TV show titles across major streaming services such as Amazon Prime, Apple TV, HBO MAX, Hulu, and Netflix. By examining over 120,000 titles, we identified patterns in genre distribution, locations available, title length trends over time, and sentiment variations across genres.</p>
 <p>The results reveal that Drama, Comedy, and Action dominate the movie genres across all platforms, with TV shows offering a broader variety including Animation, Reality-TV, and Documentary.</p>
 <p>Our topic modeling analysis further distinguishes two overarching themes: family-friendly entertainment genres like Comedy and Adventure, and serious, real-world genres like Crime and Documentary. This highlights the diversity in content and the ability of streaming platforms to cater to both lighthearted and thought-provoking preferences.</p>
 <p>We gain a better understanding of the types of content available on streaming services by extracting data from the titles and plotting the results.</p>

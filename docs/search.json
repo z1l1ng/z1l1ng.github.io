@@ -39,14 +39,14 @@
     "href": "projects/text_analysis_folder/text_analysis.html#sentiment-joy-and-sadness",
     "title": "Text Analysis of Movies & TV Shows of Streaming Services",
     "section": "Sentiment: Joy and Sadness",
-    "text": "Sentiment: Joy and Sadness\nNow we’ll look at the list of the top 75 words associated with “joy” and with “sadness” (according to the “nrc” lexicon) across all the titles.\n\n\n\n\n\n\n\n\n\nA word cloud of the top 75 words associated with pink (joy) and top 75 words associated with sadness (blue). Are there more words associated with joy or with sadness in our titles?\n\n\n\n\n\n\n\n\n\nThere are more about 200 more words associated with sadness compared to joy in our titles."
+    "text": "Sentiment: Joy and Sadness\nNow we’ll look at the list of the top 75 words associated with “joy” and with “sadness” (according to the “nrc” lexicon) across all the titles.\n\n\n\n\n\n\n\n\n\nAre there more words associated with joy or with sadness in our titles?\n\n\n\n\n\n\n\n\n\nThere are more about 200 more words associated with sadness compared to joy in our titles."
   },
   {
     "objectID": "projects/text_analysis_folder/text_analysis.html#sentiment-fear-and-trust",
     "href": "projects/text_analysis_folder/text_analysis.html#sentiment-fear-and-trust",
     "title": "Text Analysis of Movies & TV Shows of Streaming Services",
     "section": "Sentiment: Fear and Trust",
-    "text": "Sentiment: Fear and Trust\nWhat about words associated with fear and trust?\n\n\n\n\n\n\n\n\n\nA word cloud of the top 75 words associated with fear (red) and top 75 words associated with trust (green). Are there more words associated with joy or with sadness in our titles?\n\n\n\n\n\n\n\n\n\nThere are more about 120 more words associated with fear compared to trust in our titles."
+    "text": "Sentiment: Fear and Trust\nWhat about words associated with fear and trust?\n\n\n\n\n\n\n\n\n\nAre there more words associated with joy or with sadness in our titles?\n\n\n\n\n\n\n\n\n\nThere are more about 120 more words associated with fear compared to trust in our titles."
   },
   {
     "objectID": "projects/text_analysis_folder/text_analysis.html#sentiment-positivenegative-trajectory-of-top-4-genres-by-year",

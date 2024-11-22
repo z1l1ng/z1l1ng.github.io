@@ -16,7 +16,7 @@ This project uses R to create explore the frequency of words in titles and genre
 To view the qmd, click [here](https://github.com/z1l1ng/z1l1ng.github.io/blob/main/projects/text_analysis_folder/text_analysis.qmd).
 
 # Introduction
-Do you ever wonder specifically what types of movies or tv shows are on the streaming services you pay for? We will be exploring a comprehensive collection of all titles for Amazon Prime, Apple TV, HBO, Hulu, and Netflix using data collected from IMDB and published on Kaggle. Merging together these datasets we end up with 120,930 rows and 9 columns. Each row being title, and some columns representing the type, being movie or tv show, the year it was released, genre of the title, etc. 
+Do you ever wonder specifically what types of movies or tv shows are on the streaming services you pay for? We will be exploring a comprehensive collection of all titles on Amazon Prime, Apple TV, HBO MAX, Hulu, and Netflix using data collected from IMDB and published on Kaggle. Binding together the rows of these datasets we end up with 120,930 rows and 9 columns. Each row being title, and columns representing the type, being movie or tv show, the year it was released, genre of the title, imdb rating, the streaming service, etc. 
 
 ```{r}
 #| include: FALSE
