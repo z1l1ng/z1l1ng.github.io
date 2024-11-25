@@ -184,7 +184,7 @@ big_data |>
   unnest(country) |>
   count(country) |>
   slice_max(n, n = 10) |>
-  ggplot(aes(y = fct_reorder(country, n), x = n)) +
+  ggplot(aes(x = fct_reorder(country, n), y = n)) +
     geom_bar(stat = "identity", show.legend = FALSE, fill = "orange") +
   labs(
     title = "Top 10 Locations",
@@ -203,7 +203,7 @@ big_data |>
   group_by(service) |>
   count(country) |>
   slice_max(n, n = 10) |>
-  ggplot(aes(y = fct_reorder(country, n), x = n, fill = service)) +
+  ggplot(aes(x = fct_reorder(country, n), y = n, fill = service)) +
     geom_bar(stat = "identity", show.legend = FALSE) +
     facet_wrap(~ service, scales = "free") +
   labs(
