@@ -11,7 +11,49 @@
     "href": "projects.html",
     "title": "Projects",
     "section": "",
-    "text": "Order By\n       Default\n         \n          Title\n        \n         \n          Date - Oldest\n        \n         \n          Date - Newest\n        \n         \n          Author\n        \n     \n  \n\n\n\n\n\n\n\n\n\n\nText Analysis of Movies & TV Shows of Streaming Services\n\n\nMini-project for SDS 264 - Data Science 2 where we use stingr functions and other text analysis methods\n\n\n\n\n\n\nNov 20, 2024\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nShot Chart Analysis\n\n\nFinal project for STAT 322 - Statistical Theory where I analyzed my own basketball shot chart in attempt to replicate Brian J. Reich, James S. Hodges, Bradley P. Carlin, and…\n\n\n\n\n\n\nMay 17, 2024\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nCreating Informative Maps\n\n\nMini-project for SDS 264 - Data Science 2 where 4 informative maps were created, 2 choropleth and 2 interactive\n\n\n\n\n\n\nSep 20, 2024\n\n\n\n\n\n\n\n\nNo matching items"
+    "text": "Order By\n       Default\n         \n          Title\n        \n         \n          Date - Oldest\n        \n         \n          Date - Newest\n        \n         \n          Author\n        \n     \n  \n\n\n\n\n\n\n\n\n\n\nText Analysis of Movies & TV Shows of Streaming Services\n\n\nMini-project for SDS 264 - Data Science 2 where we use stingr functions and other text analysis methods\n\n\n\n\n\n\nNov 20, 2024\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nShot Chart Analysis\n\n\nFinal project for STAT 322 - Statistical Theory where I analyzed my own basketball shot chart in attempt to replicate Brian J. Reich, James S. Hodges, Bradley P. Carlin, and…\n\n\n\n\n\n\nMay 17, 2024\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nPackage Label Analysis & Design\n\n\n\n\n\n\n\n\n\nDec 2, 2024\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nCreating Informative Maps\n\n\nMini-project for SDS 264 - Data Science 2 where 4 informative maps were created, 2 choropleth and 2 interactive\n\n\n\n\n\n\nSep 20, 2024\n\n\n\n\n\n\n\n\nNo matching items"
+  },
+  {
+    "objectID": "projects/package_labels_folder/package_labels.html",
+    "href": "projects/package_labels_folder/package_labels.html",
+    "title": "Package Label Analysis & Design",
+    "section": "",
+    "text": "This project uses R to analyze package labels by creating visuals such as bar plots, wordclouds and tables, then using the results to design my own package label.\nTo view the qmd, click here."
+  },
+  {
+    "objectID": "projects/maps_folder/creatingmaps.html",
+    "href": "projects/maps_folder/creatingmaps.html",
+    "title": "Creating Informative Maps",
+    "section": "",
+    "text": "This project uses R to create static and interactive maps visualizing US state-level data on population change from 2010 to 2020 and marijuana laws in 2022. Using libraries like tidyverse, maps, leaflet, and sf. Interactive maps allow users to explore state-level differences dynamically, adding a layer of accessibility and engagement.\nTo view the qmd, click here."
+  },
+  {
+    "objectID": "projects/maps_folder/creatingmaps.html#percentage-change-in-population-of-the-us-from-2010-to-2020",
+    "href": "projects/maps_folder/creatingmaps.html#percentage-change-in-population-of-the-us-from-2010-to-2020",
+    "title": "Creating Informative Maps",
+    "section": "Percentage Change in Population of the US from 2010 to 2020",
+    "text": "Percentage Change in Population of the US from 2010 to 2020\n\n\n\n\n\n\n\n\n\nThis is a map of the United States showing the percent change in population of the United States from 2010 to 2020 by state. On the y-axis is longitude and on the x-axis is latitude. Percent change varies from a decrease of -3% of the population to an increase of 18%, with red representing a decrease in population (a negative percentage) and green representing an increase in population (a positive percentage). We can see from this map that Utah, Idaho, and Texas had the largest percent increase in population. The states in the Midwest, such as Illinois, Iowa, Minnesota, South Dakota, Wisconsin, etc. (the 90W and 45N area), the states also had an increase in population however it is a smaller percentage. West Virginia is the only visible state that is red and this represents a decrease in population by 3.19%. For the population increase in states, this could be caused by people moving states, and more people in the United States overall."
+  },
+  {
+    "objectID": "projects/maps_folder/creatingmaps.html#same-map-but-interactive",
+    "href": "projects/maps_folder/creatingmaps.html#same-map-but-interactive",
+    "title": "Creating Informative Maps",
+    "section": "Same Map, but Interactive!",
+    "text": "Same Map, but Interactive!"
+  },
+  {
+    "objectID": "projects/maps_folder/creatingmaps.html#legalization-of-marijuana-in-the-us-2022",
+    "href": "projects/maps_folder/creatingmaps.html#legalization-of-marijuana-in-the-us-2022",
+    "title": "Creating Informative Maps",
+    "section": "Legalization of Marijuana in the US 2022",
+    "text": "Legalization of Marijuana in the US 2022\n\n\n\n\n\n\n\n\n\nThis is a map of the United States showing the legalization of marijuana in 2022. On the y-axis is longitude and on the x-axis is latitude. The categories of legality are “Illegal”, “Legalized”, and “Mixed”, with the associated colors on the map being red, green, and blue, respectively. There are 6 states where marijuana is illegal, these states are Idaho, Kansas, Nebraska, North and South Carolina, and Wyoming. On the map, 2 of these states are on the East Coast and the rest are in the middle of the US. For the rest of the US, marijuana is either legalized or has mixed laws. A lot of the states in the west have legalized marijuana, this includes Oregon, Washington, California, along with Nevada and Arizona. There are also some states on the East Coast have also legalized marijuana. Where as states in the south and in the Midwest have mixed laws. Note that this is data from 2022, and some states with mixed laws, are now fully legalized."
+  },
+  {
+    "objectID": "projects/maps_folder/creatingmaps.html#same-map-but-interactive-1",
+    "href": "projects/maps_folder/creatingmaps.html#same-map-but-interactive-1",
+    "title": "Creating Informative Maps",
+    "section": "Same Map, but Interactive!",
+    "text": "Same Map, but Interactive!"
   },
   {
     "objectID": "projects/text_analysis_folder/text_analysis.html",
@@ -56,41 +98,6 @@
     "text": "Sentiment: Positive/Negative trajectory of Top 4 Genres by Year\nThe bing lexicon dataset has 6,786 words that are identidied as negative or postive, for the genres Action, Comedy, Drama, and Thriller we’re going to count the number of negative or positive words and calculate the what we call the sentiment value which is the number of positive words minus the negative words. Our bar will extend up from 0 if there are more positive than negative words in a year and it will extend down from 0 if there are more negative than positive words.\n\n\n\n\n\n\n\n\n\nWe can see that for Action and Thriller the sentiment values are very negative, and for Drama there are 2 years in which the titles have more postive words than negative. For Comedy, it is almost split between negative and positive, which is nice to see since most would consider comedic movie or tv show be light-hearted."
   },
   {
-    "objectID": "projects/maps_folder/creatingmaps.html",
-    "href": "projects/maps_folder/creatingmaps.html",
-    "title": "Creating Informative Maps",
-    "section": "",
-    "text": "This project uses R to create static and interactive maps visualizing US state-level data on population change from 2010 to 2020 and marijuana laws in 2022. Using libraries like tidyverse, maps, leaflet, and sf. Interactive maps allow users to explore state-level differences dynamically, adding a layer of accessibility and engagement.\nTo view the qmd, click here."
-  },
-  {
-    "objectID": "projects/maps_folder/creatingmaps.html#percentage-change-in-population-of-the-us-from-2010-to-2020",
-    "href": "projects/maps_folder/creatingmaps.html#percentage-change-in-population-of-the-us-from-2010-to-2020",
-    "title": "Creating Informative Maps",
-    "section": "Percentage Change in Population of the US from 2010 to 2020",
-    "text": "Percentage Change in Population of the US from 2010 to 2020\n\n\n\n\n\n\n\n\n\nThis is a map of the United States showing the percent change in population of the United States from 2010 to 2020 by state. On the y-axis is longitude and on the x-axis is latitude. Percent change varies from a decrease of -3% of the population to an increase of 18%, with red representing a decrease in population (a negative percentage) and green representing an increase in population (a positive percentage). We can see from this map that Utah, Idaho, and Texas had the largest percent increase in population. The states in the Midwest, such as Illinois, Iowa, Minnesota, South Dakota, Wisconsin, etc. (the 90W and 45N area), the states also had an increase in population however it is a smaller percentage. West Virginia is the only visible state that is red and this represents a decrease in population by 3.19%. For the population increase in states, this could be caused by people moving states, and more people in the United States overall."
-  },
-  {
-    "objectID": "projects/maps_folder/creatingmaps.html#same-map-but-interactive",
-    "href": "projects/maps_folder/creatingmaps.html#same-map-but-interactive",
-    "title": "Creating Informative Maps",
-    "section": "Same Map, but Interactive!",
-    "text": "Same Map, but Interactive!"
-  },
-  {
-    "objectID": "projects/maps_folder/creatingmaps.html#legalization-of-marijuana-in-the-us-2022",
-    "href": "projects/maps_folder/creatingmaps.html#legalization-of-marijuana-in-the-us-2022",
-    "title": "Creating Informative Maps",
-    "section": "Legalization of Marijuana in the US 2022",
-    "text": "Legalization of Marijuana in the US 2022\n\n\n\n\n\n\n\n\n\nThis is a map of the United States showing the legalization of marijuana in 2022. On the y-axis is longitude and on the x-axis is latitude. The categories of legality are “Illegal”, “Legalized”, and “Mixed”, with the associated colors on the map being red, green, and blue, respectively. There are 6 states where marijuana is illegal, these states are Idaho, Kansas, Nebraska, North and South Carolina, and Wyoming. On the map, 2 of these states are on the East Coast and the rest are in the middle of the US. For the rest of the US, marijuana is either legalized or has mixed laws. A lot of the states in the west have legalized marijuana, this includes Oregon, Washington, California, along with Nevada and Arizona. There are also some states on the East Coast have also legalized marijuana. Where as states in the south and in the Midwest have mixed laws. Note that this is data from 2022, and some states with mixed laws, are now fully legalized."
-  },
-  {
-    "objectID": "projects/maps_folder/creatingmaps.html#same-map-but-interactive-1",
-    "href": "projects/maps_folder/creatingmaps.html#same-map-but-interactive-1",
-    "title": "Creating Informative Maps",
-    "section": "Same Map, but Interactive!",
-    "text": "Same Map, but Interactive!"
-  },
-  {
     "objectID": "projects/shotchart_folder/shotchart.html",
     "href": "projects/shotchart_folder/shotchart.html",
     "title": "Shot Chart Analysis",
@@ -103,5 +110,33 @@
     "title": "Ziling Zhen",
     "section": "",
     "text": "Hi! I’m Ziling, however most know me as Z! I’m currently a senior math major with a statistics and data science concentration at St. Olaf College. I’m also on the NCAA women’s basketball team. Outside of my commitments as a college student I love socializing with friends, playing pickleball and trying new foods! This is a place where I’ll be sharing some of my work!"
+  },
+  {
+    "objectID": "projects/package_labels_folder/package_labels.html#my-design",
+    "href": "projects/package_labels_folder/package_labels.html#my-design",
+    "title": "Package Label Analysis & Design",
+    "section": "My Design",
+    "text": "My Design\nAfter analyzing these designs, I am ready to implement some of the key elements observed in the top 5 designs. These designs are typically divided into three parts: the front, which features the company name and product; one side, which includes a supplement facts label and a barcode; and the other side, which contains a few lines about benefits, company information, and suggested use. The dimensions generally range between 2–3 inches in height and 6–8 inches in length. These designs also have very BOLD fonts and colors.\nFor the files itself these designs are all layered and usually come with 2-3 different templates. Everything is editable which I think is the most appealing aspect, such as size, color, and fonts. File types consists of photoshop documents, psd, adobe illustrator, ai, encapsulated postscript, eps, and portable document format (pdfs).\nFor my design I wanted to keep it clean by not using too many colors, and a single font. I like things not cluttered and simple, if you could not tell by my theme choice in graphs and colors. Below is my first label design.\n\n\n\n\n\n\n\n\n\nThis is a label for matcha flavored protein powder supplement jar, that is 7.5in by 2.75in created in Canva.\n\n\n\n\n\n\n\n\n\nOn the right bottle we have the nutrition label, ingredients, and barcode. At the top of the left bottle, we have the company name that is producing the product which is ZZupplements and a little about the company, or customizable to be about the product itself as well. Front and center we have the most important view, what the customer sees and what your brand is known for. I decided to go with POWER PROTEIN POWDER for repetition as well as a good view of PROTEIN POWDER which is what my product is. I also decided the bottom third to be green to match the flavor for that clean look I am looking to achieve. As well as a photo to represent the flavor so people don’t have to look so hard for the flavor. Similarly, I created a label for the flavor strawberry using the same concept.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nThis would be a free design for"
+  },
+  {
+    "objectID": "projects/package_labels_folder/package_labels.html#chatgpt",
+    "href": "projects/package_labels_folder/package_labels.html#chatgpt",
+    "title": "Package Label Analysis & Design",
+    "section": "ChatGPT",
+    "text": "ChatGPT\n\n\n\n\n\n\n\n\n\nThis image was generated with our prompt in ChatGPT. I should’ve been more specific because I wanted the label itself however I got a nicely designed bag. It is really interesting because the font used for “POWER PROTEIN POWDER” is almost identical, I guess I am generic. Notice how some of the words on the label are blurry, we can’t really tell what it is saying.\n\nColor: Color of label to represent flavor of protein powder, also uses a shade of green and leaves for matcha/the plant. Background was grey.\n\n_ Lines: Sharp line of bottom half of color for cleaniness look, labels and barcodes are all straight, and words are also all zero degrees for “straightness”.\n\nShapes: There a couple of rectangles that are different colors to help some of the more important words."
+  },
+  {
+    "objectID": "projects/package_labels_folder/package_labels.html#google-gemini",
+    "href": "projects/package_labels_folder/package_labels.html#google-gemini",
+    "title": "Package Label Analysis & Design",
+    "section": "Google Gemini",
+    "text": "Google Gemini\n\n\n\n\n\n\n\n\n\nFor this AI generated image we used Google Gemini, it gave our label to us in bottle form, where the bottle is primarily black and the background is green. It is interesting to see that even though I gave it Power Protein Powder it wasn’t able to put it on the image. There is just about no legible English on this design.\n\nColor: Color of label to represent flavor of protein powder, also uses a shade of green matcha. Background is green. Bottle is black this time giving it a more serious feel.\n\n_ Lines: Sharp lines for cleaniness look again, everything is formatted nicely"
+  },
+  {
+    "objectID": "projects/package_labels_folder/package_labels.html#canva-magic-media",
+    "href": "projects/package_labels_folder/package_labels.html#canva-magic-media",
+    "title": "Package Label Analysis & Design",
+    "section": "Canva Magic Media",
+    "text": "Canva Magic Media\n\n\n\n\n\n\n\n\n\nCanva Magic Media was used to create this image. Our label is also in bottle form however there is no curve in this container. This is probably the most unique image that we generated. Again there is no legible English on this design.\n\nColor: Color of label to represent flavor of protein powder, also uses a shade of green matcha. Background is grey with a lump of matcha powder in the back. Bottle is back to white. This gives it a nice toned green, white, and black theme.\n\n_ Lines: Are not all sharp anymore, we have curves now separating the name and nutrition label with an image and facts about the product.\nAlthough without a more specific font we can see the AI is more useful as inspiration and not the final product."
   }
 ]

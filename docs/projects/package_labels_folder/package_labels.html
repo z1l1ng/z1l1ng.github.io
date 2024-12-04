@@ -6,9 +6,9 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="dcterms.date" content="2024-11-18">
+<meta name="dcterms.date" content="2024-12-02">
 
-<title>theat140 – Ziling Zhen</title>
+<title>Package Label Analysis &amp; Design – Ziling Zhen</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -122,6 +122,14 @@ ul.task-list li input[type="checkbox"] {
   <li><a href="#introduction" id="toc-introduction" class="nav-link active" data-scroll-target="#introduction">Introduction</a></li>
   <li><a href="#most-popular-creator-sales-strategy" id="toc-most-popular-creator-sales-strategy" class="nav-link" data-scroll-target="#most-popular-creator-sales-strategy">Most Popular Creator &amp; Sales Strategy</a></li>
   <li><a href="#insight-into-labels" id="toc-insight-into-labels" class="nav-link" data-scroll-target="#insight-into-labels">Insight Into Labels</a></li>
+  <li><a href="#my-design" id="toc-my-design" class="nav-link" data-scroll-target="#my-design">My Design</a></li>
+  <li><a href="#ai-implementation" id="toc-ai-implementation" class="nav-link" data-scroll-target="#ai-implementation">AI Implementation</a>
+  <ul class="collapse">
+  <li><a href="#chatgpt" id="toc-chatgpt" class="nav-link" data-scroll-target="#chatgpt">ChatGPT</a></li>
+  <li><a href="#google-gemini" id="toc-google-gemini" class="nav-link" data-scroll-target="#google-gemini">Google Gemini</a></li>
+  <li><a href="#canva-magic-media" id="toc-canva-magic-media" class="nav-link" data-scroll-target="#canva-magic-media">Canva Magic Media</a></li>
+  </ul></li>
+  <li><a href="#conclusion" id="toc-conclusion" class="nav-link" data-scroll-target="#conclusion">Conclusion</a></li>
   </ul>
 </nav>
     </div>
@@ -130,7 +138,7 @@ ul.task-list li input[type="checkbox"] {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">theat140</h1>
+<h1 class="title">Package Label Analysis &amp; Design</h1>
 </div>
 
 
@@ -141,7 +149,7 @@ ul.task-list li input[type="checkbox"] {
     <div>
     <div class="quarto-title-meta-heading">Published</div>
     <div class="quarto-title-meta-contents">
-      <p class="date">November 18, 2024</p>
+      <p class="date">December 2, 2024</p>
     </div>
   </div>
   
@@ -157,8 +165,8 @@ ul.task-list li input[type="checkbox"] {
 <p>To view the qmd, click <a href="PUT QMD HERE">here</a>.</p>
 <section id="introduction" class="level1">
 <h1>Introduction</h1>
-<p>In today’s competitive marketplace, product labels play a critical role in capturing consumer attention and conveying brand identity. <a href="https://graphicriver.net/">Graphic River</a> is a part of the Envato Market, marketplace for digital assets that offers a diverse array of label designs that serve as valuable resources for businesses and creators. By examining the design trends and characteristics of these labels, we can uncover key insights into what makes a label visually appealing and effective in a commercial context. Using data collected from Graphic River and then published on Kaggle, we have 622 rows and 9 columns. Each row being a package label and some columns being price, number of sales, rating, number of reviews, and the date it was released.</p>
-<p>This project will integrate the design principles learned in the course THEAT 140 - Introduction to Design for Performance with statistical programming techniques to analyze label design trends on Graphic River. The analysis will identify common features, text elements, and other covariates that contribute to a label’s popularity. I will then apply these findings to design my own product label. To deepen the exploration, I plan to compare my design to an AI-generated label based on the same analytical insights, offering a perspective on human versus machine creativity in design.</p>
+<p>In today’s competitive marketplace, product labels play a critical role in capturing consumer attention and conveying brand identity. <a href="https://graphicriver.net/">GraphicRiver</a> is a part of the Envato Market, marketplace for digital assets that offers a diverse array of label designs that serve as valuable resources for businesses and creators. By examining the design trends and characteristics of these labels, we can uncover key insights into what makes a label visually appealing and effective in a commercial context. Using data collected from GraphicRiver and published on Kaggle, this dataset includes 622 rows and 9 columns, with each row representing a package label. Key columns include price, number of sales, rating, number of reviews, and the release date.</p>
+<p>This project will integrate the design principles learned in the course <em>Theater 140 - Introduction to Design for Performance</em> with statistical programming techniques to analyze label design trends on Graphic River. The analysis will identify common features, text elements, and other covariates that contribute to a label’s popularity. I will then apply these findings to design my own product label. To deepen the exploration, I plan to compare my design to an AI-generated label based on the same analytical insights, offering a perspective on human versus machine creativity in design.</p>
 <div class="cell">
 <div class="cell-output-display">
 <div>
@@ -237,7 +245,7 @@ ul.task-list li input[type="checkbox"] {
 
 </div>
 </div>
-<p>Note that this graph is filter for years in which we have more than 25 package lables for, The data is from 2011 to 2023, however because of envanto market’s guidelines about data collection the bulk of it from 2017 and 2020.</p>
+<p>Note that the graph is filtered to include only years with more than 25 package labels. The dataset spans from 2011 to 2023, but due to Envato Market’s data collection guidelines, the majority of the data is concentrated between 2017 and 2020.</p>
 <div class="cell">
 <div class="cell-output-display">
 <table class="caption-top table table-sm table-striped small">
@@ -304,7 +312,7 @@ ul.task-list li input[type="checkbox"] {
 </table>
 </div>
 </div>
-<p>Even though in this dataset we only have 25 package labels, 2 of the top 5 in sales are from 2013 and 2 of the top 5 in sales in from 2016 with 78 designs.</p>
+<p>Even though there were only 25 package labels from 2013 in our dataset, 2 of those designs are in our Top 5 in sales. 2016 was also a good year for sales with with 2 of the 78 designs making the Top 5 as well.</p>
 <p>Here are the links to these designs:</p>
 <ul>
 <li><p><a href="https://graphicriver.net/item/box-set-for-business-cards/2474448">Box Set For Business Cards</a></p></li>
@@ -313,7 +321,7 @@ ul.task-list li input[type="checkbox"] {
 <li><p><a href="https://graphicriver.net/item/labels/6114815">Labels</a></p></li>
 <li><p><a href="https://graphicriver.net/item/labels/5398701">Labels</a></p></li>
 </ul>
-<p>Following the links, observe that “Labels” in 4th are cosmetic label templates, and the “Labels” in 5th are labels for bottles and containers. These two designs are also created by the same designer, someone with the username <strong>mihalymm</strong>. Using this let’s explore the frequency that a creator shows up over the years.</p>
+<p>Notably, the two “Labels” designs ranked 4th and 5th cater to different purposes: the 4th design focuses on cosmetic label templates, while the 5th provides labels for bottles and containers. Both were created by the same designer, <a href="https://graphicriver.net/user/mihalymm/portfolio">mihalymm</a>, showcasing their strong presence in this dataset. Using this information, let’s explore how frequently specific creators appear across the years.</p>
 </section>
 <section id="most-popular-creator-sales-strategy" class="level1">
 <h1>Most Popular Creator &amp; Sales Strategy</h1>
@@ -375,7 +383,7 @@ ul.task-list li input[type="checkbox"] {
 
 </div>
 </div>
-<p>The top 10 creators with the most designs on Graphic River in our dataset are shown above, we can see that<a href="https://graphicgrow.com/">graphicgrow</a> is the the top creator that created 118 of the 622 designs that we are analyzing. <a href="https://plexadesigns.com/">Plexa_Designs</a> is 2nd with 65 designs and <a href="https://graphicriver.net/user/dkgray/portfolio">Dkgray</a> is 3rd with 59 designs.</p>
+<p>The top 10 creators with the most designs on Graphic River in our dataset are shown above, we can see that <a href="https://graphicgrow.com/">graphicgrow</a> is the the top creator that created 118 of the 622 designs that we are analyzing. <a href="https://plexadesigns.com/">Plexa_Designs</a> is 2nd with 65 designs and <a href="https://graphicriver.net/user/dkgray/portfolio">Dkgray</a> is 3rd with 59 designs.</p>
 <p>Let’s further look at these creators to explore their sale strategies.</p>
 <div class="cell">
 <div class="cell-output-display">
@@ -386,7 +394,7 @@ ul.task-list li input[type="checkbox"] {
 </div>
 </div>
 </div>
-<p>This is not the most visually appealing boxplot to look at, however it tells us a lot. We now know that graphicgrow sells everything for 30 dollars, excluding 2 designs sold for less. Plexa_Designs has a higher price range selling everything for 89 dollars, excluding 3 designs sold for more, and Dkgray being the most interesting selling designs between 10 dollars and 25 dollars.</p>
+<p>This boxplot may not be the most visually appealing, but it provides valuable insights. We can see that <em>graphicgrow</em> sells nearly all designs for $30, with only two exceptions sold for less. <em>Plexa_Designs</em> operates at a higher price range, selling most designs for $89, excluding three that are priced even higher. Dkgray is the most interesting, whose designs are priced between $10 and $25, showcasing a unique pricing strategy.</p>
 <div class="cell">
 <div class="cell-output-display">
 <table class="caption-top table table-sm table-striped small">
@@ -421,7 +429,7 @@ ul.task-list li input[type="checkbox"] {
 </table>
 </div>
 </div>
-<p>Although graphicgrow has the most designs on Graphic River, out of these top 3 creators, Dkgray as sold the most designs, this could be due to the price range of the designs. Using the median price for these creators, it is apparent that Plexa_Designs made the most money. Let’s see when these creators were most active in putting out designs.</p>
+<p>Although <em>graphicgrow</em> has the most designs on Graphic River, <em>Dkgray</em> has sold the most designs among these top three creators, which could be attributed to the accessible price range of their designs. Based on the median price for these creators, it is evident that <em>Plexa_Designs</em> has generated the highest revenue. Next, let’s examine when these creators were most active in releasing new designs.</p>
 <div class="cell">
 <div class="cell-output-display">
 <div>
@@ -431,11 +439,11 @@ ul.task-list li input[type="checkbox"] {
 </div>
 </div>
 </div>
-<p>2017 was an active year for graphicgrow, then slowly decreasing designs and then “falling” off in 2021. Plexa_Designs als0 blah blah balh til 2021. Dkgray stated 2018 then 2020 was biggest year. These creators now have their own websites and yadidyadiya.</p>
+<p>2017 was an active year for <em>graphicgrow</em>, followed by a gradual decline in designs, ultimately tapering off after 2021. <em>Plexa_Designs</em> began releasing designs in 2016, peaked in 2017, and steadily decreased activity thereafter, with no new designs in 2022. Dkgray entered the scene in 2018, with 2020 being the year they released the most designs. Interestingly, some of these creators have since transitioned to operating their own websites.</p>
 </section>
 <section id="insight-into-labels" class="level1">
 <h1>Insight Into Labels</h1>
-<p>Now that we have sort of an idea about the price of the most popular designs, when they came out etc. let’s see what which product labels are most popular for.</p>
+<p>Now that we have an understanding of the price ranges, release years, and other characteristics of the most popular designs, let’s explore which product labels are the most popular in terms of their intended use.</p>
 <div class="cell">
 <div class="cell-output-display">
 <div>
@@ -566,7 +574,7 @@ ul.task-list li input[type="checkbox"] {
 
 </div>
 </div>
-<p>most common designs are for supplement, tea, coffee, shopping and oil, table above shows how many times each of these words show up in the title of the designs, keep in mind that some designs are just called label so there is no way to categorize that based off of the title. As a division three athlete I am interested in the supplement designs and price ranges of these designs.</p>
+<p>The most common design categories include supplements, tea, coffee, shopping, and oil. The table above highlights the frequency of these words appearing in the titles of the designs. However, it’s worth noting that some designs are generically titled ‘Label,’ making it impossible to categorize them based solely on their titles. As a Division III athlete, I am particularly interested in supplement designs and the price ranges associated with these designs.</p>
 <div class="cell">
 <div class="cell-output-display">
 <div>
@@ -576,7 +584,7 @@ ul.task-list li input[type="checkbox"] {
 </div>
 </div>
 </div>
-<p>more supplemnet dessigns came out in 2017 howver the year with the most supplement designs sold was in 2016. Again let’s look at what these designs are selling for.</p>
+<p>More supplement designs were released in 2017; however, the year with the highest number of supplement designs sold was 2016. Let’s take a closer look at the price range these designs are selling for.</p>
 <div class="cell">
 <div class="cell-output-display">
 <div>
@@ -586,7 +594,7 @@ ul.task-list li input[type="checkbox"] {
 </div>
 </div>
 </div>
-<p>These designs are selling for as low as $9, with a median price of $30 and a maximum of $89. The interquartile range (IQR) is $25 to $30, indicating that the middle 50% of the designs are priced between $25 and $30.</p>
+<p>These designs are selling for as low as $9, with a median price of $30 and a maximum of $89. The interquartile range (IQR) is $25 to $30, indicating that the middle 50% of the designs fall within this price range.</p>
 <div class="cell">
 <div class="cell-output-display">
 <div style="border: 1px solid #ddd; padding: 0px; overflow-y: scroll; height:200px; overflow-x: scroll; width:100%; ">
@@ -624,7 +632,7 @@ ul.task-list li input[type="checkbox"] {
 
 </div>
 </div>
-<p>We again see creators graphicgrow and Plexa_Designs are in the Top 5 for most supplement designs sold, also new creators such as jumpingideas(LINK) in 2nd, designstudios(LINK) in 3rd and Artsoldiers(LINK) in 4th.</p>
+<p>We again see creators graphicgrow and Plexa_Designs are in the Top 5 for most supplement designs sold, also new creators such as <a href="https://graphicriver.net/user/jumpingideas/portfolio">jumpingideas</a> in 2nd, designstudios(https://graphicriver.net/user/designstudios/portfolio) in 3rd and Artsoldiers(https://graphicriver.net/user/artsoldiers/portfolio) in 4th.</p>
 <div class="cell">
 <div class="cell-output-display">
 <div>
@@ -668,7 +676,7 @@ ul.task-list li input[type="checkbox"] {
 </table>
 </div>
 </div>
-<p>Again, not the most appealing boxplot to look at, however tells us a lots stil. designstudios sells all designs at 9 dollars, graphicgrow again sells desgins at 30, and jumpingideas’ prices are from 35 to 12</p>
+<p>Again, while the boxplot may not be the most visually appealing, it still provides valuable insights. <em>designstudios</em> consistently prices all designs at $9, <em>graphicgrow</em> maintains a price point of $30 for its designs, and <em>jumpingideas</em> has prices range from $12 to $35.”</p>
 <div class="cell">
 <div class="cell-output-display">
 <table class="caption-top table table-sm table-striped small">
@@ -736,7 +744,124 @@ ul.task-list li input[type="checkbox"] {
 <li><a href="https://graphicriver.net/item/supplement-label-template-vol06/19530135">Label Design Bottle Nutrition Supplement</a></li>
 <li><a href="https://graphicriver.net/item/supplement-labels/14164208">Supplement Label Vol-06</a></li>
 </ul>
-<p>After analyzing these I am ready to implement some things I’ve noticed in these Top 5 designs.</p>
+</section>
+<section id="my-design" class="level1">
+<h1>My Design</h1>
+<p>After analyzing these designs, I am ready to implement some of the key elements observed in the top 5 designs. These designs are typically divided into three parts: the front, which features the company name and product; one side, which includes a supplement facts label and a barcode; and the other side, which contains a few lines about benefits, company information, and suggested use. The dimensions generally range between 2–3 inches in height and 6–8 inches in length. These designs also have very BOLD fonts and colors.</p>
+<p>For the files itself these designs are all layered and usually come with 2-3 different templates. Everything is editable which I think is the most appealing aspect, such as size, color, and fonts. File types consists of photoshop documents, psd, adobe illustrator, ai, encapsulated postscript, eps, and portable document format (pdfs).</p>
+<p>For my design I wanted to keep it clean by not using too many colors, and a single font. I like things not cluttered and simple, if you could not tell by my theme choice in graphs and colors. Below is my first label design.</p>
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="matchalabel.png" class="img-fluid figure-img" width="1000"></p>
+</figure>
+</div>
+</div>
+</div>
+<p>Label for matcha flavored protein powder supplement jar, that is 7.5in by 2.75in created in Canva.</p>
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="matchabottle.png" class="img-fluid figure-img" width="900"></p>
+</figure>
+</div>
+</div>
+</div>
+<p>On the right bottle we have the nutrition label, ingredients, and barcode. At the top of the left bottle, we have the company name that is producing the product which is <em>ZZupplements</em> and a little about the company, or customizable to be about the product itself as well. Front and center we have the most important view, what the customer sees and what your brand is known for. I decided to go with POWER PROTEIN POWDER for repetition as well as a good view of PROTEIN POWDER which is what my product is. I also decided the bottom third to be green to match the flavor for that <em>clean</em> look I am looking to achieve. As well as a photo to represent the flavor so people don’t have to look so hard for the flavor. Similarly, I created a label for the flavor strawberry using the same concept.</p>
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="strawberrylabel.png" class="img-fluid figure-img" width="1000"></p>
+</figure>
+</div>
+</div>
+</div>
+<p>Label for strawberry flavored protein powder supplement jar, that is 7.5in by 2.75in created in Canva.</p>
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="strawberrybottle.png" class="img-fluid figure-img" width="900"></p>
+</figure>
+</div>
+</div>
+</div>
+<p>I would not sell these designs but put them out on the internet for free as inspiration to others considering my designs are not layered, is only available in pdf format and not easily editable.</p>
+<p>Elements of Design:</p>
+<ul>
+<li>Color: Color of bottle to represent flavor of protein powder, the shade of my green and red are bright and welcoming opposed to sharp and cautionary.</li>
+</ul>
+<p>_ Lines: Sharp line of bottom third of color for cleaniness look, labels and barcodes are all straight, and words are also all zero degrees for “straightness”</p>
+<ul>
+<li>Shapes: The images on both bottles are illustrated and not real photos, adds to the overall feel of the bottle.</li>
+</ul>
+</section>
+<section id="ai-implementation" class="level1">
+<h1>AI Implementation</h1>
+<p>With my knowledge of package deigns now and having some experience with designing my own package label, I am curious how AI is able to interpret and design these labels.</p>
+<p>With this prompt “Create an Image: This is a 7.5in by 2.75in design for a package label. The company is ZZupplements, the product is Power Protein Powder, the flavor is matcha, this is a 100% whey product.” I utilized three different AI models to create this label.</p>
+<section id="chatgpt" class="level2">
+<h2 class="anchored" data-anchor-id="chatgpt">ChatGPT</h2>
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="chatgpt.webp" class="img-fluid figure-img" style="width:60.0%"></p>
+</figure>
+</div>
+</div>
+</div>
+<p>This image was generated with our prompt in ChatGPT. I should’ve been more specific because I wanted the label itself however I got a nicely designed bag. It is really interesting because the font used for “POWER PROTEIN POWDER” is almost identical, I guess I am generic. Notice how some of the words on the label are blurry, we can’t really tell what it is saying.</p>
+<ul>
+<li>Color: Color of label to represent flavor of protein powder, also uses a shade of green and leaves for matcha/the plant. Background was grey.</li>
+</ul>
+<p>_ Lines: Sharp line of bottom half of color for cleaniness look, labels and barcodes are all straight, and words are also all zero degrees for “straightness”.</p>
+<ul>
+<li>Shapes: There a couple of rectangles that are different colors to help some of the more important words.</li>
+</ul>
+</section>
+<section id="google-gemini" class="level2">
+<h2 class="anchored" data-anchor-id="google-gemini">Google Gemini</h2>
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="gemini.jpeg" class="img-fluid figure-img" style="width:60.0%"></p>
+</figure>
+</div>
+</div>
+</div>
+<p>For this AI generated image we used Google Gemini, it gave our label to us in bottle form, where the bottle is primarily black and the background is green. It is interesting to see that even though I gave it Power Protein Powder it wasn’t able to put it on the image. There is just about no legible English on this design.</p>
+<ul>
+<li>Color: Color of label to represent flavor of protein powder, also uses a shade of green matcha. Background is green. Bottle is black this time giving it a more serious feel.</li>
+</ul>
+<p>_ Lines: Sharp lines for cleaniness look again, everything is formatted nicely</p>
+</section>
+<section id="canva-magic-media" class="level2">
+<h2 class="anchored" data-anchor-id="canva-magic-media">Canva Magic Media</h2>
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="magicmedia.png" class="img-fluid figure-img" width="540"></p>
+</figure>
+</div>
+</div>
+</div>
+<p>Canva Magic Media was used to create this image. Our label is also in bottle form however there is no curve in this container. This is probably the most unique image that we generated. Again there is no legible English on this design.</p>
+<ul>
+<li>Color: Color of label to represent flavor of protein powder, also uses a shade of green matcha. Background is grey with a lump of matcha powder in the back. Bottle is back to white. This gives it a nice toned green, white, and black theme.</li>
+</ul>
+<p>_ Lines: Are not all sharp anymore, we have curves now separating the name and nutrition label with an image and facts about the product.</p>
+<p>Although without a more specific font we can see the AI is more useful as inspiration and not the final product.</p>
+</section>
+</section>
+<section id="conclusion" class="level1">
+<h1>Conclusion</h1>
+<p>This project allowed me to apply my design knowledge with an analysis done in R. By analyzing top designs on GraphicRiver, I identified key trends such as clean layouts and bold yet minimalistic styles, all of which I integrated into my own label designs. Creating labels for matcha and strawberry-flavored protein powders enabled me to meet the project’s creative deliverables by demonstrating application of the skills learned in class. Additionally, exploring AI tools like ChatGPT, Google Gemini, and Canva Magic Media showcased my ability to leverage technology. This experience not only enhanced my design skills but also helped me understand the intersection of creativity and technology, a crucial step in achieving my long-term goals in design and beyond.</p>
 
 
 </section>
