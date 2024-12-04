@@ -7,6 +7,7 @@ format:
 image: matchabottle.png
 editor_options: 
   chunk_output_type: console
+freeze: true
 ---
 
 ```{r}
@@ -406,4 +407,4 @@ Although without a more specific font we can see the AI is more useful as inspir
 
 # Conclusion
 
-This project allowed me to apply my design knowledge with an analysis done in R. By analyzing top designs on GraphicRiver, I identified key trends such as clean layouts and bold yet minimalistic styles, all of which I integrated into my own label designs. Creating labels for matcha and strawberry-flavored protein powders enabled me to meet the project’s creative deliverables by demonstrating application of the skills learned in class. Additionally, exploring AI tools like ChatGPT, Google Gemini, and Canva Magic Media showcased my ability to leverage technology. This experience not only enhanced my design skills but also helped me understand the intersection of creativity and technology, a crucial step in achieving my long-term goals in design and beyond.
+This project allowed me to apply my design knowledge with an analysis done in R. By analyzing top designs on GraphicRiver, I was able to identify key trends such as price, layouts and bold yet minimalistic styles, all of which I integrated into my own label designs. Creating labels for matcha and strawberry-flavored protein powders enabled me to meet the project’s creative deliverables by demonstrating application of the skills learned in class. Additionally, exploring AI tools like ChatGPT, Google Gemini, and Canva Magic Media showcased my ability to leverage technology. This experience not only enhanced my design skills but also helped me understand the intersection of creativity and technology, a crucial step in achieving my long-term goals in design and beyond.
