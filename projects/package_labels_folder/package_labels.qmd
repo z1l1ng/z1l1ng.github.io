@@ -255,6 +255,7 @@ More supplement designs were released in 2017; however, the year with the highes
 supplement |> 
   ggplot(aes(x = as.numeric(price))) +
   geom_boxplot(fill = "steelblue2") +
+  labs(x = "Price") +
   theme_bw()
 ```
 
@@ -363,7 +364,7 @@ _ Lines: Sharp line of bottom third of color for cleaniness look, labels and bar
 
 With my knowledge of package deigns now and having some experience with designing my own package label, I am curious how AI is able to interpret and design these labels.
 
-With this prompt "Create an Image: This is a 7.5in by 2.75in design for a package label. The company is ZZupplements, the product is Power Protein Powder, the flavor is matcha, this is a 100% whey product." I utilized three different AI models to create this label.
+With this prompt "Create an Image: A 7.5in by 2.75in design for a package label. The company is ZZupplements, the product is Power Protein Powder, the flavor is matcha, this is a 100% whey product." I utilized three different AI models to create these labels.
 
 ## ChatGPT
 ```{r, out.width= "60%"}
@@ -371,11 +372,11 @@ With this prompt "Create an Image: This is a 7.5in by 2.75in design for a packag
 knitr::include_graphics("chatgpt.webp")
 ```
 
-This image was generated with our prompt in ChatGPT. I should've been more specific because I wanted the label itself however I got a nicely designed bag. It is really interesting because the font used for "POWER PROTEIN POWDER" is almost identical, I guess I am generic. Notice how some of the words on the label are blurry, we can't really tell what it is saying. 
+This image was generated with our prompt in ChatGPT. I should've been more specific because I wanted the label itself however I got two jars with this design. It is really interesting because the font used for "POWER PROTEIN POWDER" is almost identical, I guess I am generic. Notice how some of the words on the label are blurry, we can't really tell what it is saying. 
 
-- Color: Color of label to represent flavor of protein powder, also uses a shade of green and leaves for matcha/the plant. Background was grey.
+- Color: Color of label to represent flavor of protein powder, also uses a shade of green for matcha and the matcha powder. Background is a darker grey with shadows. Very interesting that a blue is used as well.
 
-_ Lines: Sharp line of bottom half of color for cleaniness look, labels and barcodes are all straight, and words are also all zero degrees for "straightness".
+- Lines: Sharp lines are used, labels and barcodes are all straight, and words are also all zero degrees for "straightness".
 
 - Shapes: There a couple of rectangles that are different colors to help some of the more important words.
 
@@ -385,11 +386,13 @@ _ Lines: Sharp line of bottom half of color for cleaniness look, labels and barc
 knitr::include_graphics("gemini.jpeg")
 ```
 
-For this AI generated image we used Google Gemini, it gave our label to us in bottle form, where the bottle is primarily black and the background is green. It is interesting to see that even though I gave it Power Protein Powder it wasn't able to put it on the image. There is just about no legible English on this design. 
+For this AI generated image we used Google Gemini, it gave our label to us in bottle form, where the bottle is primarily green and the background is green. It is interesting to see that even though I gave it Power Protein Powder it was only able to somewhat put it on the image. There is just some legible English on this design. 
 
-- Color: Color of label to represent flavor of protein powder, also uses a shade of green matcha. Background is green. Bottle is black this time giving it a more serious feel. 
+- Color: Color of label to represent flavor of protein powder, also uses a shade of green matcha. Background is green. Bottle is also green just fully incorporating the matcha vibe. 
 
-_ Lines: Sharp lines for cleaniness look again, everything is formatted nicely
+- Lines: Sharp lines for cleaniness look again, everything is formatted nicely.
+
+- Shapes: A rectangle is used with text inside as, this also adds to the sharp lines. 
 
 ## Canva Magic Media 
 ```{r}
@@ -401,7 +404,7 @@ Canva Magic Media was used to create this image. Our label is also in bottle for
 
 - Color: Color of label to represent flavor of protein powder, also uses a shade of green matcha. Background is grey with a lump of matcha powder in the back. Bottle is back to white. This gives it a nice toned green, white, and black theme. 
 
-_ Lines: Are not all sharp anymore, we have curves now separating the name and nutrition label with an image and facts about the product. 
+- Lines: Are not all sharp anymore, we have curves now separating the name and nutrition label with an image and facts about the product. 
 
 Although without a more specific font we can see the AI is more useful as inspiration and not the final product. 
 
