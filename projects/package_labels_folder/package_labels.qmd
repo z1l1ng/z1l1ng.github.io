@@ -386,13 +386,13 @@ This image was generated with our prompt in ChatGPT. I should've been more speci
 knitr::include_graphics("gemini.jpeg")
 ```
 
-For this AI generated image we used Google Gemini, it gave our label to us in bottle form, where the bottle is primarily green and the background is green. It is interesting to see that even though I gave it Power Protein Powder it was only able to somewhat put it on the image. There is just some legible English on this design. 
+For this AI generated image we used Google Gemini, it also gave our label to us in bottle form, where the bottle is primarily green and the background is green. It is interesting to see that even though I gave it Power Protein Powder it was only able to somewhat put it on the image. There is just some legible English on this design. 
 
 - Color: Color of label to represent flavor of protein powder, also uses a shade of green matcha. Background is green. Bottle is also green just fully incorporating the matcha vibe. 
 
-- Lines: Sharp lines for cleaniness look again, everything is formatted nicely.
+- Lines: Sharp lines for cleaniness look again, everything is formatted nicely. There 2 curved lines for a flowly look. 
 
-- Shapes: A rectangle is used with text inside as, this also adds to the sharp lines. 
+- Shapes: A rectangle is used with text inside as this also adds to the sharp lines. Dots around the curved lines.
 
 ## Canva Magic Media 
 ```{r}
@@ -402,11 +402,11 @@ knitr::include_graphics("magicmedia.png")
 
 Canva Magic Media was used to create this image. Our label is also in bottle form however there is no curve in this container. This is probably the most unique image that we generated. Again there is no legible English on this design. 
 
-- Color: Color of label to represent flavor of protein powder, also uses a shade of green matcha. Background is grey with a lump of matcha powder in the back. Bottle is back to white. This gives it a nice toned green, white, and black theme. 
+- Color: Color of the label is white, also uses a shade of green matcha. Background is grey, the bottle is two different shades of green, with a green cap, there are more shades of green used in this label compared to all of the others.
 
-- Lines: Are not all sharp anymore, we have curves now separating the name and nutrition label with an image and facts about the product. 
+- Lines: Are not all sharp anymore, we have curves on the side kind of wrapping an image
 
-Although without a more specific font we can see the AI is more useful as inspiration and not the final product. 
+Although without a more specific font we can see the AI is more useful as inspiration and not the final product. These images aren't available in psd form which mean if you're looking for a label that you can adjust it would give you more work converting it into a psd and creating the layers yourself compared to designing your own. 
 
 # Conclusion
 
