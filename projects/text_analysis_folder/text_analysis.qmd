@@ -9,6 +9,7 @@ image: logos.png
 editor_options: 
   chunk_output_type: console
 description: "Mini-project for SDS 264 - Data Science 2 where we use stingr functions and other text analysis methods"
+freeze: true
 ---
 
 This project uses R to create explore the frequency of words in titles and genres of movies and tv shows of different streaming services by creating visuals such as bar plots, wordclouds and tables.
