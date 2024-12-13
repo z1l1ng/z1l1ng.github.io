@@ -3,7 +3,8 @@ title: "Creating Informative Maps"
 date: "2024-09-20"
 sidebar: false
 format:
-  html: default
+  html:
+    code-fold: true
 editor_options: 
   chunk_output_type: console
 image: mapsimage.png
@@ -70,7 +71,7 @@ census_sf
 
 ## Percentage Change in Population of the US from 2010 to 2020
 
-```{r, out.width= "100%", echo = FALSE}
+```{r, out.width= "100%"}
 # First static plot
   ggplot(census_sf) +
   geom_sf(aes(fill = perc_change)) +
@@ -169,7 +170,7 @@ marijuana_laws2024_sf
 
 ## Legalization of Marijuana in the US 2022
 
-```{r, out.width= "100%", echo = FALSE}
+```{r, out.width= "100%"}
 # Second static plot
 ggplot(marijuana_laws2024_sf) +
   geom_sf(aes(fill = LegalStatus)) +

@@ -3,7 +3,8 @@ title: "Shot Chart Analysis"
 date: "2024-05-17"
 sidebar: false
 format:
-  html: default
+  html:
+    code-fold: true
 editor_options: 
   chunk_output_type: console
 image: shotchart.png
@@ -152,7 +153,7 @@ court_themes = list(
 
 This shot chart shows the location of my shots for the 2023-2024 Season. Green represents makes, where red represents misses. Out of the 169 shots taken (not including freethrows) I made 68 of those shots (40.24%), thus meaning I missed 101 of those shots (59.76%). 
 
-```{r, echo = FALSE,  out.width = "75%", out.height= "75%"}
+```{r,  out.width = "75%", out.height= "75%"}
 #Shots Makes and Misses
 ggplot() +
 geom_sf(data = court_sf) +
@@ -178,7 +179,7 @@ geom_sf(data = court_sf) +
 
 This shot chart shows the location of my shots for the 2023-2024 Season. Green represents makes, where red represents misses. Out of the 169 shots taken (not including freethrows) I made 68 of those shots (40.24%), thus meaning I missed 101 of those shots (59.76%).
 
-```{r, echo = FALSE,  out.width = "75%", out.height= "75%"}
+```{r,  out.width = "75%", out.height= "75%"}
 #Shots Makes and Misses Angles
 ggplot() +
 geom_sf(data = court_sf) +
@@ -225,7 +226,7 @@ shots_sf |>
 Now, we've divided the court into 5 different angles, left side, left center, center, right center, and right side. We can see that I take the most shots from the left center and the right center. I shot 45.5% from the left side, 34.8% from left center, 53.3% from the center, 38% from the right center, and 40% from the right side.
 
 
-```{r, echo = FALSE,  out.width = "75%", out.height= "75%"}
+```{r,  out.width = "75%", out.height= "75%"}
 #Shots Makes and Misses Distance
 ggplot() +
 geom_sf(data = court_sf) +
@@ -291,7 +292,7 @@ shots_aggregated <- st_join(court_polys, shot_zones %>% dplyr::select(-c(geometr
 shots_aggregated  <- st_cast(shots_aggregated, "MULTIPOLYGON")
 ```
 
-```{r, echo = FALSE,  out.width = "75%", out.height= "75%"}
+```{r,  out.width = "75%", out.height= "75%"}
 #Shots Makes and Misses Angles + Distance
 ggplot() +
 geom_sf(data = court_sf) +
@@ -326,7 +327,7 @@ shot_zones |>
 ```
 \doublespacing
 
-```{r, echo = FALSE,  out.width = "75%", out.height= "75%"}
+```{r,  out.width = "75%", out.height= "75%"}
 #Aggregated Shots Attempts 
 ggplot() +
   geom_sf(data = shots_aggregated, aes(fill = shot_count)) +
@@ -351,7 +352,7 @@ ggplot() +
 
 This shot chart shoes the number of shots total I took in each zone, with a white/lighter blues is a lower amount of shots taken and a darker blue means a higher amount. 
 
-```{r, echo = FALSE,  out.width = "75%", out.height= "75%"}
+```{r,  out.width = "75%", out.height= "75%"}
 #Percentages of Makes
 ggplot() +
   geom_sf(data = shots_aggregated, aes(fill = shot_percentage)) +
@@ -444,7 +445,7 @@ This project has sparked some curiosity what more I can do with this dataset. I 
 
 **Spatial Analysis For Fun (Quadrat Test & Moran's I)**
 
-```{r, echo = FALSE,  out.width = "75%", out.height= "75%"}
+```{r,  out.width = "75%", out.height= "75%"}
 #Shots Makes and Misses
 ggplot() +
 geom_sf(data = court_sf) +
@@ -522,7 +523,7 @@ shots_ppp <- ppp(
 ```
 
 
-```{r, echo = FALSE, out.width = "75%", out.height= "75%"}
+```{r, out.width = "75%", out.height= "75%"}
 plot_court() +
   # Plot window
   geom_sf(data = window_points, fill = "grey", alpha = 0.5) +

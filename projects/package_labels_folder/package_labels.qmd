@@ -3,7 +3,8 @@ title: "Package Label Analysis & Design"
 date: "2024-12-02"
 sidebar: false
 format:
-  html: default
+  html:
+    code-fold: true
 image: matchabottle.png
 editor_options: 
   chunk_output_type: console
@@ -44,7 +45,7 @@ labels <- labels |>
   mutate(year = year(date))
 ```
 
-```{r, echo = FALSE}
+```{r}
 labels |> 
   group_by(year) |>
   count(year) |>
@@ -114,7 +115,7 @@ The top 10 creators with the most designs on Graphic River in our dataset are sh
 
 Let's further look at these creators to explore their sale strategies.
 
-```{r, echo = FALSE}
+```{r}
 labels |>
   filter(creator == "graphicgrow" | creator == "Plexa_Designs" | creator == "Dkgray") |>
   group_by(creator) |>
@@ -144,7 +145,7 @@ labels |>
 
 Although *graphicgrow* has the most designs on Graphic River, *Dkgray* has sold the most designs among these top three creators, which could be attributed to the accessible price range of their designs. Based on the median price for these creators, it is evident that *Plexa_Designs* has generated the highest revenue. Next, let's examine when these creators were most active in releasing new designs.
 
-```{r, echo = FALSE}
+```{r}
 labels |>
   filter(creator == "graphicgrow" | creator == "Plexa_Designs" | creator == "Dkgray") |>
   group_by(creator) |>
@@ -189,7 +190,7 @@ wordfreq <- labels |>
   select(!isnum)
 ```
 
-```{r, echo = FALSE}
+```{r}
 set.seed(1234)
 wordcloud(
     words = wordfreq$word,
@@ -218,7 +219,7 @@ supplement <- labels |>
   filter(supplement == TRUE)
 ```
 
-```{r, echo = FALSE}
+```{r}
 supple_publish <- supplement |>
   group_by(year) |>
   count(year) |>
@@ -273,7 +274,7 @@ supplement |>
 
 We again see creators graphicgrow and Plexa_Designs are in the Top 5 for most supplement designs sold, also new creators such as [jumpingideas](https://graphicriver.net/user/jumpingideas/portfolio) in 2nd, designstudios(https://graphicriver.net/user/designstudios/portfolio) in 3rd and Artsoldiers(https://graphicriver.net/user/artsoldiers/portfolio) in 4th. 
 
-```{r, echo = FALSE}
+```{r}
 supplement |>
   filter(creator == "graphicgrow" | creator == "jumpingideas" | creator == "designstudios") |>
   group_by(creator) |>

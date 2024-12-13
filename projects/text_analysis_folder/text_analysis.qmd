@@ -3,7 +3,8 @@ title: "Text Analysis of Movies & TV Shows of Streaming Services"
 date: "2024-11-20"
 sidebar: false
 format:
-  html: default
+  html:
+    code-fold: true
 image: logos.png
 editor_options: 
   chunk_output_type: console
@@ -68,7 +69,7 @@ amazonprime <- amazonprime |>
 big_data <- bind_rows(hulu, netflix, hbo, appletv, amazonprime) 
 ```
 
-```{r, echo = FALSE}
+```{r}
 # function for plotting since we have to do it twice
 count_plot <- function(variable){
   #labs for title
@@ -135,7 +136,7 @@ big_data |>
   distinct(genres) 
 ```
 
-```{r, echo = FALSE}
+```{r}
 genres_count |>
   group_by(service) |>
   
@@ -173,7 +174,7 @@ The genres are all pretty similar for movies between our streaming services with
 
 Using another str_split() we can split up the lists of locations that the title is available to, titles like *The Queen's Gambit* is available to countries such as AD, AE, AG, AL, AO, AR, AT, AU, AZ, BA, BB, BE, BG and much more. After splitting our genres we find that we have 138 distinct countries that our streaming services are available in. We'll now look what countries offer the most titles. 
 
-```{r, echo = FALSE, out.height= "80%"}
+```{r, out.height= "80%"}
 distinctcountry <- big_data |>
   mutate(country = str_split(availableCountries, ", ")) |>
   unnest(country) |>
@@ -196,7 +197,7 @@ big_data |>
 
 The country with the most titles available is the US, then followed by Great Britain and Guernsey. 
 
-```{r, echo = FALSE, out.height= "80%"}
+```{r, out.height= "80%"}
 big_data |>
   mutate(country = str_split(availableCountries, ", ")) |>
   unnest(country) |>
@@ -238,7 +239,7 @@ nums_big_data <- big_data |>
          )
 ```
 
-```{r, echo = FALSE, warning = FALSE}
+```{r, warning = FALSE}
 # function for scatter plot
 lengthword_plot <- function(xaxis, yaxis, linemethod){
   nums_big_data |>
@@ -378,7 +379,7 @@ sequels |>
 
 Now, we have a new tibble of just the titles that are sequels from our dataset. We already know that since Amazon Prime has the most titles, it's very likely that it will also have the most sequels, So, let's also look at which streaming service has the highest proportion of sequels.
 
-```{r, echo = FALSE, out.height= "75%"}
+```{r, out.height= "75%"}
 sequels |>
   group_by(service) |>
   count() |>
@@ -394,7 +395,7 @@ sequels |>
   theme_bw()
 ```
 
-```{r, echo = FALSE, out.height= "75%"}
+```{r, out.height= "75%"}
 big_data |>
   mutate(sequel = str_detect(title, " 2: |[vV][oO][lL].2|[vV]olume.2|[mM]ovie.2|[pP]art.2| 2$")) |>
   group_by(service) |>
@@ -422,7 +423,7 @@ We can see that even though Amazon Prime has the most titles that are sequels, i
 
 Now we'll look at the list of the top 75 words associated with "joy" and with "sadness" (according to the "nrc" lexicon) across all the titles.
 
-```{r, echo = FALSE}
+```{r}
 nrc_sentiments <- get_sentiments(lexicon = "nrc")
 
 get_sentiment <- function(emotion1, emotion2){
@@ -448,7 +449,7 @@ joy_sad_cloud <- joy_sad |>
   ungroup()
 ```
 
-```{r, echo = FALSE}
+```{r}
 set.seed(2222)
 wordcloud(
     words = joy_sad_cloud$word,
@@ -462,7 +463,7 @@ wordcloud(
 
 Are there more words associated with joy or with sadness in our titles?
 
-```{r, echo = FALSE}
+```{r}
 joy_sad |>
   count(sentiment) |>
   ggplot(aes(x = sentiment, y = n)) +
@@ -482,7 +483,7 @@ There are more about 200 more words associated with sadness compared to joy in o
 
 What about words associated with fear and trust? 
 
-```{r, echo = FALSE}
+```{r}
 #use function
 fear_trust <- get_sentiment("fear", "trust")
 
@@ -505,7 +506,7 @@ wordcloud(
 
 Are there more words associated with joy or with sadness in our titles?
 
-```{r, echo = FALSE}
+```{r}
 fear_trust |>
   count(sentiment) |>
   ggplot(aes(x = sentiment, y = n)) +
@@ -525,7 +526,7 @@ There are more about 120 more words associated with fear compared to trust in ou
 
 The bing lexicon dataset has 6,786 words that are identidied as negative or postive, for the genres Action, Comedy, Drama, and Thriller we're going to count the number of negative or positive words and calculate the what we call the sentiment value which is the number of positive words minus the negative words. Our bar will extend up from 0 if there are more positive than negative words in a year and it will extend down from 0 if there are more negative than positive words.
 
-```{r, echo = FALSE}
+```{r}
 bigger_data_tidy <- big_data_tidy |>
   mutate(genres = str_split(genres, ", | & ")) |> 
   unnest(genres) |> 
@@ -607,20 +608,15 @@ bigger_data_topics |>
 #   ungroup() |>
 #   arrange(topic, -beta)
 
-# bigger_data_top_terms |>
-#   mutate(term = reorder_within(term, beta, topic)) |>
-#   ggplot(aes(beta, term, fill = factor(topic))) +
-#     geom_col(show.legend = FALSE) +
-#     facet_wrap(~ topic, scales = "free") +
-#     scale_y_reordered()
-
 # Find words with greatest difference between two topics, using log ratio
 bigger_beta_wide <- bigger_data_topics |>
   mutate(topic = paste0("topic", topic)) |>
   pivot_wider(names_from = topic, values_from = beta) |> 
   filter(topic1 > .001 | topic2 > .001) |>
   mutate(log_ratio = log2(topic2 / topic1))
+```
 
+```{r}
 # graph of words
 bigger_beta_wide |>
   arrange(desc(abs(log_ratio))) |>
@@ -632,6 +628,7 @@ bigger_beta_wide |>
          y = "Words in Genres") +
   theme_bw()
 ```
+
 
 These are the words with the greatest difference between the two topics, using the log ratio, looking at these words we can see sort of where these topics are leading us. 
 
