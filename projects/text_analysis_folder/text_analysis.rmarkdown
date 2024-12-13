@@ -11,12 +11,16 @@ editor_options:
 description: "Mini-project for SDS 264 - Data Science 2 where we use stingr functions and other text analysis methods"
 ---
 
+
+
 This project uses R to create explore the frequency of words in titles and genres of movies and tv shows of different streaming services by creating visuals such as bar plots, wordclouds and tables.
 
 To view the qmd, click [here](https://github.com/z1l1ng/z1l1ng.github.io/blob/main/projects/text_analysis_folder/text_analysis.qmd).
 
 # Introduction
 Do you ever wonder specifically what types of movies or tv shows are on the streaming services you pay for? We will be exploring a comprehensive collection of all titles on Amazon Prime, Apple TV, HBO MAX, Hulu, and Netflix using data collected from IMDB and published on Kaggle. Binding together the rows of these datasets, we end up with 120,930 rows and 9 columns. Each row being title, and columns representing the type, being movie or tv show, the year it was released, genre of the title, imdb rating, the streaming service, etc. 
+
+
 
 ```{r}
 #| include: FALSE
@@ -101,11 +105,15 @@ type_count <- count_plot(type)
 plot_grid(title_count, type_count, ncol = 1, align = "v") 
 ```
 
+
+
 We can see that for most titles to least, it ranks Amazon Prime, Netflix, Apple TV, Hulu and HBO. From our 120,930 titles, we have more movies than tv shows. 
 
 # Genres of Movies 
 
 For genres of movies we will be using a str_split() to split up the lists of genres associated with our titles. Some of these genres are also "Action & Adventure" or "War & Politics", meaning we also have to split the ampersand as well as the comma. After splitting our genres we find that we have 26 distinct genres. We'll now look what the most popular genres are. 
+
+
 
 ```{r}
 # new tibble for count of genres by type
@@ -167,11 +175,15 @@ genres_count |>
   theme_bw()
 ```
 
+
+
 The genres are all pretty similar for movies between our streaming services with Drama, Comedy, and Action taking the top 3 for most titles with that genre, and Thriller, Romance, and Adventure for 4th, 5th and 6th, depending on the streaming service. For TV shows we see more of a variety for top 10 genres, we see an increase in Animation, Reality-TV, Crime, Documentary, and Family, however the genres are still very similar by streaming service. 
 
 # Locations
 
 Using another str_split() we can split up the lists of locations that the title is available to, titles like *The Queen's Gambit* is available to countries such as AD, AE, AG, AL, AO, AR, AT, AU, AZ, BA, BB, BE, BG and much more. After splitting our genres we find that we have 138 distinct countries that our streaming services are available in. We'll now look what countries offer the most titles. 
+
+
 
 ```{r, out.height= "80%"}
 distinctcountry <- big_data |>
@@ -194,7 +206,11 @@ big_data |>
   theme_bw()
 ```
 
+
+
 The country with the most titles available is the US, then followed by Great Britain and Guernsey. 
+
+
 
 ```{r, out.height= "80%"}
 big_data |>
@@ -214,6 +230,8 @@ big_data |>
   theme_bw()
 ```
 
+
+
 This is very interesting because I did not know that Hulu is only available in the US and Japan before this project. We can see that Japan has more titles available compared to the US. The US is the has the most titles available for Apple TV and Amazon Prime. Slovakia for Netflix, and Nicaragua for HBO. 
 
 # Length & Content of Titles
@@ -221,6 +239,8 @@ This is very interesting because I did not know that Hulu is only available in t
 ## Length of Title
 
 For the length of the titles, I am interested if titles the are longer or shorter over time, we will do this by looking at the word count of the titles and the actual character length of the title. By using str_length() we can calculate the how many characters are in the title and str_count() to count the number of words in our title. 
+
+
 
 ```{r}
 # new tbl for numerical data of title
@@ -284,9 +304,13 @@ top_row <- plot_grid(length_plot, word_plot)
 plot_grid(top_row, word_length, ncol = 1)
 ```
 
+
+
 The average length of the title stays consistent over time from average length of 17ish characters in 1900 to 2024. We can see that our line of best fit is nearly identical since the length is depends on the words. The average title is around 3.4 words in 2024. This means that the average word is around 5 characters since the average length of our title is 17 in 2024 and the average number of words is 3.4. However, these plots don't tell us too much important information about our titles other than the fact that they are consistently around 3 to 4 words throughout the years. 
 
 Something more exciting would be exploring the content our titles, these are the top ten most common words in our titles. 
+
+
 
 ```{r, echo = FALSE}
 # getting every word from title
@@ -309,7 +333,11 @@ big_data_tidy |>
     scroll_box(width = "100%", height = "200px")
 ```
 
+
+
 We can see that "love" is our most common word, appearing 2165 times and then "christmas" appearing 1477 times as second most common. However, something interesting is that "2" is the third most common, this could mean that there are lots of sequels! If you watch a movie or show you enjoy it's very likely your streaming service also contains the sequel. Let's see what other numbers are common in our titles. These are the top 10 numbers that show up in our titles.
+
+
 
 ```{r, echo = FALSE}
 nums_big_data |>
@@ -324,9 +352,13 @@ nums_big_data |>
     scroll_box(width = "100%", height = "200px")
 ```
 
+
+
 ## Sequels
 
 Let's see how many of these titles with a 2 in them are sequels and which sequels are available on our streaming services. Looking at the list of titles with 2's there were some common occurrences with how second movies are title. We see that there are titles that have a 2 and a colon, such as *Super Size Me 2: ...* or *Goosebumps 2: ...*, then there are the 'Vol. 2', 'VOL. 2' and 'Volume 2'. We also see some titles with 'Part 2' or 'Part 2:' however our OR expression will take care of the ones with a colon. Lastly, we have the titles ending with '2', like *Despicable Me 2* or *Shrek 2*. This makes sure that we don't pick up titles like *2 Fast 2 Furious*, *2:22* or *2 Women*. Using our regular expression we are able locate from our 1513 titles with 2's in them 1240 titles that are sequels. Below is a table of all the sequels available from the 5 streaming services, see if you can find a sequel you recognize.
+
+
 
 ```{r, echo = FALSE}
 has_2 <- nums_big_data |>
@@ -376,7 +408,11 @@ sequels |>
     scroll_box(width = "100%", height = "200px")
 ```
 
+
+
 Now, we have a new tibble of just the titles that are sequels from our dataset. We already know that since Amazon Prime has the most titles, it's very likely that it will also have the most sequels, So, let's also look at which streaming service has the highest proportion of sequels.
+
+
 
 ```{r, out.height= "75%"}
 sequels |>
@@ -416,11 +452,15 @@ big_data |>
   theme_bw()
 ```
 
+
+
 We can see that even though Amazon Prime has the most titles that are sequels, it doesn't mean it has the highest proportion of sequels. Netflix has the highest proportion with 0.015% of the titles on Netflix are sequels. 
 
 ## Sentiment: Joy and Sadness
 
 Now we'll look at the list of the top 75 words associated with "joy" and with "sadness" (according to the "nrc" lexicon) across all the titles.
+
+
 
 ```{r}
 nrc_sentiments <- get_sentiments(lexicon = "nrc")
@@ -460,7 +500,11 @@ wordcloud(
     rot.per = .50)
 ```
 
+
+
 Are there more words associated with joy or with sadness in our titles?
+
+
 
 ```{r}
 joy_sad |>
@@ -476,11 +520,15 @@ joy_sad |>
   theme_bw()
 ```
 
+
+
 There are more about 200 more words associated with sadness compared to joy in our titles. 
 
 ## Sentiment: Fear and Trust
 
 What about words associated with fear and trust? 
+
+
 
 ```{r}
 #use function
@@ -503,7 +551,11 @@ wordcloud(
     rot.per = .50)
 ```
 
+
+
 Are there more words associated with joy or with sadness in our titles?
+
+
 
 ```{r}
 fear_trust |>
@@ -519,11 +571,15 @@ fear_trust |>
   theme_bw()
 ```
 
+
+
 There are more about 120 more words associated with fear compared to trust in our titles. 
 
 ## Sentiment: Positive/Negative trajectory of Top 4 Genres by Year
 
 The bing lexicon dataset has 6,786 words that are identidied as negative or postive, for the genres Action, Comedy, Drama, and Thriller we're going to count the number of negative or positive words and calculate the what we call the sentiment value which is the number of positive words minus the negative words. Our bar will extend up from 0 if there are more positive than negative words in a year and it will extend down from 0 if there are more negative than positive words.
+
+
 
 ```{r}
 bigger_data_tidy <- big_data_tidy |>
@@ -556,6 +612,8 @@ bing_sentiments |>
   theme_bw()
 ```
 
+
+
 We can see that for Action and Thriller the sentiment values are very negative, and for Drama there are 2 years in which the titles have more postive words than negative. For Comedy, it is almost split between negative and positive, which is nice to see since most would consider comedic movie or tv show be light-hearted.
 
 # LDA 2-topic model 
@@ -574,6 +632,8 @@ However, it is important to note that words can be shared between topics; a word
 
 For our dataset, we are interested in our genres and how the distribution of words within the titles of each genre reflects the themes and characteristics of different types of movies and TV shows. After filtering for stop words we will create a dtm for our words and genres, fit our lda model and then interpret our findings. 
 
+
+
 ```{r}
 # creating dtm matrix
 bigger_data_dtm <- bigger_data_tidy |>
@@ -589,7 +649,11 @@ bigger_data_lda <- LDA(bigger_data_dtm, k = 2, control = list(seed = 2222))
 bigger_data_topics <- tidy(bigger_data_lda, matrix = "beta")
 ```
 
+
+
 A table of our highest beta value, which is the probability of a word being generated by a specific topic.
+
+
 
 ```{r, echo = FALSE}
 #table for 50 words
@@ -629,7 +693,11 @@ bigger_beta_wide |>
 ```
 
 
+
+
 These are the words with the greatest difference between the two topics, using the log ratio, looking at these words we can see sort of where these topics are leading us. 
+
+
 
 ```{r, echo = FALSE}
 data_documents <- tidy(bigger_data_lda, matrix = "gamma")
@@ -642,6 +710,8 @@ data_documents |>
   arrange(topic, -gamma) |>
   kable()
 ```
+
+
 
 Topic 1 (red):
 Documents heavily associated with Topic 1 include genres like Adventure, Romance, Animation, Family, Fantasy, Musical, Game-Show, Comedy, Adult, and Kids. This topic seems to represent genres that are typically focused on entertainment, family-friendly content, and lighter themes. There is a range of genres that cater to various age groups and include both animated and live-action content. Topics in this category could focus on fun, adventure, humor, and fictional worlds.
@@ -658,3 +728,4 @@ The results reveal that Drama, Comedy, and Action dominate the movie genres acro
 Our topic modeling analysis further distinguishes two overarching themes: family-friendly entertainment genres like Comedy and Adventure, and serious, real-world genres like Crime and Documentary. This highlights the diversity in content and the ability of streaming platforms to cater to both lighthearted and thought-provoking preferences.
 
 We gain a better understanding of the types of content available on streaming services by extracting data from the titles and plotting the results.
+
