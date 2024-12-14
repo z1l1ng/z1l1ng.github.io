@@ -1,7 +1,7 @@
 ---
 title: "Stardew Valley Data Acquisition"
 author: "Ziling Zhen & Rain Hartos"
-date: "2024-12-02"
+date: "2024-10-27"
 sidebar: false
 format:
   html:
