@@ -1,0 +1,585 @@
+"","item","regular_price","silver_price","gold_price","iridium_price","profession","category","sub_category","sell_price"
+"1","Amaranth",150,187,225,300,NA,"crop","Fall Crop",NA
+"2","Amaranth",165,205,247,330,"tiller","crop","Fall Crop",NA
+"3","Ancient_Fruit",550,687,825,1100,NA,"crop","Special Crop",NA
+"4","Ancient_Fruit",605,755,907,1210,"tiller","crop","Special Crop",NA
+"5","Apple",100,125,150,200,NA,"crop",NA,NA
+"6","Apple",110,137,165,220,"tiller","crop",NA,NA
+"7","Apricot",50,62,75,100,NA,"crop",NA,NA
+"8","Apricot",55,68,82,110,"tiller","crop",NA,NA
+"9","Artichoke",160,200,240,320,NA,"crop","Fall Crop",NA
+"10","Artichoke",176,220,264,352,"tiller","crop","Fall Crop",NA
+"11","Banana",150,187,225,300,NA,"crop",NA,NA
+"12","Banana",165,205,247,330,"tiller","crop",NA,NA
+"13","Beet",100,125,150,200,NA,"crop","Fall Crop",NA
+"14","Beet",110,137,165,220,"tiller","crop","Fall Crop",NA
+"15","Blackberry",20,25,30,40,NA,"crop",NA,NA
+"16","Blue_Jazz",50,62,75,100,NA,"crop","Spring Crop",NA
+"17","Blue_Jazz",55,68,82,110,"tiller","crop","Spring Crop",NA
+"18","Blueberry",50,62,75,100,NA,"crop","Summer Crop",NA
+"19","Blueberry",55,68,82,110,"tiller","crop","Summer Crop",NA
+"20","Bok_Choy",80,100,120,160,NA,"crop","Fall Crop",NA
+"21","Bok_Choy",88,110,132,176,"tiller","crop","Fall Crop",NA
+"22","Broccoli",70,87,105,140,NA,"crop","Fall Crop",NA
+"23","Broccoli",77,95,115,154,"tiller","crop","Fall Crop",NA
+"24","Cactus_Fruit",75,93,112,150,NA,"crop","Special Crop",NA
+"25","Cactus_Fruit",82,102,123,165,NA,"crop","Special Crop",NA
+"26","Carrot",35,43,52,70,NA,"crop","Spring Crop",NA
+"27","Carrot",38,47,57,77,"tiller","crop","Spring Crop",NA
+"28","Cauliflower",175,218,262,350,NA,"crop","Spring Crop",NA
+"29","Cauliflower",192,239,288,385,"tiller","crop","Spring Crop",NA
+"30","Cherry",80,100,120,160,NA,"crop",NA,NA
+"31","Cherry",88,110,132,176,"tiller","crop",NA,NA
+"32","Corn",50,62,75,100,NA,"crop","Summer Crop",NA
+"33","Corn",50,62,75,100,NA,"crop","Fall Crop",NA
+"34","Corn",55,68,82,110,"tiller","crop","Summer Crop",NA
+"35","Corn",55,68,82,110,"tiller","crop","Fall Crop",NA
+"36","Cranberries",75,93,112,150,NA,"crop","Fall Crop",NA
+"37","Cranberries",82,102,123,165,"tiller","crop","Fall Crop",NA
+"38","Crystal_Fruit",150,187,225,300,NA,"crop",NA,NA
+"39","Eggplant",60,75,90,120,NA,"crop","Fall Crop",NA
+"40","Eggplant",66,82,99,132,"tiller","crop","Fall Crop",NA
+"41","Fairy_Rose",290,362,435,580,NA,"crop","Fall Crop",NA
+"42","Fairy_Rose",319,398,478,638,"tiller","crop","Fall Crop",NA
+"43","Fiddlehead_Fern",90,112,135,180,NA,"crop",NA,NA
+"44","Fiddlehead_Fern",99,123,148,198,"tiller","crop",NA,NA
+"45","Garlic",60,75,90,120,NA,"crop","Spring Crop",NA
+"46","Garlic",66,82,99,132,"tiller","crop","Spring Crop",NA
+"47","Grape",80,100,120,160,NA,"crop","Fall Crop",NA
+"48","Grape",88,110,132,176,NA,"crop","Fall Crop",NA
+"49","Green_Bean",40,50,60,80,NA,"crop","Spring Crop",NA
+"50","Green_Bean",44,55,66,88,"tiller","crop","Spring Crop",NA
+"51","Hops",25,31,37,50,NA,"crop","Summer Crop",NA
+"52","Hops",27,34,40,55,"tiller","crop","Summer Crop",NA
+"53","Hot_Pepper",40,50,60,80,NA,"crop","Summer Crop",NA
+"54","Hot_Pepper",44,55,66,88,"tiller","crop","Summer Crop",NA
+"55","Kale",110,137,165,220,NA,"crop","Spring Crop",NA
+"56","Kale",121,150,181,242,"tiller","crop","Spring Crop",NA
+"57","Mango",130,162,195,260,NA,"crop",NA,NA
+"58","Mango",143,178,214,286,"tiller","crop",NA,NA
+"59","Melon",250,312,375,500,NA,"crop","Summer Crop",NA
+"60","Melon",275,343,412,550,"tiller","crop","Summer Crop",NA
+"61","Orange",100,125,150,200,NA,"crop",NA,NA
+"62","Orange",110,137,165,220,"tiller","crop",NA,NA
+"63","Parsnip",35,43,52,70,NA,"crop","Spring Crop",NA
+"64","Parsnip",38,47,57,77,"tiller","crop","Spring Crop",NA
+"65","Peach",140,175,210,280,NA,"crop",NA,NA
+"66","Peach",154,192,231,308,"tiller","crop",NA,NA
+"67","Pineapple",300,375,450,600,NA,"crop","Special Crop",NA
+"68","Pineapple",330,412,495,660,"tiller","crop","Special Crop",NA
+"69","Pomegranate",140,175,210,280,NA,"crop",NA,NA
+"70","Pomegranate",154,192,231,308,"tiller","crop",NA,NA
+"71","Poppy",140,175,210,280,NA,"crop","Summer Crop",NA
+"72","Poppy",154,192,231,308,"tiller","crop","Summer Crop",NA
+"73","Potato",80,100,120,160,NA,"crop","Spring Crop",NA
+"74","Potato",88,110,132,176,"tiller","crop","Spring Crop",NA
+"75","Powdermelon",60,75,90,120,NA,"crop","Winter Crop",NA
+"76","Powdermelon",66,82,99,132,"tiller","crop","Winter Crop",NA
+"77","Pumpkin",320,400,480,640,NA,"crop","Fall Crop",NA
+"78","Pumpkin",352,440,528,704,"tiller","crop","Fall Crop",NA
+"79","Qi_Fruit",1,NA,NA,NA,NA,"crop","Special Crop",NA
+"80","Qi_Fruit",1,NA,NA,NA,NA,"crop","Special Crop",NA
+"81","Radish",90,112,135,180,NA,"crop","Summer Crop",NA
+"82","Radish",99,123,148,198,"tiller","crop","Summer Crop",NA
+"83","Red_Cabbage",260,325,390,520,NA,"crop","Summer Crop",NA
+"84","Red_Cabbage",286,357,429,572,"tiller","crop","Summer Crop",NA
+"85","Rhubarb",220,275,330,440,NA,"crop","Spring Crop",NA
+"86","Rhubarb",242,302,363,484,"tiller","crop","Spring Crop",NA
+"87","Spice_Berry",80,100,120,160,NA,"crop",NA,NA
+"88","Starfruit",750,937,1125,1500,NA,"crop","Summer Crop",NA
+"89","Starfruit",825,1030,1237,1650,"tiller","crop","Summer Crop",NA
+"90","Strawberry",120,150,180,240,NA,"crop","Spring Crop",NA
+"91","Strawberry",132,165,198,264,"tiller","crop","Spring Crop",NA
+"92","Summer_Spangle",90,112,135,180,NA,"crop","Summer Crop",NA
+"93","Summer_Spangle",99,123,148,198,"tiller","crop","Summer Crop",NA
+"94","Summer_Squash",45,56,67,90,NA,"crop","Summer Crop",NA
+"95","Summer_Squash",49,61,73,99,"tiller","crop","Summer Crop",NA
+"96","Sunflower",80,100,120,160,NA,"crop","Summer Crop",NA
+"97","Sunflower",80,100,120,160,NA,"crop","Fall Crop",NA
+"98","Sunflower",88,110,132,176,"tiller","crop","Summer Crop",NA
+"99","Sunflower",88,110,132,176,"tiller","crop","Fall Crop",NA
+"100","Taro_Root",100,125,150,200,NA,"crop","Special Crop",NA
+"101","Taro_Root",110,137,165,220,"tiller","crop","Special Crop",NA
+"102","Tea_Leaves",50,NA,NA,NA,NA,"crop","Special Crop",NA
+"103","Tea_Leaves",55,NA,NA,NA,NA,"crop","Special Crop",NA
+"104","Tomato",60,75,90,120,NA,"crop","Summer Crop",NA
+"105","Tomato",66,82,99,132,"tiller","crop","Summer Crop",NA
+"106","Tulip",30,37,45,60,NA,"crop","Spring Crop",NA
+"107","Tulip",33,40,49,66,"tiller","crop","Spring Crop",NA
+"108","Unmilled_Rice",30,37,45,60,NA,"crop","Spring Crop",NA
+"109","Unmilled_Rice",33,40,49,66,"tiller","crop","Spring Crop",NA
+"110","Wheat",25,31,37,50,NA,"crop","Summer Crop",NA
+"111","Wheat",25,31,37,50,NA,"crop","Fall Crop",NA
+"112","Wheat",27,34,40,55,"tiller","crop","Summer Crop",NA
+"113","Wheat",27,34,40,55,"tiller","crop","Fall Crop",NA
+"114","Wild_Plum",80,100,120,160,NA,"crop",NA,NA
+"115","Yam",160,200,240,320,NA,"crop","Fall Crop",NA
+"116","Yam",176,220,264,352,"tiller","crop","Fall Crop",NA
+"117","Egg",50,62,75,100,NA,"animal product",NA,NA
+"118","Egg",60,75,90,120,"Rancher","animal product",NA,NA
+"119","Egg",50,62,75,100,"Artisan","animal product",NA,NA
+"120","Large Egg",95,118,142,190,NA,"animal product",NA,NA
+"121","Large Egg",114,142,171,228,"Rancher","animal product",NA,NA
+"122","Large Egg",95,118,142,190,"Artisan","animal product",NA,NA
+"123","Void Egg",65,81,97,130,NA,"animal product",NA,NA
+"124","Void Egg",78,97,117,156,"Rancher","animal product",NA,NA
+"125","Void Egg",65,81,97,130,"Artisan","animal product",NA,NA
+"126","Duck Egg",95,118,142,190,NA,"animal product",NA,NA
+"127","Duck Egg",114,142,171,228,"Rancher","animal product",NA,NA
+"128","Duck Egg",95,118,142,190,"Artisan","animal product",NA,NA
+"129","Wool",340,425,510,680,NA,"animal product",NA,NA
+"130","Wool",408,510,612,816,"Rancher","animal product",NA,NA
+"131","Wool",340,425,510,680,"Artisan","animal product",NA,NA
+"132","Dinosaur Egg",350,437,525,700,NA,"animal product",NA,NA
+"133","Dinosaur Egg",350,437,525,700,"Rancher","animal product",NA,NA
+"134","Dinosaur Egg",350,437,525,700,"Artisan","animal product",NA,NA
+"135","Dinosaur Egg",1050,1311,1575,2100,"Treasure Appraisal Guide and  Artisan","animal product",NA,NA
+"136","Golden Egg",500,625,750,1000,NA,"animal product",NA,NA
+"137","Golden Egg",600,750,900,1200,"Rancher","animal product",NA,NA
+"138","Golden Egg",500,625,750,1000,"Artisan","animal product",NA,NA
+"139","Ostrich Egg",600,750,900,1200,NA,"animal product",NA,NA
+"140","Ostrich Egg",720,900,1080,1440,"Rancher","animal product",NA,NA
+"141","Ostrich Egg",600,750,900,1200,"Artisan","animal product",NA,NA
+"142","Milk",125,156,187,250,NA,"animal product",NA,NA
+"143","Milk",150,187,225,300,"Rancher","animal product",NA,NA
+"144","Milk",125,156,187,250,"Artisan","animal product",NA,NA
+"145","Large Milk",190,237,285,380,NA,"animal product",NA,NA
+"146","Large Milk",228,285,342,456,"Rancher","animal product",NA,NA
+"147","Large Milk",190,237,285,380,"Artisan","animal product",NA,NA
+"148","Goat Milk",225,281,337,450,NA,"animal product",NA,NA
+"149","Goat Milk",270,337,405,540,"Rancher","animal product",NA,NA
+"150","Goat Milk",225,281,337,450,"Artisan","animal product",NA,NA
+"151","Large Goat Milk",345,431,517,690,NA,"animal product",NA,NA
+"152","Large Goat Milk",414,517,621,828,"Rancher","animal product",NA,NA
+"153","Large Goat Milk",345,431,517,690,"Artisan","animal product",NA,NA
+"154","Truffle",625,781,937,1250,NA,"animal product",NA,NA
+"155","Truffle",625,781,937,1250,"Rancher","animal product",NA,NA
+"156","Truffle",625,781,937,1250,"Artisan","animal product",NA,NA
+"157","Quartz",NA,NA,NA,NA,"gemologist","mineral","foraged mineral",32
+"158","Quartz",NA,NA,NA,NA,NA,"mineral","foraged mineral",25
+"159","Earth Crystal",NA,NA,NA,NA,"gemologist","mineral","foraged mineral",65
+"160","Earth Crystal",NA,NA,NA,NA,NA,"mineral","foraged mineral",50
+"161","Frozen Tear",NA,NA,NA,NA,"gemologist","mineral","foraged mineral",97
+"162","Frozen Tear",NA,NA,NA,NA,NA,"mineral","foraged mineral",75
+"163","Fire Quartz",NA,NA,NA,NA,"gemologist","mineral","foraged mineral",130
+"164","Fire Quartz",NA,NA,NA,NA,NA,"mineral","foraged mineral",100
+"165","Emerald",NA,NA,NA,NA,"gemologist","mineral","gem",325
+"166","Emerald",NA,NA,NA,NA,NA,"mineral","gem",250
+"167","Aquamarine",NA,NA,NA,NA,"gemologist","mineral","gem",234
+"168","Aquamarine",NA,NA,NA,NA,NA,"mineral","gem",180
+"169","Ruby",NA,NA,NA,NA,"gemologist","mineral","gem",325
+"170","Ruby",NA,NA,NA,NA,NA,"mineral","gem",250
+"171","Amethyst",NA,NA,NA,NA,"gemologist","mineral","gem",130
+"172","Amethyst",NA,NA,NA,NA,NA,"mineral","gem",100
+"173","Topaz",NA,NA,NA,NA,"gemologist","mineral","gem",104
+"174","Topaz",NA,NA,NA,NA,NA,"mineral","gem",80
+"175","Jade",NA,NA,NA,NA,"gemologist","mineral","gem",260
+"176","Jade",NA,NA,NA,NA,NA,"mineral","gem",200
+"177","Diamond",NA,NA,NA,NA,"gemologist","mineral","gem",974
+"178","Diamond",NA,NA,NA,NA,NA,"mineral","gem",750
+"179","Prismatic Shard",NA,NA,NA,NA,"gemologist","mineral","gem",2600
+"180","Prismatic Shard",NA,NA,NA,NA,NA,"mineral","gem",2000
+"181","Tigerseye",NA,NA,NA,NA,"gemologist","mineral","geode mineral",357
+"182","Tigerseye",NA,NA,NA,NA,NA,"mineral","geode mineral",275
+"183","Opal",NA,NA,NA,NA,"gemologist","mineral","geode mineral",195
+"184","Opal",NA,NA,NA,NA,NA,"mineral","geode mineral",150
+"185","Fire Opal",NA,NA,NA,NA,"gemologist","mineral","geode mineral",455
+"186","Fire Opal",NA,NA,NA,NA,NA,"mineral","geode mineral",350
+"187","Alamite",NA,NA,NA,NA,"gemologist","mineral","geode mineral",195
+"188","Alamite",NA,NA,NA,NA,NA,"mineral","geode mineral",150
+"189","Bixite",NA,NA,NA,NA,"gemologist","mineral","geode mineral",390
+"190","Bixite",NA,NA,NA,NA,NA,"mineral","geode mineral",300
+"191","Baryte",NA,NA,NA,NA,"gemologist","mineral","geode mineral",65
+"192","Baryte",NA,NA,NA,NA,NA,"mineral","geode mineral",50
+"193","Aerinite",NA,NA,NA,NA,"gemologist","mineral","geode mineral",162
+"194","Aerinite",NA,NA,NA,NA,NA,"mineral","geode mineral",125
+"195","Calcite",NA,NA,NA,NA,"gemologist","mineral","geode mineral",97
+"196","Calcite",NA,NA,NA,NA,NA,"mineral","geode mineral",75
+"197","Dolomite",NA,NA,NA,NA,"gemologist","mineral","geode mineral",390
+"198","Dolomite",NA,NA,NA,NA,NA,"mineral","geode mineral",300
+"199","Esperite",NA,NA,NA,NA,"gemologist","mineral","geode mineral",130
+"200","Esperite",NA,NA,NA,NA,NA,"mineral","geode mineral",100
+"201","Fluorapatite",NA,NA,NA,NA,"gemologist","mineral","geode mineral",260
+"202","Fluorapatite",NA,NA,NA,NA,NA,"mineral","geode mineral",200
+"203","Geminite",NA,NA,NA,NA,"gemologist","mineral","geode mineral",195
+"204","Geminite",NA,NA,NA,NA,NA,"mineral","geode mineral",150
+"205","Helvite",NA,NA,NA,NA,"gemologist","mineral","geode mineral",585
+"206","Helvite",NA,NA,NA,NA,NA,"mineral","geode mineral",450
+"207","Jamborite",NA,NA,NA,NA,"gemologist","mineral","geode mineral",195
+"208","Jamborite",NA,NA,NA,NA,NA,"mineral","geode mineral",150
+"209","Jagoite",NA,NA,NA,NA,"gemologist","mineral","geode mineral",149
+"210","Jagoite",NA,NA,NA,NA,NA,"mineral","geode mineral",115
+"211","Kyanite",NA,NA,NA,NA,"gemologist","mineral","geode mineral",325
+"212","Kyanite",NA,NA,NA,NA,NA,"mineral","geode mineral",250
+"213","Lunarite",NA,NA,NA,NA,"gemologist","mineral","geode mineral",260
+"214","Lunarite",NA,NA,NA,NA,NA,"mineral","geode mineral",200
+"215","Malachite",NA,NA,NA,NA,"gemologist","mineral","geode mineral",130
+"216","Malachite",NA,NA,NA,NA,NA,"mineral","geode mineral",100
+"217","Neptunite",NA,NA,NA,NA,"gemologist","mineral","geode mineral",520
+"218","Neptunite",NA,NA,NA,NA,NA,"mineral","geode mineral",400
+"219","Lemon Stone",NA,NA,NA,NA,"gemologist","mineral","geode mineral",260
+"220","Lemon Stone",NA,NA,NA,NA,NA,"mineral","geode mineral",200
+"221","Nekoite",NA,NA,NA,NA,"gemologist","mineral","geode mineral",104
+"222","Nekoite",NA,NA,NA,NA,NA,"mineral","geode mineral",80
+"223","Orpiment",NA,NA,NA,NA,"gemologist","mineral","geode mineral",104
+"224","Orpiment",NA,NA,NA,NA,NA,"mineral","geode mineral",80
+"225","Petrified Slime",NA,NA,NA,NA,"gemologist","mineral","geode mineral",156
+"226","Petrified Slime",NA,NA,NA,NA,NA,"mineral","geode mineral",120
+"227","Thunder Egg",NA,NA,NA,NA,"gemologist","mineral","geode mineral",130
+"228","Thunder Egg",NA,NA,NA,NA,NA,"mineral","geode mineral",100
+"229","Pyrite",NA,NA,NA,NA,"gemologist","mineral","geode mineral",156
+"230","Pyrite",NA,NA,NA,NA,NA,"mineral","geode mineral",120
+"231","Ocean Stone",NA,NA,NA,NA,"gemologist","mineral","geode mineral",286
+"232","Ocean Stone",NA,NA,NA,NA,NA,"mineral","geode mineral",220
+"233","Ghost Crystal",NA,NA,NA,NA,"gemologist","mineral","geode mineral",260
+"234","Ghost Crystal",NA,NA,NA,NA,NA,"mineral","geode mineral",200
+"235","Jasper",NA,NA,NA,NA,"gemologist","mineral","geode mineral",195
+"236","Jasper",NA,NA,NA,NA,NA,"mineral","geode mineral",150
+"237","Celestine",NA,NA,NA,NA,"gemologist","mineral","geode mineral",162
+"238","Celestine",NA,NA,NA,NA,NA,"mineral","geode mineral",125
+"239","Marble",NA,NA,NA,NA,"gemologist","mineral","geode mineral",143
+"240","Marble",NA,NA,NA,NA,NA,"mineral","geode mineral",110
+"241","Sandstone",NA,NA,NA,NA,"gemologist","mineral","geode mineral",78
+"242","Sandstone",NA,NA,NA,NA,NA,"mineral","geode mineral",60
+"243","Granite",NA,NA,NA,NA,"gemologist","mineral","geode mineral",97
+"244","Granite",NA,NA,NA,NA,NA,"mineral","geode mineral",75
+"245","Basalt",NA,NA,NA,NA,"gemologist","mineral","geode mineral",227
+"246","Basalt",NA,NA,NA,NA,NA,"mineral","geode mineral",175
+"247","Limestone",NA,NA,NA,NA,"gemologist","mineral","geode mineral",19
+"248","Limestone",NA,NA,NA,NA,NA,"mineral","geode mineral",15
+"249","Soapstone",NA,NA,NA,NA,"gemologist","mineral","geode mineral",156
+"250","Soapstone",NA,NA,NA,NA,NA,"mineral","geode mineral",120
+"251","Hematite",NA,NA,NA,NA,"gemologist","mineral","geode mineral",195
+"252","Hematite",NA,NA,NA,NA,NA,"mineral","geode mineral",150
+"253","Mudstone",NA,NA,NA,NA,"gemologist","mineral","geode mineral",32
+"254","Mudstone",NA,NA,NA,NA,NA,"mineral","geode mineral",25
+"255","Obsidian",NA,NA,NA,NA,"gemologist","mineral","geode mineral",260
+"256","Obsidian",NA,NA,NA,NA,NA,"mineral","geode mineral",200
+"257","Slate",NA,NA,NA,NA,"gemologist","mineral","geode mineral",110
+"258","Slate",NA,NA,NA,NA,NA,"mineral","geode mineral",85
+"259","Fairy Stone",NA,NA,NA,NA,"gemologist","mineral","geode mineral",325
+"260","Fairy Stone",NA,NA,NA,NA,NA,"mineral","geode mineral",250
+"261","Star Shards",NA,NA,NA,NA,"gemologist","mineral","geode mineral",650
+"262","Star Shards",NA,NA,NA,NA,NA,"mineral","geode mineral",500
+"263","Geode",NA,NA,NA,NA,NA,"mineral","geode",50
+"264","Frozen Geode",NA,NA,NA,NA,NA,"mineral","geode",100
+"265","Magma Geode",NA,NA,NA,NA,NA,"mineral","geode",150
+"266","Omni Geode",NA,NA,NA,NA,NA,"mineral","geode",0
+"267","Albacore",75,93,112,150,NA,"fish","The Beach",NA
+"268","Albacore",93,116,140,187,"fisher","fish","The Beach",NA
+"269","Albacore",112,139,168,225,"angler","fish","The Beach",NA
+"270","Anchovy",30,37,45,60,NA,"fish","The Beach",NA
+"271","Anchovy",37,46,56,75,"fisher","fish","The Beach",NA
+"272","Anchovy",45,55,67,90,"angler","fish","The Beach",NA
+"273","Angler",900,1125,1350,1800,NA,"fish","Legendary",NA
+"274","Angler",900,1125,1350,1800,NA,"fish","River",NA
+"275","Angler",1125,1406,1687,2250,"fisher","fish","Legendary",NA
+"276","Angler",1125,1406,1687,2250,"fisher","fish","River",NA
+"277","Angler",1350,1687,2025,2700,"angler","fish","Legendary",NA
+"278","Angler",1350,1687,2025,2700,"angler","fish","River",NA
+"279","Blobfish",500,625,750,1000,NA,"fish","Night Market",NA
+"280","Blobfish",625,781,937,1250,"fisher","fish","Night Market",NA
+"281","Blobfish",750,937,1125,1500,"angler","fish","Night Market",NA
+"282","Blue_Discus",120,150,180,240,NA,"fish","Ginger Island",NA
+"283","Blue_Discus",150,187,225,300,"fisher","fish","Ginger Island",NA
+"284","Blue_Discus",180,225,270,360,"angler","fish","Ginger Island",NA
+"285","Bream",45,56,67,90,NA,"fish","River",NA
+"286","Bream",56,70,83,112,"fisher","fish","River",NA
+"287","Bream",67,84,100,135,"angler","fish","River",NA
+"288","Bullhead",75,93,112,150,NA,"fish","Mountain Lake",NA
+"289","Bullhead",93,116,140,187,"fisher","fish","Mountain Lake",NA
+"290","Bullhead",112,139,168,225,"angler","fish","Mountain Lake",NA
+"291","Carp",30,37,45,60,NA,"fish","Mountain Lake",NA
+"292","Carp",30,37,45,60,NA,"fish","Secret Woods",NA
+"293","Carp",30,37,45,60,NA,"fish","Sewers",NA
+"294","Carp",30,37,45,60,NA,"fish","Mutant Bug Lair",NA
+"295","Carp",37,46,56,75,"fisher","fish","Mountain Lake",NA
+"296","Carp",37,46,56,75,"fisher","fish","Secret Woods",NA
+"297","Carp",37,46,56,75,"fisher","fish","Sewers",NA
+"298","Carp",37,46,56,75,"fisher","fish","Mutant Bug Lair",NA
+"299","Carp",45,55,67,90,"angler","fish","Mountain Lake",NA
+"300","Carp",45,55,67,90,"angler","fish","Secret Woods",NA
+"301","Carp",45,55,67,90,"angler","fish","Sewers",NA
+"302","Carp",45,55,67,90,"angler","fish","Mutant Bug Lair",NA
+"303","Catfish",200,250,300,400,NA,"fish","River",NA
+"304","Catfish",200,250,300,400,NA,"fish","Secret Woods",NA
+"305","Catfish",200,250,300,400,NA,"fish","Witch's Swamp",NA
+"306","Catfish",250,312,375,500,"fisher","fish","River",NA
+"307","Catfish",250,312,375,500,"fisher","fish","Secret Woods",NA
+"308","Catfish",250,312,375,500,"fisher","fish","Witch's Swamp",NA
+"309","Catfish",300,375,450,600,"angler","fish","River",NA
+"310","Catfish",300,375,450,600,"angler","fish","Secret Woods",NA
+"311","Catfish",300,375,450,600,"angler","fish","Witch's Swamp",NA
+"312","Chub",50,62,75,100,NA,"fish","River",NA
+"313","Chub",50,62,75,100,NA,"fish","Mountain Lake",NA
+"314","Chub",62,77,93,125,"fisher","fish","River",NA
+"315","Chub",62,77,93,125,"fisher","fish","Mountain Lake",NA
+"316","Chub",75,93,112,150,"angler","fish","River",NA
+"317","Chub",75,93,112,150,"angler","fish","Mountain Lake",NA
+"318","Clam",50,62,75,100,NA,"fish","Crab Pot",NA
+"319","Clam",62,77,93,125,"fisher","fish","Crab Pot",NA
+"320","Clam",75,93,112,150,"angler","fish","Crab Pot",NA
+"321","Cockle",50,62,75,100,NA,"fish","Crab Pot",NA
+"322","Cockle",62,77,93,125,"fisher","fish","Crab Pot",NA
+"323","Cockle",75,93,112,150,"angler","fish","Crab Pot",NA
+"324","Crab",100,125,NA,NA,NA,"fish","Crab Pot",NA
+"325","Crab",125,156,NA,NA,"fisher","fish","Crab Pot",NA
+"326","Crab",150,187,NA,NA,"angler","fish","Crab Pot",NA
+"327","Crayfish",75,93,NA,NA,NA,"fish","Crab Pot",NA
+"328","Crayfish",93,116,NA,NA,"fisher","fish","Crab Pot",NA
+"329","Crayfish",112,139,NA,NA,"angler","fish","Crab Pot",NA
+"330","Crimsonfish",1500,1875,2250,3000,NA,"fish","Legendary",NA
+"331","Crimsonfish",1500,1875,2250,3000,NA,"fish","The Beach",NA
+"332","Crimsonfish",1875,2343,2812,3750,"fisher","fish","Legendary",NA
+"333","Crimsonfish",1875,2343,2812,3750,"fisher","fish","The Beach",NA
+"334","Crimsonfish",2250,2812,3375,4500,"angler","fish","Legendary",NA
+"335","Crimsonfish",2250,2812,3375,4500,"angler","fish","The Beach",NA
+"336","Dorado",100,125,150,200,NA,"fish","River",NA
+"337","Dorado",125,156,187,250,"fisher","fish","River",NA
+"338","Dorado",150,187,225,300,"angler","fish","River",NA
+"339","Eel",85,106,127,170,NA,"fish","The Beach",NA
+"340","Eel",106,132,158,212,"fisher","fish","The Beach",NA
+"341","Eel",127,159,190,255,"angler","fish","The Beach",NA
+"342","Flounder",100,125,150,200,NA,"fish","The Beach",NA
+"343","Flounder",100,125,150,200,NA,"fish","Ginger Island",NA
+"344","Flounder",125,156,187,250,"fisher","fish","The Beach",NA
+"345","Flounder",125,156,187,250,"fisher","fish","Ginger Island",NA
+"346","Flounder",150,187,225,300,"angler","fish","The Beach",NA
+"347","Flounder",150,187,225,300,"angler","fish","Ginger Island",NA
+"348","Ghostfish",45,56,67,90,NA,"fish","Mines",NA
+"349","Ghostfish",56,70,83,112,"fisher","fish","Mines",NA
+"350","Ghostfish",67,84,100,135,"angler","fish","Mines",NA
+"351","Glacierfish",1000,1250,1500,2000,NA,"fish","Legendary",NA
+"352","Glacierfish",1000,1250,1500,2000,NA,"fish","River",NA
+"353","Glacierfish",1250,1562,1875,2500,"fisher","fish","Legendary",NA
+"354","Glacierfish",1250,1562,1875,2500,"fisher","fish","River",NA
+"355","Glacierfish",1500,1875,2250,3000,"angler","fish","Legendary",NA
+"356","Glacierfish",1500,1875,2250,3000,"angler","fish","River",NA
+"357","Glacierfish_Jr.",1000,1250,1500,2000,NA,"fish","Legendary",NA
+"358","Glacierfish_Jr.",1000,1250,1500,2000,NA,"fish","River",NA
+"359","Glacierfish_Jr.",1250,1562,1875,2500,"fisher","fish","Legendary",NA
+"360","Glacierfish_Jr.",1250,1562,1875,2500,"fisher","fish","River",NA
+"361","Glacierfish_Jr.",1500,1875,2250,3000,"angler","fish","Legendary",NA
+"362","Glacierfish_Jr.",1500,1875,2250,3000,"angler","fish","River",NA
+"363","Goby",150,187,225,300,NA,"fish","River",NA
+"364","Goby",187,233,281,375,"fisher","fish","River",NA
+"365","Goby",225,280,337,450,"angler","fish","River",NA
+"366","Halibut",80,100,120,160,NA,"fish","The Beach",NA
+"367","Halibut",100,125,150,200,"fisher","fish","The Beach",NA
+"368","Halibut",120,150,180,240,"angler","fish","The Beach",NA
+"369","Herring",30,37,45,60,NA,"fish","The Beach",NA
+"370","Herring",37,46,56,75,"fisher","fish","The Beach",NA
+"371","Herring",45,55,67,90,"angler","fish","The Beach",NA
+"372","Ice_Pip",500,625,750,1000,NA,"fish","Mines",NA
+"373","Ice_Pip",625,781,937,1250,"fisher","fish","Mines",NA
+"374","Ice_Pip",750,937,1125,1500,"angler","fish","Mines",NA
+"375","Largemouth_Bass",100,125,150,200,NA,"fish","Mountain Lake",NA
+"376","Largemouth_Bass",125,156,187,250,"fisher","fish","Mountain Lake",NA
+"377","Largemouth_Bass",150,187,225,300,"angler","fish","Mountain Lake",NA
+"378","Lava_Eel",700,875,1050,1400,NA,"fish","Mines",NA
+"379","Lava_Eel",700,875,1050,1400,NA,"fish","Ginger Island",NA
+"380","Lava_Eel",875,1093,1312,1750,"fisher","fish","Mines",NA
+"381","Lava_Eel",875,1093,1312,1750,"fisher","fish","Ginger Island",NA
+"382","Lava_Eel",1050,1312,1575,2100,"angler","fish","Mines",NA
+"383","Lava_Eel",1050,1312,1575,2100,"angler","fish","Ginger Island",NA
+"384","Legend",5000,6250,7500,10000,NA,"fish","Legendary",NA
+"385","Legend",5000,6250,7500,10000,NA,"fish","Mountain Lake",NA
+"386","Legend",6250,7812,9375,12500,"fisher","fish","Legendary",NA
+"387","Legend",6250,7812,9375,12500,"fisher","fish","Mountain Lake",NA
+"388","Legend",7500,9375,11250,15000,"angler","fish","Legendary",NA
+"389","Legend",7500,9375,11250,15000,"angler","fish","Mountain Lake",NA
+"390","Legend_II",5000,6250,7500,10000,NA,"fish","Legendary",NA
+"391","Legend_II",5000,6250,7500,10000,NA,"fish","Mountain Lake",NA
+"392","Legend_II",6250,7812,9375,12500,"fisher","fish","Legendary",NA
+"393","Legend_II",6250,7812,9375,12500,"fisher","fish","Mountain Lake",NA
+"394","Legend_II",7500,9375,11250,15000,"angler","fish","Legendary",NA
+"395","Legend_II",7500,9375,11250,15000,"angler","fish","Mountain Lake",NA
+"396","Lingcod",120,150,180,240,NA,"fish","River",NA
+"397","Lingcod",120,150,180,240,NA,"fish","Mountain Lake",NA
+"398","Lingcod",150,187,225,300,"fisher","fish","River",NA
+"399","Lingcod",150,187,225,300,"fisher","fish","Mountain Lake",NA
+"400","Lingcod",180,225,270,360,"angler","fish","River",NA
+"401","Lingcod",180,225,270,360,"angler","fish","Mountain Lake",NA
+"402","Lionfish",100,125,150,200,NA,"fish","Ginger Island",NA
+"403","Lionfish",125,156,187,250,"fisher","fish","Ginger Island",NA
+"404","Lionfish",150,187,225,300,"angler","fish","Ginger Island",NA
+"405","Lobster",120,150,NA,NA,NA,"fish","Crab Pot",NA
+"406","Lobster",150,187,NA,NA,"fisher","fish","Crab Pot",NA
+"407","Lobster",180,225,NA,NA,"angler","fish","Crab Pot",NA
+"408","Midnight_Carp",150,187,225,300,NA,"fish","Mountain Lake",NA
+"409","Midnight_Carp",150,187,225,300,NA,"fish","Cindersap Forest Pond",NA
+"410","Midnight_Carp",150,187,225,300,NA,"fish","Ginger Island",NA
+"411","Midnight_Carp",187,233,281,375,"fisher","fish","Mountain Lake",NA
+"412","Midnight_Carp",187,233,281,375,"fisher","fish","Cindersap Forest Pond",NA
+"413","Midnight_Carp",187,233,281,375,"fisher","fish","Ginger Island",NA
+"414","Midnight_Carp",225,280,337,450,"angler","fish","Mountain Lake",NA
+"415","Midnight_Carp",225,280,337,450,"angler","fish","Cindersap Forest Pond",NA
+"416","Midnight_Carp",225,280,337,450,"angler","fish","Ginger Island",NA
+"417","Midnight_Squid",100,125,150,200,NA,"fish","Night Market",NA
+"418","Midnight_Squid",125,156,187,250,"fisher","fish","Night Market",NA
+"419","Midnight_Squid",150,187,225,300,"angler","fish","Night Market",NA
+"420","Ms._Angler",900,1125,1350,1800,NA,"fish","Legendary",NA
+"421","Ms._Angler",900,1125,1350,1800,NA,"fish","River",NA
+"422","Ms._Angler",1125,1406,1687,2250,"fisher","fish","Legendary",NA
+"423","Ms._Angler",1125,1406,1687,2250,"fisher","fish","River",NA
+"424","Ms._Angler",1350,1687,2025,2700,"angler","fish","Legendary",NA
+"425","Ms._Angler",1350,1687,2025,2700,"angler","fish","River",NA
+"426","Mussel",30,37,45,60,NA,"fish","Crab Pot",NA
+"427","Mussel",37,46,56,75,"fisher","fish","Crab Pot",NA
+"428","Mussel",45,55,67,90,"angler","fish","Crab Pot",NA
+"429","Mutant_Carp",1000,1250,1500,2000,NA,"fish","Legendary",NA
+"430","Mutant_Carp",1000,1250,1500,2000,NA,"fish","Sewers",NA
+"431","Mutant_Carp",1250,1562,1875,2500,"fisher","fish","Legendary",NA
+"432","Mutant_Carp",1250,1562,1875,2500,"fisher","fish","Sewers",NA
+"433","Mutant_Carp",1500,1875,2250,3000,"angler","fish","Legendary",NA
+"434","Mutant_Carp",1500,1875,2250,3000,"angler","fish","Sewers",NA
+"435","Octopus",150,187,225,300,NA,"fish","The Beach",NA
+"436","Octopus",150,187,225,300,NA,"fish","Night Market",NA
+"437","Octopus",150,187,225,300,NA,"fish","Ginger Island",NA
+"438","Octopus",187,233,281,375,"fisher","fish","The Beach",NA
+"439","Octopus",187,233,281,375,"fisher","fish","Night Market",NA
+"440","Octopus",187,233,281,375,"fisher","fish","Ginger Island",NA
+"441","Octopus",225,280,337,450,"angler","fish","The Beach",NA
+"442","Octopus",225,280,337,450,"angler","fish","Night Market",NA
+"443","Octopus",225,280,337,450,"angler","fish","Ginger Island",NA
+"444","Oyster",40,50,60,80,NA,"fish","Crab Pot",NA
+"445","Oyster",50,62,75,100,"fisher","fish","Crab Pot",NA
+"446","Oyster",60,75,90,120,"angler","fish","Crab Pot",NA
+"447","Perch",55,68,82,110,NA,"fish","River",NA
+"448","Perch",55,68,82,110,NA,"fish","Mountain Lake",NA
+"449","Perch",55,68,82,110,NA,"fish","Cindersap Forest Pond",NA
+"450","Perch",68,85,102,137,"fisher","fish","River",NA
+"451","Perch",68,85,102,137,"fisher","fish","Mountain Lake",NA
+"452","Perch",68,85,102,137,"fisher","fish","Cindersap Forest Pond",NA
+"453","Perch",82,102,123,165,"angler","fish","River",NA
+"454","Perch",82,102,123,165,"angler","fish","Mountain Lake",NA
+"455","Perch",82,102,123,165,"angler","fish","Cindersap Forest Pond",NA
+"456","Periwinkle",20,25,NA,NA,NA,"fish","Crab Pot",NA
+"457","Periwinkle",25,31,NA,NA,"fisher","fish","Crab Pot",NA
+"458","Periwinkle",30,37,NA,NA,"angler","fish","Crab Pot",NA
+"459","Pike",100,125,150,200,NA,"fish","River",NA
+"460","Pike",100,125,150,200,NA,"fish","Cindersap Forest Pond",NA
+"461","Pike",125,156,187,250,"fisher","fish","River",NA
+"462","Pike",125,156,187,250,"fisher","fish","Cindersap Forest Pond",NA
+"463","Pike",150,187,225,300,"angler","fish","River",NA
+"464","Pike",150,187,225,300,"angler","fish","Cindersap Forest Pond",NA
+"465","Pufferfish",200,250,300,400,NA,"fish","The Beach",NA
+"466","Pufferfish",200,250,300,400,NA,"fish","Ginger Island",NA
+"467","Pufferfish",250,312,375,500,"fisher","fish","The Beach",NA
+"468","Pufferfish",250,312,375,500,"fisher","fish","Ginger Island",NA
+"469","Pufferfish",300,375,450,600,"angler","fish","The Beach",NA
+"470","Pufferfish",300,375,450,600,"angler","fish","Ginger Island",NA
+"471","Radioactive_Carp",1000,1250,1500,2000,NA,"fish","Legendary",NA
+"472","Radioactive_Carp",1000,1250,1500,2000,NA,"fish","Sewers",NA
+"473","Radioactive_Carp",1250,1562,1875,2500,"fisher","fish","Legendary",NA
+"474","Radioactive_Carp",1250,1562,1875,2500,"fisher","fish","Sewers",NA
+"475","Radioactive_Carp",1500,1875,2250,3000,"angler","fish","Legendary",NA
+"476","Radioactive_Carp",1500,1875,2250,3000,"angler","fish","Sewers",NA
+"477","Rainbow_Trout",65,81,97,130,NA,"fish","River",NA
+"478","Rainbow_Trout",65,81,97,130,NA,"fish","Mountain Lake",NA
+"479","Rainbow_Trout",81,101,121,162,"fisher","fish","River",NA
+"480","Rainbow_Trout",81,101,121,162,"fisher","fish","Mountain Lake",NA
+"481","Rainbow_Trout",97,121,145,195,"angler","fish","River",NA
+"482","Rainbow_Trout",97,121,145,195,"angler","fish","Mountain Lake",NA
+"483","Red_Mullet",75,93,112,150,NA,"fish","The Beach",NA
+"484","Red_Mullet",93,116,140,187,"fisher","fish","The Beach",NA
+"485","Red_Mullet",112,139,168,225,"angler","fish","The Beach",NA
+"486","Red_Snapper",50,62,75,100,NA,"fish","The Beach",NA
+"487","Red_Snapper",62,77,93,125,"fisher","fish","The Beach",NA
+"488","Red_Snapper",75,93,112,150,"angler","fish","The Beach",NA
+"489","Salmon",75,93,112,150,NA,"fish","River",NA
+"490","Salmon",93,116,140,187,"fisher","fish","River",NA
+"491","Salmon",112,139,168,225,"angler","fish","River",NA
+"492","Sandfish",75,93,112,150,NA,"fish","Desert",NA
+"493","Sandfish",93,116,140,187,"fisher","fish","Desert",NA
+"494","Sandfish",112,139,168,225,"angler","fish","Desert",NA
+"495","Sardine",40,50,60,80,NA,"fish","The Beach",NA
+"496","Sardine",50,62,75,100,"fisher","fish","The Beach",NA
+"497","Sardine",60,75,90,120,"angler","fish","The Beach",NA
+"498","Scorpion_Carp",150,187,225,300,NA,"fish","Desert",NA
+"499","Scorpion_Carp",187,233,281,375,"fisher","fish","Desert",NA
+"500","Scorpion_Carp",225,280,337,450,"angler","fish","Desert",NA
+"501","Sea_Cucumber",75,93,112,150,NA,"fish","The Beach",NA
+"502","Sea_Cucumber",75,93,112,150,NA,"fish","Night Market",NA
+"503","Sea_Cucumber",93,116,140,187,"fisher","fish","The Beach",NA
+"504","Sea_Cucumber",93,116,140,187,"fisher","fish","Night Market",NA
+"505","Sea_Cucumber",112,139,168,225,"angler","fish","The Beach",NA
+"506","Sea_Cucumber",112,139,168,225,"angler","fish","Night Market",NA
+"507","Shad",60,75,90,120,NA,"fish","River",NA
+"508","Shad",75,93,112,150,"fisher","fish","River",NA
+"509","Shad",90,112,135,180,"angler","fish","River",NA
+"510","Shrimp",60,75,NA,NA,NA,"fish","Crab Pot",NA
+"511","Shrimp",75,93,NA,NA,"fisher","fish","Crab Pot",NA
+"512","Shrimp",90,112,NA,NA,"angler","fish","Crab Pot",NA
+"513","Slimejack",100,125,150,200,NA,"fish","Mutant Bug Lair",NA
+"514","Slimejack",125,156,187,250,"fisher","fish","Mutant Bug Lair",NA
+"515","Slimejack",150,187,225,300,"angler","fish","Mutant Bug Lair",NA
+"516","Smallmouth_Bass",50,62,75,100,NA,"fish","River",NA
+"517","Smallmouth_Bass",50,62,75,100,NA,"fish","Cindersap Forest Pond",NA
+"518","Smallmouth_Bass",62,77,93,125,"fisher","fish","River",NA
+"519","Smallmouth_Bass",62,77,93,125,"fisher","fish","Cindersap Forest Pond",NA
+"520","Smallmouth_Bass",75,93,112,150,"angler","fish","River",NA
+"521","Smallmouth_Bass",75,93,112,150,"angler","fish","Cindersap Forest Pond",NA
+"522","Snail",65,81,NA,NA,NA,"fish","Crab Pot",NA
+"523","Snail",81,101,NA,NA,"fisher","fish","Crab Pot",NA
+"524","Snail",97,121,NA,NA,"angler","fish","Crab Pot",NA
+"525","Son_of_Crimsonfish",1500,1875,2250,3000,NA,"fish","Legendary",NA
+"526","Son_of_Crimsonfish",1500,1875,2250,3000,NA,"fish","The Beach",NA
+"527","Son_of_Crimsonfish",1875,2343,2812,3750,"fisher","fish","Legendary",NA
+"528","Son_of_Crimsonfish",1875,2343,2812,3750,"fisher","fish","The Beach",NA
+"529","Son_of_Crimsonfish",2250,2812,3375,4500,"angler","fish","Legendary",NA
+"530","Son_of_Crimsonfish",2250,2812,3375,4500,"angler","fish","The Beach",NA
+"531","Spook_Fish",220,275,330,440,NA,"fish","Night Market",NA
+"532","Spook_Fish",275,343,412,550,"fisher","fish","Night Market",NA
+"533","Spook_Fish",330,412,495,660,"angler","fish","Night Market",NA
+"534","Squid",80,100,120,160,NA,"fish","The Beach",NA
+"535","Squid",100,125,150,200,"fisher","fish","The Beach",NA
+"536","Squid",120,150,180,240,"angler","fish","The Beach",NA
+"537","Stingray",180,225,270,360,NA,"fish","Ginger Island",NA
+"538","Stingray",225,281,337,450,"fisher","fish","Ginger Island",NA
+"539","Stingray",270,337,405,540,"angler","fish","Ginger Island",NA
+"540","Stonefish",300,375,450,600,NA,"fish","Mines",NA
+"541","Stonefish",375,468,562,750,"fisher","fish","Mines",NA
+"542","Stonefish",450,562,675,900,"angler","fish","Mines",NA
+"543","Sturgeon",200,250,300,400,NA,"fish","Mountain Lake",NA
+"544","Sturgeon",250,312,375,500,"fisher","fish","Mountain Lake",NA
+"545","Sturgeon",300,375,450,600,"angler","fish","Mountain Lake",NA
+"546","Sunfish",30,37,45,60,NA,"fish","River",NA
+"547","Sunfish",37,46,56,75,"fisher","fish","River",NA
+"548","Sunfish",45,55,67,90,"angler","fish","River",NA
+"549","Super_Cucumber",250,312,375,500,NA,"fish","The Beach",NA
+"550","Super_Cucumber",250,312,375,500,NA,"fish","Night Market",NA
+"551","Super_Cucumber",312,390,468,625,"fisher","fish","The Beach",NA
+"552","Super_Cucumber",312,390,468,625,"fisher","fish","Night Market",NA
+"553","Super_Cucumber",375,468,562,750,"angler","fish","The Beach",NA
+"554","Super_Cucumber",375,468,562,750,"angler","fish","Night Market",NA
+"555","Tiger_Trout",150,187,225,300,NA,"fish","River",NA
+"556","Tiger_Trout",187,233,281,375,"fisher","fish","River",NA
+"557","Tiger_Trout",225,280,337,450,"angler","fish","River",NA
+"558","Tilapia",75,93,112,150,NA,"fish","The Beach",NA
+"559","Tilapia",75,93,112,150,NA,"fish","Ginger Island",NA
+"560","Tilapia",93,116,140,187,"fisher","fish","The Beach",NA
+"561","Tilapia",93,116,140,187,"fisher","fish","Ginger Island",NA
+"562","Tilapia",112,139,168,225,"angler","fish","The Beach",NA
+"563","Tilapia",112,139,168,225,"angler","fish","Ginger Island",NA
+"564","Tuna",100,125,150,200,NA,"fish","The Beach",NA
+"565","Tuna",100,125,150,200,NA,"fish","Ginger Island",NA
+"566","Tuna",125,156,187,250,"fisher","fish","The Beach",NA
+"567","Tuna",125,156,187,250,"fisher","fish","Ginger Island",NA
+"568","Tuna",150,187,225,300,"angler","fish","The Beach",NA
+"569","Tuna",150,187,225,300,"angler","fish","Ginger Island",NA
+"570","Void_Salmon",150,187,225,300,NA,"fish","Witch's Swamp",NA
+"571","Void_Salmon",187,233,281,375,"fisher","fish","Witch's Swamp",NA
+"572","Void_Salmon",225,280,337,450,"angler","fish","Witch's Swamp",NA
+"573","Walleye",105,131,157,210,NA,"fish","River",NA
+"574","Walleye",105,131,157,210,NA,"fish","Mountain Lake",NA
+"575","Walleye",105,131,157,210,NA,"fish","Cindersap Forest Pond",NA
+"576","Walleye",131,163,196,262,"fisher","fish","River",NA
+"577","Walleye",131,163,196,262,"fisher","fish","Mountain Lake",NA
+"578","Walleye",131,163,196,262,"fisher","fish","Cindersap Forest Pond",NA
+"579","Walleye",157,196,235,315,"angler","fish","River",NA
+"580","Walleye",157,196,235,315,"angler","fish","Mountain Lake",NA
+"581","Walleye",157,196,235,315,"angler","fish","Cindersap Forest Pond",NA
+"582","Woodskip",75,93,112,150,NA,"fish","Secret Woods",NA
+"583","Woodskip",93,116,140,187,"fisher","fish","Secret Woods",NA
+"584","Woodskip",112,139,168,225,"angler","fish","Secret Woods",NA

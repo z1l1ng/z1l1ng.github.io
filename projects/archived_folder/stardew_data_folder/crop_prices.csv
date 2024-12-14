@@ -1,0 +1,117 @@
+"","item","regular_price","silver_price","gold_price","iridium_price","profession","category","sub_category"
+"1","Amaranth",150,187,225,300,NA,"crop","Fall Crop"
+"2","Amaranth",165,205,247,330,"tiller","crop","Fall Crop"
+"3","Ancient_Fruit",550,687,825,1100,NA,"crop","Special Crop"
+"4","Ancient_Fruit",605,755,907,1210,"tiller","crop","Special Crop"
+"5","Apple",100,125,150,200,NA,"crop",NA
+"6","Apple",110,137,165,220,"tiller","crop",NA
+"7","Apricot",50,62,75,100,NA,"crop",NA
+"8","Apricot",55,68,82,110,"tiller","crop",NA
+"9","Artichoke",160,200,240,320,NA,"crop","Fall Crop"
+"10","Artichoke",176,220,264,352,"tiller","crop","Fall Crop"
+"11","Banana",150,187,225,300,NA,"crop",NA
+"12","Banana",165,205,247,330,"tiller","crop",NA
+"13","Beet",100,125,150,200,NA,"crop","Fall Crop"
+"14","Beet",110,137,165,220,"tiller","crop","Fall Crop"
+"15","Blackberry",20,25,30,40,NA,"crop",NA
+"16","Blue_Jazz",50,62,75,100,NA,"crop","Spring Crop"
+"17","Blue_Jazz",55,68,82,110,"tiller","crop","Spring Crop"
+"18","Blueberry",50,62,75,100,NA,"crop","Summer Crop"
+"19","Blueberry",55,68,82,110,"tiller","crop","Summer Crop"
+"20","Bok_Choy",80,100,120,160,NA,"crop","Fall Crop"
+"21","Bok_Choy",88,110,132,176,"tiller","crop","Fall Crop"
+"22","Broccoli",70,87,105,140,NA,"crop","Fall Crop"
+"23","Broccoli",77,95,115,154,"tiller","crop","Fall Crop"
+"24","Cactus_Fruit",75,93,112,150,NA,"crop","Special Crop"
+"25","Cactus_Fruit",82,102,123,165,NA,"crop","Special Crop"
+"26","Carrot",35,43,52,70,NA,"crop","Spring Crop"
+"27","Carrot",38,47,57,77,"tiller","crop","Spring Crop"
+"28","Cauliflower",175,218,262,350,NA,"crop","Spring Crop"
+"29","Cauliflower",192,239,288,385,"tiller","crop","Spring Crop"
+"30","Cherry",80,100,120,160,NA,"crop",NA
+"31","Cherry",88,110,132,176,"tiller","crop",NA
+"32","Corn",50,62,75,100,NA,"crop","Summer Crop"
+"33","Corn",50,62,75,100,NA,"crop","Fall Crop"
+"34","Corn",55,68,82,110,"tiller","crop","Summer Crop"
+"35","Corn",55,68,82,110,"tiller","crop","Fall Crop"
+"36","Cranberries",75,93,112,150,NA,"crop","Fall Crop"
+"37","Cranberries",82,102,123,165,"tiller","crop","Fall Crop"
+"38","Crystal_Fruit",150,187,225,300,NA,"crop",NA
+"39","Eggplant",60,75,90,120,NA,"crop","Fall Crop"
+"40","Eggplant",66,82,99,132,"tiller","crop","Fall Crop"
+"41","Fairy_Rose",290,362,435,580,NA,"crop","Fall Crop"
+"42","Fairy_Rose",319,398,478,638,"tiller","crop","Fall Crop"
+"43","Fiddlehead_Fern",90,112,135,180,NA,"crop",NA
+"44","Fiddlehead_Fern",99,123,148,198,"tiller","crop",NA
+"45","Garlic",60,75,90,120,NA,"crop","Spring Crop"
+"46","Garlic",66,82,99,132,"tiller","crop","Spring Crop"
+"47","Grape",80,100,120,160,NA,"crop","Fall Crop"
+"48","Grape",88,110,132,176,NA,"crop","Fall Crop"
+"49","Green_Bean",40,50,60,80,NA,"crop","Spring Crop"
+"50","Green_Bean",44,55,66,88,"tiller","crop","Spring Crop"
+"51","Hops",25,31,37,50,NA,"crop","Summer Crop"
+"52","Hops",27,34,40,55,"tiller","crop","Summer Crop"
+"53","Hot_Pepper",40,50,60,80,NA,"crop","Summer Crop"
+"54","Hot_Pepper",44,55,66,88,"tiller","crop","Summer Crop"
+"55","Kale",110,137,165,220,NA,"crop","Spring Crop"
+"56","Kale",121,150,181,242,"tiller","crop","Spring Crop"
+"57","Mango",130,162,195,260,NA,"crop",NA
+"58","Mango",143,178,214,286,"tiller","crop",NA
+"59","Melon",250,312,375,500,NA,"crop","Summer Crop"
+"60","Melon",275,343,412,550,"tiller","crop","Summer Crop"
+"61","Orange",100,125,150,200,NA,"crop",NA
+"62","Orange",110,137,165,220,"tiller","crop",NA
+"63","Parsnip",35,43,52,70,NA,"crop","Spring Crop"
+"64","Parsnip",38,47,57,77,"tiller","crop","Spring Crop"
+"65","Peach",140,175,210,280,NA,"crop",NA
+"66","Peach",154,192,231,308,"tiller","crop",NA
+"67","Pineapple",300,375,450,600,NA,"crop","Special Crop"
+"68","Pineapple",330,412,495,660,"tiller","crop","Special Crop"
+"69","Pomegranate",140,175,210,280,NA,"crop",NA
+"70","Pomegranate",154,192,231,308,"tiller","crop",NA
+"71","Poppy",140,175,210,280,NA,"crop","Summer Crop"
+"72","Poppy",154,192,231,308,"tiller","crop","Summer Crop"
+"73","Potato",80,100,120,160,NA,"crop","Spring Crop"
+"74","Potato",88,110,132,176,"tiller","crop","Spring Crop"
+"75","Powdermelon",60,75,90,120,NA,"crop","Winter Crop"
+"76","Powdermelon",66,82,99,132,"tiller","crop","Winter Crop"
+"77","Pumpkin",320,400,480,640,NA,"crop","Fall Crop"
+"78","Pumpkin",352,440,528,704,"tiller","crop","Fall Crop"
+"79","Qi_Fruit",1,NA,NA,NA,NA,"crop","Special Crop"
+"80","Qi_Fruit",1,NA,NA,NA,NA,"crop","Special Crop"
+"81","Radish",90,112,135,180,NA,"crop","Summer Crop"
+"82","Radish",99,123,148,198,"tiller","crop","Summer Crop"
+"83","Red_Cabbage",260,325,390,520,NA,"crop","Summer Crop"
+"84","Red_Cabbage",286,357,429,572,"tiller","crop","Summer Crop"
+"85","Rhubarb",220,275,330,440,NA,"crop","Spring Crop"
+"86","Rhubarb",242,302,363,484,"tiller","crop","Spring Crop"
+"87","Spice_Berry",80,100,120,160,NA,"crop",NA
+"88","Starfruit",750,937,1125,1500,NA,"crop","Summer Crop"
+"89","Starfruit",825,1030,1237,1650,"tiller","crop","Summer Crop"
+"90","Strawberry",120,150,180,240,NA,"crop","Spring Crop"
+"91","Strawberry",132,165,198,264,"tiller","crop","Spring Crop"
+"92","Summer_Spangle",90,112,135,180,NA,"crop","Summer Crop"
+"93","Summer_Spangle",99,123,148,198,"tiller","crop","Summer Crop"
+"94","Summer_Squash",45,56,67,90,NA,"crop","Summer Crop"
+"95","Summer_Squash",49,61,73,99,"tiller","crop","Summer Crop"
+"96","Sunflower",80,100,120,160,NA,"crop","Summer Crop"
+"97","Sunflower",80,100,120,160,NA,"crop","Fall Crop"
+"98","Sunflower",88,110,132,176,"tiller","crop","Summer Crop"
+"99","Sunflower",88,110,132,176,"tiller","crop","Fall Crop"
+"100","Taro_Root",100,125,150,200,NA,"crop","Special Crop"
+"101","Taro_Root",110,137,165,220,"tiller","crop","Special Crop"
+"102","Tea_Leaves",50,NA,NA,NA,NA,"crop","Special Crop"
+"103","Tea_Leaves",55,NA,NA,NA,NA,"crop","Special Crop"
+"104","Tomato",60,75,90,120,NA,"crop","Summer Crop"
+"105","Tomato",66,82,99,132,"tiller","crop","Summer Crop"
+"106","Tulip",30,37,45,60,NA,"crop","Spring Crop"
+"107","Tulip",33,40,49,66,"tiller","crop","Spring Crop"
+"108","Unmilled_Rice",30,37,45,60,NA,"crop","Spring Crop"
+"109","Unmilled_Rice",33,40,49,66,"tiller","crop","Spring Crop"
+"110","Wheat",25,31,37,50,NA,"crop","Summer Crop"
+"111","Wheat",25,31,37,50,NA,"crop","Fall Crop"
+"112","Wheat",27,34,40,55,"tiller","crop","Summer Crop"
+"113","Wheat",27,34,40,55,"tiller","crop","Fall Crop"
+"114","Wild_Plum",80,100,120,160,NA,"crop",NA
+"115","Yam",160,200,240,320,NA,"crop","Fall Crop"
+"116","Yam",176,220,264,352,"tiller","crop","Fall Crop"

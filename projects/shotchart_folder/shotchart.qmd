@@ -1,5 +1,6 @@
 ---
 title: "Shot Chart Analysis"
+author: "Ziling Zhen"
 date: "2024-05-17"
 sidebar: false
 format:

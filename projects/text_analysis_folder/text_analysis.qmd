@@ -1,5 +1,6 @@
 ---
 title: "Text Analysis of Movies & TV Shows of Streaming Services"
+author: "Ziling Zhen"
 date: "2024-11-20"
 sidebar: false
 format:

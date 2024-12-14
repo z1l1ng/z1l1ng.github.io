@@ -1,0 +1,319 @@
+...1,item,regular_price,silver_price,gold_price,iridium_price,profession,sub_category,category
+1,Albacore,75,93,112,150,none,The Beach,fish
+2,Albacore,93,116,140,187,fisher,The Beach,fish
+3,Albacore,112,139,168,225,angler,The Beach,fish
+4,Anchovy,30,37,45,60,none,The Beach,fish
+5,Anchovy,37,46,56,75,fisher,The Beach,fish
+6,Anchovy,45,55,67,90,angler,The Beach,fish
+7,Angler,900,1125,1350,1800,none,Legendary,fish
+8,Angler,900,1125,1350,1800,none,River,fish
+9,Angler,1125,1406,1687,2250,fisher,Legendary,fish
+10,Angler,1125,1406,1687,2250,fisher,River,fish
+11,Angler,1350,1687,2025,2700,angler,Legendary,fish
+12,Angler,1350,1687,2025,2700,angler,River,fish
+13,Blobfish,500,625,750,1000,none,Night Market,fish
+14,Blobfish,625,781,937,1250,fisher,Night Market,fish
+15,Blobfish,750,937,1125,1500,angler,Night Market,fish
+16,Blue_Discus,120,150,180,240,none,Ginger Island,fish
+17,Blue_Discus,150,187,225,300,fisher,Ginger Island,fish
+18,Blue_Discus,180,225,270,360,angler,Ginger Island,fish
+19,Bream,45,56,67,90,none,River,fish
+20,Bream,56,70,83,112,fisher,River,fish
+21,Bream,67,84,100,135,angler,River,fish
+22,Bullhead,75,93,112,150,none,Mountain Lake,fish
+23,Bullhead,93,116,140,187,fisher,Mountain Lake,fish
+24,Bullhead,112,139,168,225,angler,Mountain Lake,fish
+25,Carp,30,37,45,60,none,Mountain Lake,fish
+26,Carp,30,37,45,60,none,Secret Woods,fish
+27,Carp,30,37,45,60,none,Sewers,fish
+28,Carp,30,37,45,60,none,Mutant Bug Lair,fish
+29,Carp,37,46,56,75,fisher,Mountain Lake,fish
+30,Carp,37,46,56,75,fisher,Secret Woods,fish
+31,Carp,37,46,56,75,fisher,Sewers,fish
+32,Carp,37,46,56,75,fisher,Mutant Bug Lair,fish
+33,Carp,45,55,67,90,angler,Mountain Lake,fish
+34,Carp,45,55,67,90,angler,Secret Woods,fish
+35,Carp,45,55,67,90,angler,Sewers,fish
+36,Carp,45,55,67,90,angler,Mutant Bug Lair,fish
+37,Catfish,200,250,300,400,none,River,fish
+38,Catfish,200,250,300,400,none,Secret Woods,fish
+39,Catfish,200,250,300,400,none,Witch's Swamp,fish
+40,Catfish,250,312,375,500,fisher,River,fish
+41,Catfish,250,312,375,500,fisher,Secret Woods,fish
+42,Catfish,250,312,375,500,fisher,Witch's Swamp,fish
+43,Catfish,300,375,450,600,angler,River,fish
+44,Catfish,300,375,450,600,angler,Secret Woods,fish
+45,Catfish,300,375,450,600,angler,Witch's Swamp,fish
+46,Chub,50,62,75,100,none,River,fish
+47,Chub,50,62,75,100,none,Mountain Lake,fish
+48,Chub,62,77,93,125,fisher,River,fish
+49,Chub,62,77,93,125,fisher,Mountain Lake,fish
+50,Chub,75,93,112,150,angler,River,fish
+51,Chub,75,93,112,150,angler,Mountain Lake,fish
+52,Clam,50,62,75,100,none,Crab Pot,fish
+53,Clam,62,77,93,125,fisher,Crab Pot,fish
+54,Clam,75,93,112,150,angler,Crab Pot,fish
+55,Cockle,50,62,75,100,none,Crab Pot,fish
+56,Cockle,62,77,93,125,fisher,Crab Pot,fish
+57,Cockle,75,93,112,150,angler,Crab Pot,fish
+58,Crab,100,125,NA,NA,none,Crab Pot,fish
+59,Crab,125,156,NA,NA,fisher,Crab Pot,fish
+60,Crab,150,187,NA,NA,angler,Crab Pot,fish
+61,Crayfish,75,93,NA,NA,none,Crab Pot,fish
+62,Crayfish,93,116,NA,NA,fisher,Crab Pot,fish
+63,Crayfish,112,139,NA,NA,angler,Crab Pot,fish
+64,Crimsonfish,1500,1875,2250,3000,none,Legendary,fish
+65,Crimsonfish,1500,1875,2250,3000,none,The Beach,fish
+66,Crimsonfish,1875,2343,2812,3750,fisher,Legendary,fish
+67,Crimsonfish,1875,2343,2812,3750,fisher,The Beach,fish
+68,Crimsonfish,2250,2812,3375,4500,angler,Legendary,fish
+69,Crimsonfish,2250,2812,3375,4500,angler,The Beach,fish
+70,Dorado,100,125,150,200,none,River,fish
+71,Dorado,125,156,187,250,fisher,River,fish
+72,Dorado,150,187,225,300,angler,River,fish
+73,Eel,85,106,127,170,none,The Beach,fish
+74,Eel,106,132,158,212,fisher,The Beach,fish
+75,Eel,127,159,190,255,angler,The Beach,fish
+76,Flounder,100,125,150,200,none,The Beach,fish
+77,Flounder,100,125,150,200,none,Ginger Island,fish
+78,Flounder,125,156,187,250,fisher,The Beach,fish
+79,Flounder,125,156,187,250,fisher,Ginger Island,fish
+80,Flounder,150,187,225,300,angler,The Beach,fish
+81,Flounder,150,187,225,300,angler,Ginger Island,fish
+82,Ghostfish,45,56,67,90,none,Mines,fish
+83,Ghostfish,56,70,83,112,fisher,Mines,fish
+84,Ghostfish,67,84,100,135,angler,Mines,fish
+85,Glacierfish,1000,1250,1500,2000,none,Legendary,fish
+86,Glacierfish,1000,1250,1500,2000,none,River,fish
+87,Glacierfish,1250,1562,1875,2500,fisher,Legendary,fish
+88,Glacierfish,1250,1562,1875,2500,fisher,River,fish
+89,Glacierfish,1500,1875,2250,3000,angler,Legendary,fish
+90,Glacierfish,1500,1875,2250,3000,angler,River,fish
+91,Glacierfish_Jr.,1000,1250,1500,2000,none,Legendary,fish
+92,Glacierfish_Jr.,1000,1250,1500,2000,none,River,fish
+93,Glacierfish_Jr.,1250,1562,1875,2500,fisher,Legendary,fish
+94,Glacierfish_Jr.,1250,1562,1875,2500,fisher,River,fish
+95,Glacierfish_Jr.,1500,1875,2250,3000,angler,Legendary,fish
+96,Glacierfish_Jr.,1500,1875,2250,3000,angler,River,fish
+97,Goby,150,187,225,300,none,River,fish
+98,Goby,187,233,281,375,fisher,River,fish
+99,Goby,225,280,337,450,angler,River,fish
+100,Halibut,80,100,120,160,none,The Beach,fish
+101,Halibut,100,125,150,200,fisher,The Beach,fish
+102,Halibut,120,150,180,240,angler,The Beach,fish
+103,Herring,30,37,45,60,none,The Beach,fish
+104,Herring,37,46,56,75,fisher,The Beach,fish
+105,Herring,45,55,67,90,angler,The Beach,fish
+106,Ice_Pip,500,625,750,1000,none,Mines,fish
+107,Ice_Pip,625,781,937,1250,fisher,Mines,fish
+108,Ice_Pip,750,937,1125,1500,angler,Mines,fish
+109,Largemouth_Bass,100,125,150,200,none,Mountain Lake,fish
+110,Largemouth_Bass,125,156,187,250,fisher,Mountain Lake,fish
+111,Largemouth_Bass,150,187,225,300,angler,Mountain Lake,fish
+112,Lava_Eel,700,875,1050,1400,none,Mines,fish
+113,Lava_Eel,700,875,1050,1400,none,Ginger Island,fish
+114,Lava_Eel,875,1093,1312,1750,fisher,Mines,fish
+115,Lava_Eel,875,1093,1312,1750,fisher,Ginger Island,fish
+116,Lava_Eel,1050,1312,1575,2100,angler,Mines,fish
+117,Lava_Eel,1050,1312,1575,2100,angler,Ginger Island,fish
+118,Legend,5000,6250,7500,10000,none,Legendary,fish
+119,Legend,5000,6250,7500,10000,none,Mountain Lake,fish
+120,Legend,6250,7812,9375,12500,fisher,Legendary,fish
+121,Legend,6250,7812,9375,12500,fisher,Mountain Lake,fish
+122,Legend,7500,9375,11250,15000,angler,Legendary,fish
+123,Legend,7500,9375,11250,15000,angler,Mountain Lake,fish
+124,Legend_II,5000,6250,7500,10000,none,Legendary,fish
+125,Legend_II,5000,6250,7500,10000,none,Mountain Lake,fish
+126,Legend_II,6250,7812,9375,12500,fisher,Legendary,fish
+127,Legend_II,6250,7812,9375,12500,fisher,Mountain Lake,fish
+128,Legend_II,7500,9375,11250,15000,angler,Legendary,fish
+129,Legend_II,7500,9375,11250,15000,angler,Mountain Lake,fish
+130,Lingcod,120,150,180,240,none,River,fish
+131,Lingcod,120,150,180,240,none,Mountain Lake,fish
+132,Lingcod,150,187,225,300,fisher,River,fish
+133,Lingcod,150,187,225,300,fisher,Mountain Lake,fish
+134,Lingcod,180,225,270,360,angler,River,fish
+135,Lingcod,180,225,270,360,angler,Mountain Lake,fish
+136,Lionfish,100,125,150,200,none,Ginger Island,fish
+137,Lionfish,125,156,187,250,fisher,Ginger Island,fish
+138,Lionfish,150,187,225,300,angler,Ginger Island,fish
+139,Lobster,120,150,NA,NA,none,Crab Pot,fish
+140,Lobster,150,187,NA,NA,fisher,Crab Pot,fish
+141,Lobster,180,225,NA,NA,angler,Crab Pot,fish
+142,Midnight_Carp,150,187,225,300,none,Mountain Lake,fish
+143,Midnight_Carp,150,187,225,300,none,Cindersap Forest Pond,fish
+144,Midnight_Carp,150,187,225,300,none,Ginger Island,fish
+145,Midnight_Carp,187,233,281,375,fisher,Mountain Lake,fish
+146,Midnight_Carp,187,233,281,375,fisher,Cindersap Forest Pond,fish
+147,Midnight_Carp,187,233,281,375,fisher,Ginger Island,fish
+148,Midnight_Carp,225,280,337,450,angler,Mountain Lake,fish
+149,Midnight_Carp,225,280,337,450,angler,Cindersap Forest Pond,fish
+150,Midnight_Carp,225,280,337,450,angler,Ginger Island,fish
+151,Midnight_Squid,100,125,150,200,none,Night Market,fish
+152,Midnight_Squid,125,156,187,250,fisher,Night Market,fish
+153,Midnight_Squid,150,187,225,300,angler,Night Market,fish
+154,Ms._Angler,900,1125,1350,1800,none,Legendary,fish
+155,Ms._Angler,900,1125,1350,1800,none,River,fish
+156,Ms._Angler,1125,1406,1687,2250,fisher,Legendary,fish
+157,Ms._Angler,1125,1406,1687,2250,fisher,River,fish
+158,Ms._Angler,1350,1687,2025,2700,angler,Legendary,fish
+159,Ms._Angler,1350,1687,2025,2700,angler,River,fish
+160,Mussel,30,37,45,60,none,Crab Pot,fish
+161,Mussel,37,46,56,75,fisher,Crab Pot,fish
+162,Mussel,45,55,67,90,angler,Crab Pot,fish
+163,Mutant_Carp,1000,1250,1500,2000,none,Legendary,fish
+164,Mutant_Carp,1000,1250,1500,2000,none,Sewers,fish
+165,Mutant_Carp,1250,1562,1875,2500,fisher,Legendary,fish
+166,Mutant_Carp,1250,1562,1875,2500,fisher,Sewers,fish
+167,Mutant_Carp,1500,1875,2250,3000,angler,Legendary,fish
+168,Mutant_Carp,1500,1875,2250,3000,angler,Sewers,fish
+169,Octopus,150,187,225,300,none,The Beach,fish
+170,Octopus,150,187,225,300,none,Night Market,fish
+171,Octopus,150,187,225,300,none,Ginger Island,fish
+172,Octopus,187,233,281,375,fisher,The Beach,fish
+173,Octopus,187,233,281,375,fisher,Night Market,fish
+174,Octopus,187,233,281,375,fisher,Ginger Island,fish
+175,Octopus,225,280,337,450,angler,The Beach,fish
+176,Octopus,225,280,337,450,angler,Night Market,fish
+177,Octopus,225,280,337,450,angler,Ginger Island,fish
+178,Oyster,40,50,60,80,none,Crab Pot,fish
+179,Oyster,50,62,75,100,fisher,Crab Pot,fish
+180,Oyster,60,75,90,120,angler,Crab Pot,fish
+181,Perch,55,68,82,110,none,River,fish
+182,Perch,55,68,82,110,none,Mountain Lake,fish
+183,Perch,55,68,82,110,none,Cindersap Forest Pond,fish
+184,Perch,68,85,102,137,fisher,River,fish
+185,Perch,68,85,102,137,fisher,Mountain Lake,fish
+186,Perch,68,85,102,137,fisher,Cindersap Forest Pond,fish
+187,Perch,82,102,123,165,angler,River,fish
+188,Perch,82,102,123,165,angler,Mountain Lake,fish
+189,Perch,82,102,123,165,angler,Cindersap Forest Pond,fish
+190,Periwinkle,20,25,NA,NA,none,Crab Pot,fish
+191,Periwinkle,25,31,NA,NA,fisher,Crab Pot,fish
+192,Periwinkle,30,37,NA,NA,angler,Crab Pot,fish
+193,Pike,100,125,150,200,none,River,fish
+194,Pike,100,125,150,200,none,Cindersap Forest Pond,fish
+195,Pike,125,156,187,250,fisher,River,fish
+196,Pike,125,156,187,250,fisher,Cindersap Forest Pond,fish
+197,Pike,150,187,225,300,angler,River,fish
+198,Pike,150,187,225,300,angler,Cindersap Forest Pond,fish
+199,Pufferfish,200,250,300,400,none,The Beach,fish
+200,Pufferfish,200,250,300,400,none,Ginger Island,fish
+201,Pufferfish,250,312,375,500,fisher,The Beach,fish
+202,Pufferfish,250,312,375,500,fisher,Ginger Island,fish
+203,Pufferfish,300,375,450,600,angler,The Beach,fish
+204,Pufferfish,300,375,450,600,angler,Ginger Island,fish
+205,Radioactive_Carp,1000,1250,1500,2000,none,Legendary,fish
+206,Radioactive_Carp,1000,1250,1500,2000,none,Sewers,fish
+207,Radioactive_Carp,1250,1562,1875,2500,fisher,Legendary,fish
+208,Radioactive_Carp,1250,1562,1875,2500,fisher,Sewers,fish
+209,Radioactive_Carp,1500,1875,2250,3000,angler,Legendary,fish
+210,Radioactive_Carp,1500,1875,2250,3000,angler,Sewers,fish
+211,Rainbow_Trout,65,81,97,130,none,River,fish
+212,Rainbow_Trout,65,81,97,130,none,Mountain Lake,fish
+213,Rainbow_Trout,81,101,121,162,fisher,River,fish
+214,Rainbow_Trout,81,101,121,162,fisher,Mountain Lake,fish
+215,Rainbow_Trout,97,121,145,195,angler,River,fish
+216,Rainbow_Trout,97,121,145,195,angler,Mountain Lake,fish
+217,Red_Mullet,75,93,112,150,none,The Beach,fish
+218,Red_Mullet,93,116,140,187,fisher,The Beach,fish
+219,Red_Mullet,112,139,168,225,angler,The Beach,fish
+220,Red_Snapper,50,62,75,100,none,The Beach,fish
+221,Red_Snapper,62,77,93,125,fisher,The Beach,fish
+222,Red_Snapper,75,93,112,150,angler,The Beach,fish
+223,Salmon,75,93,112,150,none,River,fish
+224,Salmon,93,116,140,187,fisher,River,fish
+225,Salmon,112,139,168,225,angler,River,fish
+226,Sandfish,75,93,112,150,none,Desert,fish
+227,Sandfish,93,116,140,187,fisher,Desert,fish
+228,Sandfish,112,139,168,225,angler,Desert,fish
+229,Sardine,40,50,60,80,none,The Beach,fish
+230,Sardine,50,62,75,100,fisher,The Beach,fish
+231,Sardine,60,75,90,120,angler,The Beach,fish
+232,Scorpion_Carp,150,187,225,300,none,Desert,fish
+233,Scorpion_Carp,187,233,281,375,fisher,Desert,fish
+234,Scorpion_Carp,225,280,337,450,angler,Desert,fish
+235,Sea_Cucumber,75,93,112,150,none,The Beach,fish
+236,Sea_Cucumber,75,93,112,150,none,Night Market,fish
+237,Sea_Cucumber,93,116,140,187,fisher,The Beach,fish
+238,Sea_Cucumber,93,116,140,187,fisher,Night Market,fish
+239,Sea_Cucumber,112,139,168,225,angler,The Beach,fish
+240,Sea_Cucumber,112,139,168,225,angler,Night Market,fish
+241,Shad,60,75,90,120,none,River,fish
+242,Shad,75,93,112,150,fisher,River,fish
+243,Shad,90,112,135,180,angler,River,fish
+244,Shrimp,60,75,NA,NA,none,Crab Pot,fish
+245,Shrimp,75,93,NA,NA,fisher,Crab Pot,fish
+246,Shrimp,90,112,NA,NA,angler,Crab Pot,fish
+247,Slimejack,100,125,150,200,none,Mutant Bug Lair,fish
+248,Slimejack,125,156,187,250,fisher,Mutant Bug Lair,fish
+249,Slimejack,150,187,225,300,angler,Mutant Bug Lair,fish
+250,Smallmouth_Bass,50,62,75,100,none,River,fish
+251,Smallmouth_Bass,50,62,75,100,none,Cindersap Forest Pond,fish
+252,Smallmouth_Bass,62,77,93,125,fisher,River,fish
+253,Smallmouth_Bass,62,77,93,125,fisher,Cindersap Forest Pond,fish
+254,Smallmouth_Bass,75,93,112,150,angler,River,fish
+255,Smallmouth_Bass,75,93,112,150,angler,Cindersap Forest Pond,fish
+256,Snail,65,81,NA,NA,none,Crab Pot,fish
+257,Snail,81,101,NA,NA,fisher,Crab Pot,fish
+258,Snail,97,121,NA,NA,angler,Crab Pot,fish
+259,Son_of_Crimsonfish,1500,1875,2250,3000,none,Legendary,fish
+260,Son_of_Crimsonfish,1500,1875,2250,3000,none,The Beach,fish
+261,Son_of_Crimsonfish,1875,2343,2812,3750,fisher,Legendary,fish
+262,Son_of_Crimsonfish,1875,2343,2812,3750,fisher,The Beach,fish
+263,Son_of_Crimsonfish,2250,2812,3375,4500,angler,Legendary,fish
+264,Son_of_Crimsonfish,2250,2812,3375,4500,angler,The Beach,fish
+265,Spook_Fish,220,275,330,440,none,Night Market,fish
+266,Spook_Fish,275,343,412,550,fisher,Night Market,fish
+267,Spook_Fish,330,412,495,660,angler,Night Market,fish
+268,Squid,80,100,120,160,none,The Beach,fish
+269,Squid,100,125,150,200,fisher,The Beach,fish
+270,Squid,120,150,180,240,angler,The Beach,fish
+271,Stingray,180,225,270,360,none,Ginger Island,fish
+272,Stingray,225,281,337,450,fisher,Ginger Island,fish
+273,Stingray,270,337,405,540,angler,Ginger Island,fish
+274,Stonefish,300,375,450,600,none,Mines,fish
+275,Stonefish,375,468,562,750,fisher,Mines,fish
+276,Stonefish,450,562,675,900,angler,Mines,fish
+277,Sturgeon,200,250,300,400,none,Mountain Lake,fish
+278,Sturgeon,250,312,375,500,fisher,Mountain Lake,fish
+279,Sturgeon,300,375,450,600,angler,Mountain Lake,fish
+280,Sunfish,30,37,45,60,none,River,fish
+281,Sunfish,37,46,56,75,fisher,River,fish
+282,Sunfish,45,55,67,90,angler,River,fish
+283,Super_Cucumber,250,312,375,500,none,The Beach,fish
+284,Super_Cucumber,250,312,375,500,none,Night Market,fish
+285,Super_Cucumber,312,390,468,625,fisher,The Beach,fish
+286,Super_Cucumber,312,390,468,625,fisher,Night Market,fish
+287,Super_Cucumber,375,468,562,750,angler,The Beach,fish
+288,Super_Cucumber,375,468,562,750,angler,Night Market,fish
+289,Tiger_Trout,150,187,225,300,none,River,fish
+290,Tiger_Trout,187,233,281,375,fisher,River,fish
+291,Tiger_Trout,225,280,337,450,angler,River,fish
+292,Tilapia,75,93,112,150,none,The Beach,fish
+293,Tilapia,75,93,112,150,none,Ginger Island,fish
+294,Tilapia,93,116,140,187,fisher,The Beach,fish
+295,Tilapia,93,116,140,187,fisher,Ginger Island,fish
+296,Tilapia,112,139,168,225,angler,The Beach,fish
+297,Tilapia,112,139,168,225,angler,Ginger Island,fish
+298,Tuna,100,125,150,200,none,The Beach,fish
+299,Tuna,100,125,150,200,none,Ginger Island,fish
+300,Tuna,125,156,187,250,fisher,The Beach,fish
+301,Tuna,125,156,187,250,fisher,Ginger Island,fish
+302,Tuna,150,187,225,300,angler,The Beach,fish
+303,Tuna,150,187,225,300,angler,Ginger Island,fish
+304,Void_Salmon,150,187,225,300,none,Witch's Swamp,fish
+305,Void_Salmon,187,233,281,375,fisher,Witch's Swamp,fish
+306,Void_Salmon,225,280,337,450,angler,Witch's Swamp,fish
+307,Walleye,105,131,157,210,none,River,fish
+308,Walleye,105,131,157,210,none,Mountain Lake,fish
+309,Walleye,105,131,157,210,none,Cindersap Forest Pond,fish
+310,Walleye,131,163,196,262,fisher,River,fish
+311,Walleye,131,163,196,262,fisher,Mountain Lake,fish
+312,Walleye,131,163,196,262,fisher,Cindersap Forest Pond,fish
+313,Walleye,157,196,235,315,angler,River,fish
+314,Walleye,157,196,235,315,angler,Mountain Lake,fish
+315,Walleye,157,196,235,315,angler,Cindersap Forest Pond,fish
+316,Woodskip,75,93,112,150,none,Secret Woods,fish
+317,Woodskip,93,116,140,187,fisher,Secret Woods,fish
+318,Woodskip,112,139,168,225,angler,Secret Woods,fish

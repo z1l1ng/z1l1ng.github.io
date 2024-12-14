@@ -1,5 +1,6 @@
 ---
 title: "Creating Informative Maps"
+author: "Ziling Zhen"
 date: "2024-09-20"
 sidebar: false
 format:
