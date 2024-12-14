@@ -1,0 +1,11 @@
+---
+title: Archived Projects
+listing:
+    contents: archived_folder
+    type: grid
+    sort: "date desc"
+    sort-ui: true
+image: archived_folder/archived.webp
+description: "This section includes projects from past courses that have been completed and are no longer actively updated. These works reflect the skills and knowledge gained during each course, and while they are no longer current, they remain a valuable resource for understanding past learning experiences."
+page-layout: full
+---

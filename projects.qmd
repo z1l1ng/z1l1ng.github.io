@@ -1,12 +1,14 @@
 ---
 title: Projects
 listing:
-    contents: projects
+    contents:
+        - text_analysis.qmd
+        - shotchart.qmd
+        - archived.qmd
     type: grid
     sort: "title desc"
     sort-ui: true
 title-block-banner: true
 page-layout: full
 ---
-
 

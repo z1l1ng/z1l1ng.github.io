@@ -26,7 +26,7 @@ library(cowplot)
 ```
 
 ```{r, include = FALSE}
-labels <- read_csv("~/z1l1ng.github.io/projects/package_labels_folder/evanto_package_processed.csv")
+labels <- read_csv("~/z1l1ng.github.io/projects/archived_folder/package_labels_folder/evanto_package_processed.csv")
 ```
 
 This project uses R to analyze package labels by creating visuals such as bar plots, wordclouds and tables, then using the results to design my own package label.

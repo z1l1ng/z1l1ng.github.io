@@ -1,11 +1,21 @@
 [
   {
+    "listing": "/projects/archived.html",
+    "items": [
+      "/projects/archived_folder/package_labels_folder/package_labels.html",
+      "/projects/archived_folder/maps_folder/creatingmaps.html"
+    ]
+  },
+  {
     "listing": "/projects.html",
     "items": [
       "/projects/text_analysis_folder/text_analysis.html",
       "/projects/shotchart_folder/shotchart.html",
-      "/projects/package_labels_folder/package_labels.html",
-      "/projects/maps_folder/creatingmaps.html"
+      "/projects/archived.html"
     ]
+  },
+  {
+    "listing": "/projects/archived_folder/archived.html",
+    "items": []
   }
 ]
