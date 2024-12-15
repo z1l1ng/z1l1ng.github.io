@@ -37,6 +37,8 @@ For our project, we decided to scrape data from the wiki pages of one of our fav
 
 For our project, we were interested in compiling a list of items from the game that can be farmed or collected. The only way to make money from the game is by selling these items, and the price of the item depends on the quality of the item and the profession(s) of the player. Thus, our dataset includes information on the name, category, subcategory, and the different price points of the item depending on item quality (regular, silver, gold, and iridium) and player's profession.
 
+To view the qmd, click [here](https://github.com/z1l1ng/z1l1ng.github.io/blob/main/projects/archived_folder/stardew_data_folder/stardew_data.qmd).
+
 ## Approach
 
 All of our data has been accumulated from the [*Stardew Valley* Wiki](https://stardewvalleywiki.com/Stardew_Valley_Wiki) page. Since each item in the game has a different page and not all of the pages followed a similar structure, we used a combination of harvesting the data in both table form and anywhere on the webpage using rvest with html_text. In the end, we were able to create a dataset from the more important item categories: crops, fish, animal products, and minerals.

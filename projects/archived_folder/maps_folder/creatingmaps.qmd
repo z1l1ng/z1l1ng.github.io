@@ -15,7 +15,7 @@ freeze: true
 
 This project uses R to create static and interactive maps visualizing US state-level data on population change from 2010 to 2020 and marijuana laws in 2022. Using libraries like tidyverse, maps, leaflet, and sf. Interactive maps allow users to explore state-level differences dynamically, adding a layer of accessibility and engagement.
 
-To view the qmd, click [here](https://github.com/z1l1ng/z1l1ng.github.io/blob/main/projects/maps_folder/creatingmaps.qmd).
+To view the qmd, click [here](https://github.com/z1l1ng/z1l1ng.github.io/blob/main/projects/archived_folder/maps_folder/creatingmaps.qmd).
 
 ```{r, include=FALSE}
 # Load in libraries
