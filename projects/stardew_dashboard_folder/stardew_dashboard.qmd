@@ -15,6 +15,7 @@ library(tidyverse)
 library(plotly)
 library(ggimage)
 library(sf)
+library(DT)
 ```
 
 # About
