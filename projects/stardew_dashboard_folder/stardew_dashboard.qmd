@@ -8,6 +8,7 @@ format:
     scrolling: true 
 editor_options: 
   chunk_output_type: console
+freeze: true
 ---
 
 ```{r, include = FALSE}
