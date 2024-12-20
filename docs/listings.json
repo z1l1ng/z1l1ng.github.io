@@ -3,6 +3,7 @@
     "listing": "/projects.html",
     "items": [
       "/projects/text_analysis_folder/text_analysis.html",
+      "/projects/stardew_dashboard_folder/stardew_dashboard.html",
       "/projects/shotchart_folder/shotchart.html",
       "/projects/archived.html"
     ]

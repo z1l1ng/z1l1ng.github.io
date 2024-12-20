@@ -1,0 +1,531 @@
+---
+title: "Stardew Valley Dashboard"
+author: "Ziling Zhen"
+format: 
+  dashboard:
+    navbar: true
+    page-layout: full
+    scrolling: true 
+editor_options: 
+  chunk_output_type: console
+---
+
+```{r, include = FALSE}
+library(tidyverse)
+library(plotly)
+library(ggimage)
+library(sf)
+```
+
+# About
+
+```{r}
+#| echo: false
+knitr::include_graphics("stardew.jpg")
+```
+
+Stardew Valley is an indie farming simulation game developed by ConcernedApe, where players inherit their grandfather's old farm in the small town of Stardew Valley. In the game, you can grow crops, raise animals, mine, fish, engage with the townspeople, and of course, make lots of money! While the game encourages players to pursue their goals at their own pace, one of the most rewarding aspects is maximizing the amount of money made at the end of each day. Whether you are cultivating crops, raising livestock, or engaging in artisan production, there are multiple ways to make money in the game. Thus, this dashboard looks into the items in the game can make you money.
+
+The data was acquired from web scraping the [Stardew Valley Wiki](https://stardewvalleywiki.com/Stardew_Valley_Wiki), with the majority of the process described [here](https://z1l1ng.github.io/projects/archived_folder/stardew_data_folder/stardew_data.html) For each category, multiple functions were created to scrape the necessary data using the rvest package in R. Variables scraped include: item name, sell price, and profession. Sell price was split into 4 different variables based on their quality (regular, silver, gold, and iridium quality). The variables category and subcategory were also included for each of the items. Depending on the category, additional variables were scraped, such as seed price for the crop category.
+
+This dashboard was created and designed by Ziling Zhen.
+
+However, the data collection and a more interactive version of this dashboard were developed collaboratively by Ziling Zhen and Rain Hartos. For an interactive experience, visit our Shiny app [here](https://rahartos.shinyapps.io/StardewValleyItemProfits/)!
+
+# Crops
+
+```{r}
+# all things needed for crops page 
+crop_prices <- read_csv("/Users/zilingzhen/z1l1ng.github.io/projects/archived_folder/stardew_data_folder/final_crop_prices.csv")
+
+create_crop_barchart <-function(selected_season){
+  
+    plot <- crop_prices |>
+      filter(season == selected_season,
+             profession == "none") |>
+      mutate(item = str_replace_all(item, "_", " "),
+             item = fct_reorder(item, regular_price)) |> 
+      # pivoting so we can filter for quality
+      pivot_longer(cols = regular_price:iridium_price, names_to = "quality", values_to = "sell_price")|>
+      group_by(item)|>
+      arrange(sell_price)|>
+      mutate(quality = fct_reorder(quality, sell_price)) |> 
+      ggplot(aes(x = item, y = sell_price, fill = quality)) +
+      geom_bar(stat = "identity", position = "dodge") +
+      scale_fill_manual(
+        labels = c(
+          "regular_price" = "Regular",
+          "silver_price" = "Silver",
+          "gold_price" = "Gold",
+          "iridium_price" = "Iridium"
+        ),
+        # assigning prices to their respective colors from the game
+        values = c("regular_price" = "darkgreen", 
+                   "silver_price" = "grey", 
+                   "gold_price" = "gold", 
+                   "iridium_price" = "purple"),
+      )+
+      labs(
+        title = "Crop Prices per Season by Quality",
+        x = "Item Name",
+        y = "Sell Price",
+        fill = "Quality")+
+      theme_bw() +
+      theme(axis.text.x = element_text(angle = 45, hjust = 1))
+  # plotly for interactiveness
+  ggplotly(plot)
+}
+
+# function to create a calendar
+create_calendar <- function(selected_season) {
+  days <- data.frame(
+    day = 1:28,
+    week = rep(1:4, each = 7),
+    weekday = factor(
+      rep(c("Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"), 4),
+      levels = c("Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun")
+    )
+  )
+  
+  events <- crop_prices |>
+      filter(season == selected_season) |>
+      mutate(item = str_replace_all(item, "_", " "))
+  
+  if (!is.null(events)) {
+    event_days <- events |>
+      filter(growth_time != 0)|>
+      rowwise() |>
+      mutate(days = ifelse(growth_time == 28 |can_regrow == TRUE,
+                           list(seq(from = 1, to = 1, by = 1)),
+                           list(seq(from = 28, to = 1, by = -growth_time)))) |>
+      unnest(cols = c(days)) |>
+      dplyr::select(day = days, item)
+    
+    event_days <- event_days |>
+      filter(day != 28) |> #remove the last day because you cannot plant on the last day of the season
+      group_by(day) |>
+      summarize(plant_crops = paste(unique(item), collapse = " & ")) |>
+      ungroup()
+    
+    days <- days |>
+      left_join(event_days, by = "day")
+  }
+  
+  cal <- ggplot(days, aes(x = weekday, y = -week, fill = plant_crops)) + #Maybe put tiles in tiles?
+    geom_tile(color = "black", linewidth = 0.8) +
+    geom_text(aes(label = day), size = 5, vjust = -1) +
+    theme_minimal() +
+    theme(
+      axis.text.y = element_blank(),
+      axis.ticks = element_blank(),
+      axis.title = element_blank(),
+      panel.grid = element_blank(),
+      plot.title = element_text(size = 16, face = "bold"),
+      legend.position = "none"
+    ) +
+    scale_x_discrete(position = "top") +
+    labs(title = "Calendar", fill = "Crops")
+  
+  fig <- ggplotly(cal, tooltip = "fill")
+  fig
+}
+```
+
+## {.sidebar}
+
+Crops are a core feature of farming and come in seasonal varieties, with specific seeds growing during spring, summer, fall, or winter (via a greenhouse or garden pot). Each crop can be planted only during its designated season, and when seasons change (after the 28th day), the crop will wither and die. Crops have unique growth times and yields, with some offering repeat harvests after maturing. Fertilizers can improve quality, speed growth, or increase yield, while trellis crops require special planning due to their space requirements. Crops can be sold for profit, used in cooking, or crafted into artisan goods like wine, juice, or pickles. Strategic crop selection and care are key to maximizing your farm’s success. Here you can find the crops that sell for the most for each season and days that you should plant those crops.
+
+## Column {.tabset}
+
+```{r}
+#| title: Spring
+create_crop_barchart("Spring")
+
+create_calendar("Spring")
+```
+
+```{r}
+#| title: Summer
+create_crop_barchart("Summer")
+
+create_calendar("Summer")
+```
+
+```{r}
+#| title: Fall
+create_crop_barchart("Fall")
+
+create_calendar("Fall")
+```
+
+```{r}
+#| title: Winter
+create_crop_barchart("Winter")
+
+create_calendar("Winter")
+```
+
+```{r}
+#| title: Special
+create_crop_barchart("Special")
+
+create_calendar("Special")
+```
+
+# Animal Products
+
+```{r}
+# all things needed for animal products
+animal_table <- read_csv("/Users/zilingzhen/z1l1ng.github.io/projects/archived_folder/stardew_data_folder/full_animal_table.csv")
+```
+
+## {.sidebar}
+Animal products are essential farm items obtained from raising livestock. Chickens, ducks, and dinosaurs produce various eggs, while cows and goats provide milk, and sheep and rabbits yield wool and specialty items like rabbit’s feet. Pigs forage truffles, and ducks occasionally drop feathers. These products can be used as-is, sold for profit, or crafted into artisan goods like mayonnaise, cheese, and cloth using equipment like the Mayonnaise Machine, Cheese Press, and Loom. Caring for animals by feeding them and increasing their friendship levels boosts product quality, maximizing farm productivity. 
+
+## Row 
+
+::: {.card title="Animal Items Base Sell Prices"}
+```{r}
+#| title: Animal Items Base Sell Prices
+animal_plot <- animal_table |>
+    # fct reorder for ordering of bars after plotting
+    mutate(quality = fct_reorder(quality, sell_price),
+           item = fct_reorder(item, sell_price)) |>
+    ggplot(aes(x = item, y = sell_price, fill = quality)) +
+    geom_bar(stat = "identity", position = "dodge") +
+    scale_fill_manual(
+      # assigning prices to their respective colors from the game
+      values = c("Regular" = "darkgreen", 
+                 "Silver" = "grey", 
+                 "Gold" = "gold", 
+                 "Iridium" = "purple")
+    ) +
+    labs(
+      title = "Animal Product Sell Price",
+      x = "Item Name",
+      y = "Profit Increase",
+      fill = "Quality")+
+    theme_bw() +
+    theme(axis.text.x = element_text(angle = 45, hjust = 1))
+  ggplotly(animal_plot)
+```
+This graph shows the sell prices of the selected animal products. The quality of animal products comes in four levels: regular, silver, gold, and iridium, ranging from most to least gold, respectively.
+:::
+
+::: {.card title="Animal Items Max Possible Profit Percentages"}
+```{r}
+#| title: Animal Items Max Possible Profit Percentages
+animal_plot2 <- animal_table |>
+    # fct reorder for ordering of bars after plotting
+    mutate(profit_increase = parse_number(profit_increase),
+           quality = fct_reorder(quality, profit_increase),
+           item = fct_reorder(item, profit_increase)) |>
+    ggplot(aes(x = item, y = profit_increase, fill = quality)) +
+    geom_bar(stat = "identity", position = "dodge") +
+    scale_fill_manual(
+      # assigning prices to their respective colors from the game
+      values = c("Regular" = "darkgreen", 
+                 "Silver" = "grey", 
+                 "Gold" = "gold", 
+                 "Iridium" = "purple")
+    ) +
+    labs(
+      title = "Profit % Increase after Processing Product",
+      x = "Item Name",
+      y = "Profit % Increase",
+      fill = "Quality")+
+    theme_bw() +
+    theme(axis.text.x = element_text(angle = 45, hjust = 1))
+  
+  ggplotly(animal_plot2)
+```
+
+This graph shows how much the profit percentage increases after processing an animal product. To maximize your profits with animal products, it is best to turn the products into processed goods, as it significantly increases your profit margins compared to selling them raw. After an item is processed, its quality is no longer retained, so it is best to process animal products with low quality.
+:::
+
+# Fish
+
+```{r}
+# all things needed for fish
+xy <- read_csv("/Users/zilingzhen/z1l1ng.github.io/projects/archived_folder/stardew_data_folder/xy.csv")
+
+stardewmap_df <- read_csv("/Users/zilingzhen/z1l1ng.github.io/projects/archived_folder/stardew_data_folder/stardewmap_df.csv")
+
+fish_prices_sf <- readRDS("/Users/zilingzhen/z1l1ng.github.io/projects/archived_folder/stardew_data_folder/fish_prices_sf.rds")
+
+map_shape <- readRDS("/Users/zilingzhen/z1l1ng.github.io/projects/archived_folder/stardew_data_folder/map_shape.rds")
+
+distinct_locations <- fish_prices_sf |>
+    # joining locations with our fish prices dataset
+    left_join(xy, join_by(sub_category)) |>
+    #filtering for the legendary subcategory which is not a location
+    filter(!is.na(x)) |>
+    # manually enter different coordinates of legnedary fish 
+    # since they are found at the location but not in that specific spot
+    mutate(x = ifelse(item == "Angler", 815, x),
+           y = ifelse(item == "Angler", 500, y),
+           x = ifelse(item == "Ms._Angler", 815, x),
+           y = ifelse(item == "Ms._Angler", 500, y),
+           x = ifelse(item == "Crimson", 805, x),
+           y = ifelse(item == "Crimson", 70, y),
+           x = ifelse(item == "Son_of_Crimsonfish", 805, x),
+           y = ifelse(item == "Son_of_Crimsonfish", 70, y),
+    ) |>  
+   distinct(sub_category, x, y) |>
+    # make it an sf object with xy as the coord system
+   st_as_sf(coords = c("x", "y"))
+
+create_fish_barchart <-function(selected_location){
+  
+    plot <- fish_prices_sf |>
+      filter(sub_category == selected_location,
+             profession == "none") |>
+      mutate(item = str_replace_all(item, "_", " "),
+             item = fct_reorder(item, regular_price)) |> 
+      # pivoting so we can filter for quality
+      pivot_longer(cols = regular_price:iridium_price, names_to = "quality", values_to = "sell_price")|>
+      group_by(item)|>
+      arrange(sell_price)|>
+      mutate(quality = fct_reorder(quality, sell_price)) |> 
+      ggplot(aes(x = item, y = sell_price, fill = quality)) +
+      geom_bar(stat = "identity", position = "dodge") +
+      scale_fill_manual(
+        labels = c(
+          "regular_price" = "Regular",
+          "silver_price" = "Silver",
+          "gold_price" = "Gold",
+          "iridium_price" = "Iridium"
+        ),
+        # assigning prices to their respective colors from the game
+        values = c("regular_price" = "darkgreen", 
+                   "silver_price" = "grey", 
+                   "gold_price" = "gold", 
+                   "iridium_price" = "purple"),
+      )+
+      labs(
+        title = "Fish Prices per Location by Quality",
+        x = "Item Name",
+        y = "Sell Price",
+        fill = "Quality")+
+      theme_bw() +
+      theme(axis.text.x = element_text(angle = 45, hjust = 1))
+  # plotly for interactiveness
+  ggplotly(plot)
+}
+
+create_fish_map <-function(selected_location){
+  
+location <- distinct_locations |>
+    filter(sub_category == selected_location)
+
+ggplot() +
+    # using map_shape which is a polygon of the dimensions of our image
+    geom_sf(data = map_shape) +
+    # layering game map on top of the polygon and sizing it to be perfect
+    geom_image(data = stardewmap_df, aes(x, y, image = image), size = 1.496) +
+    # layer for our points from the fish prices
+    geom_sf(data = location, color = "red", size = 4) +
+    # removing axes, and axes ticks and lines
+    theme(
+      panel.background = element_blank(),
+      axis.title.x = element_blank(),
+      axis.text.x = element_blank(),
+      axis.ticks.x = element_blank(),
+      axis.title.y = element_blank(),
+      axis.text.y = element_blank(),
+      axis.ticks.y = element_blank())
+}
+```
+
+## {.sidebar}
+
+Fish are a diverse category of items that can be caught in the game’s rivers, lakes, oceans, and ponds. Fish are primarily obtained using a fishing rod, but some can also be acquired using crab pots or by foraging. They vary in difficulty to catch, availability, and value, with many being tied to specific locations, seasons, weather, or times of day.
+
+Fish can be sold for profit, used in cooking recipes, or turned into artisan goods like Sashimi or Quality Fertilizer. Some fish are required for Community Center bundles, such as the Fish Tank, and others, like legendary fish, are unique and can only be caught once per save file. Legendary fish provide a challenge due to their high difficulty and can only be caught under special conditions.
+
+The fishing skill can be improved by catching fish and using better rods, tackle, and bait, which help make fishing easier and increase your chances of catching higher-quality fish. Here you can see the general areas of where fish are found, note that you can fish at any body of water. 
+
+## Column {.tabset}
+
+```{r}
+#| title: The Beach
+create_fish_barchart("The Beach")
+
+create_fish_map("The Beach")
+```
+
+```{r}
+#| title: River
+create_fish_barchart("River")
+
+create_fish_map("River")
+```
+
+```{r}
+#| title: Ginger Island
+create_fish_barchart("Ginger Island")
+
+create_fish_map("Ginger Island")
+```
+
+```{r}
+#| title: Mountain Lake
+create_fish_barchart("Mountain Lake")
+
+create_fish_map("Mountain Lake")
+```
+
+```{r}
+#| title: Secret Woods
+create_fish_barchart("Secret Woods")
+
+create_fish_map("Secret Woods")
+```
+
+```{r}
+#| title: Sewers
+create_fish_barchart("Sewers")
+
+create_fish_map("Sewers")
+```
+
+```{r}
+#| title: Mutant Bug Lair
+create_fish_barchart("Mutant Bug Lair")
+
+create_fish_map("Mutant Bug Lair")
+```
+
+```{r}
+#| title: Witch's Swamp
+create_fish_barchart("Witch's Swamp")
+
+create_fish_map("Witch's Swamp")
+```
+
+```{r, warning = FALSE}
+#| title: Crab Pot
+cropplot <- fish_prices_sf |>
+      filter(sub_category == "Crab Pot",
+             profession == "none") |>
+      mutate(item = str_replace_all(item, "_", " "),
+             item = fct_reorder(item, regular_price)) |> 
+      # pivoting so we can filter for quality
+      pivot_longer(cols = regular_price:iridium_price, names_to = "quality", values_to = "sell_price") |>
+      group_by(item)|>
+      arrange(sell_price) |>
+      ggplot(aes(x = item, y = sell_price, fill = quality)) +
+      geom_bar(stat = "identity", position = "dodge") +
+      scale_fill_manual(
+        labels = c(
+          "regular_price" = "Regular",
+          "silver_price" = "Silver",
+          "gold_price" = "Gold",
+          "iridium_price" = "Iridium"
+        ),
+        # assigning prices to their respective colors from the game
+        values = c("regular_price" = "darkgreen", 
+                   "silver_price" = "grey", 
+                   "gold_price" = "gold", 
+                   "iridium_price" = "purple"),
+      )+
+      labs(
+        title = "Fish Prices per Location by Quality",
+        x = "Item Name",
+        y = "Sell Price",
+        fill = "Quality")+
+      theme_bw() +
+      theme(axis.text.x = element_text(angle = 45, hjust = 1))
+ggplotly(cropplot)
+
+create_fish_map("Crab Pot")
+```
+
+```{r}
+#| title: Mines
+create_fish_barchart("Mines")
+
+create_fish_map("Mines")
+```
+
+```{r}
+#| title: Cindersap Forest Pond
+create_fish_barchart("Cindersap Forest Pond")
+
+create_fish_map("Cindersap Forest Pond")
+```
+
+```{r}
+#| title: Desert
+create_fish_barchart("Desert")
+
+create_fish_map("Desert")
+```
+
+# Minerals 
+
+```{r}
+# things needed for minerals 
+mineral_prices <- read_csv("/Users/zilingzhen/z1l1ng.github.io/projects/archived_folder/stardew_data_folder/final_minerals_prices.csv")
+
+mineral_barchart <- function(type_mineral){
+  #labs for title
+  title_label <- rlang::englue("{{type_mineral}} Prices by Profession") 
+  plot <- mineral_prices |>
+    mutate(sub_category = str_to_title(sub_category)) |>
+    filter(sub_category == type_mineral) |>
+    # fct reorder for ordering of bars after plotting
+    mutate(item = fct_reorder(item, sell_price),
+           profession = fct_reorder(profession, sell_price))|> 
+    ggplot(aes(x = item, y = sell_price, fill = profession)) +
+    geom_bar(stat = "identity", position = "dodge") +
+    labs(
+      #title = title_label,
+      x = "Item Name",
+      y = "Sell Price",
+      fill = "Profession")+
+    theme_bw() +
+    theme(axis.text.x = element_text(angle = 45, hjust = 1))
+  
+  ggplotly(plot)
+}
+```
+
+## {.sidebar}
+
+Minerals are collectible items primarily obtained through mining or opening geodes. They are divided into gems and resources, each with unique uses and values. Gems, such as Amethyst, Emerald, and Diamond, are often used as gifts, in crafting, or sold for profit. Resources like ores (Copper, Iron, Gold) and Coal are essential for crafting, tool upgrades, and building farm structures.
+
+Some minerals, like Quartz or the rare Prismatic Shard, have special uses, such as crafting or unlocking unique items like the Galaxy Sword. Geodes are a key source of minerals, containing random items when cracked open at the Blacksmith. Minerals are also required for completing museum collections, crafting recipes, and certain quests, making them a vital part of your farm’s success.
+
+::: {.column width="100%"}
+## Row {.tabset}
+
+```{r}
+#| title: Gem
+mineral_barchart("Gem")
+```
+
+```{r}
+#| title: Foraged Mineral
+mineral_barchart("Foraged Mineral")
+```
+
+```{r}
+#| title: Geode Mineral 
+mineral_barchart("Geode Mineral")
+```
+
+```{r}
+#| title: Geode 
+mineral_barchart("Geode")
+```
+:::
+
+::: {.column width="100%"}
+## Row
+
+```{r}
+DT::datatable(mineral_prices |>
+                    dplyr::select(-category))
+```
+:::

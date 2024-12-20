@@ -1033,7 +1033,7 @@ map_shape <- st_polygon(list(map_ext, map_int))
 stardewmap_df <- data.frame(
   x = 612, 
   y = 371, 
-  image = "stardewmap.png"
+  image = "/Users/zilingzhen/z1l1ng.github.io/projects/archived_folder/stardew_data_folder/stardewmap.png"
 )
 
 # write it in csv form 
