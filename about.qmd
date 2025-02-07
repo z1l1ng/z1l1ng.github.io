@@ -37,7 +37,7 @@ Transfer \| Sept 2021 - June 2022
 
 ### Fun Facts!
 
-- I super enjoy going to sporting events, particularly basketball and baseball games. The atmosphere in the arena and the intensity of the competition is super fun. I went to my first MLB game this summer and was absolutely hooked. I also play Division 3 basketball so I love playing in sporting events as well! 
+- I super enjoy going to sporting events, particularly basketball and baseball games. The atmosphere in the arena and the intensity of the competition is super fun. I went to my first MLB game this summer and was absolutely hooked. I also play Division 3 basketball, so I love playing as well! 
 ```{r}
 #| echo: false
 knitr::include_graphics("images/sports.png")
