@@ -10,7 +10,6 @@ image: matchabottle.png
 editor_options: 
   chunk_output_type: console
 description: "Final Project for THEAT 140 - Introduction to Perform: Desgin, incorporating design and R."
-freeze: true
 ---
 
 ```{r}
