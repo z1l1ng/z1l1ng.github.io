@@ -260,7 +260,8 @@ More supplement designs were released in 2017; however, the year with the highes
 supplement |> 
   ggplot(aes(x = as.numeric(price))) +
   geom_boxplot(fill = "#b4a9e6") +
-  labs(x = "Price") +
+  labs(x = "Price",
+       title = "Price of Supplement Designs") +
   theme_bw()
 ```
 
