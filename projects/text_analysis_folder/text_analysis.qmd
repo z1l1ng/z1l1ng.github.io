@@ -10,7 +10,6 @@ image: logos.png
 editor_options: 
   chunk_output_type: console
 description: "Mini-project for SDS 264 - Data Science 2 where we use stingr functions and other text analysis methods"
-freeze: true
 ---
 
 This project uses R to create explore the frequency of words in titles and genres of movies and tv shows of different streaming services by creating visuals such as bar plots, wordclouds and tables.
@@ -40,6 +39,7 @@ library(RCurl)
 library(ggraph)
 library(igraph)
 library(gridExtra)
+library(forcats)
 library(kableExtra)
 ```
 
@@ -72,7 +72,7 @@ big_data <- bind_rows(hulu, netflix, hbo, appletv, amazonprime)
 
 ```{r}
 # function for plotting since we have to do it twice
-count_plot <- function(variable){
+count_plot <- function(variable, fill){
   #labs for title
   title_label <- rlang::englue("Number of Titles per {{variable}}") 
   
@@ -83,8 +83,8 @@ count_plot <- function(variable){
   big_data |>
   group_by({{variable}}) |>
   count({{variable}}) |>
-  ggplot(aes(x = {{variable}}, y = n, fill = {{variable}})) +
-  geom_bar(stat = "identity") +
+  ggplot(aes(x = fct_reorder({{variable}}, -n), y = n, fill = {{fill}})) +
+  geom_bar(stat = "identity", show.legend = FALSE) +
   #adds numbers to bar
   geom_text(aes(label = n)) + 
   labs(
@@ -95,9 +95,14 @@ count_plot <- function(variable){
   theme_bw()
 }
 
-title_count <- count_plot(service)
+colors <- c("Netflix" = "#E50914", "AppleTv" = "#808080", "Hulu" = "#1ce783", "HBO" = "#991EEB",
+            "AmazonPrime" = "#1399FF")
 
-type_count <- count_plot(type)
+title_count <- count_plot(service, service) +
+  scale_fill_manual(values = colors)
+
+type_count <- count_plot(type, n) +
+  scale_fill_gradient2()
 
 # aligning grids in html using cowplot
 plot_grid(title_count, type_count, ncol = 1, align = "v") 
@@ -144,12 +149,15 @@ genres_count |>
   # filter for movie by service
   filter(type == "movie") |> 
   slice_max(n, n = 10) |>
-  mutate(genre = fct_reorder(genres, n)) |>
-  ggplot(aes(y = genre, x = n, fill = service)) +
+  ggplot(aes(y = reorder_within(genres, n, service), x = n, fill = service)) +
     geom_bar(stat = "identity", show.legend = FALSE) +
     facet_wrap(~ service, scales = "free") +
+    scale_y_reordered() +
+    scale_fill_manual(values = colors) +
   labs(
-    title = "Top Genres 10 of Movies by Streaming Services "
+    title = "Top Genres 10 of Movies by Streaming Services",
+    y = "",
+    x = ""
   ) + 
   theme_bw()
 
@@ -159,10 +167,11 @@ genres_count |>
   # filter for tv by service
   filter(type == "tv") |> 
   slice_max(n, n = 10) |>
-  mutate(genre = fct_reorder(genres, n)) |>
-  ggplot(aes(y = genre, x = n, fill = service)) +
+  ggplot(aes(y = reorder_within(genres, n, service), x = n, fill = service)) +
     geom_bar(stat = "identity", show.legend = FALSE) +
     facet_wrap(~ service, scales = "free") +
+    scale_y_reordered() +
+    scale_fill_manual(values = colors) +
   labs(
     title = "Top Genres 10 of TV Shows by Streaming Services"
   ) + 
@@ -186,12 +195,12 @@ big_data |>
   unnest(country) |>
   count(country) |>
   slice_max(n, n = 10) |>
-  ggplot(aes(x = fct_reorder(country, n), y = n)) +
+  ggplot(aes(x = fct_reorder(country, -n), y = n)) +
     geom_bar(stat = "identity", show.legend = FALSE, fill = "orange") +
   labs(
     title = "Top 10 Locations",
-    y = "Country",
-    x = "Count"
+    y = "Count",
+    x = "Country"
   ) + 
   theme_bw()
 ```
@@ -205,9 +214,11 @@ big_data |>
   group_by(service) |>
   count(country) |>
   slice_max(n, n = 10) |>
-  ggplot(aes(x = fct_reorder(country, n), y = n, fill = service)) +
+  ggplot(aes(x = reorder_within(country, -n, service), y = n, fill = service)) +
     geom_bar(stat = "identity", show.legend = FALSE) +
     facet_wrap(~ service, scales = "free") +
+    scale_x_reordered() +
+    scale_fill_manual(values = colors) +
   labs(
     title = "Top 10 Locations for Titles Available by Service",
     y = "Country",
@@ -384,9 +395,10 @@ Now, we have a new tibble of just the titles that are sequels from our dataset. 
 sequels |>
   group_by(service) |>
   count() |>
-  ggplot(aes(x = service, y = n, fill = service)) +
+  ggplot(aes(x = fct_reorder(service, -n), y = n, fill = service)) +
     geom_bar(stat = "identity", show.legend = FALSE) +
     geom_text(aes(label = n)) +
+    scale_fill_manual(values = colors) +
     theme() + 
     labs(
      title = "Sequels by Streaming Service",
@@ -403,12 +415,13 @@ big_data |>
   
   # calculate proportion
   summarize(proportion_sequels = mean(sequel, na.rm = TRUE)) |>
-  ggplot(aes(x = service, 
+  ggplot(aes(x = fct_reorder(service, -proportion_sequels), 
              y = proportion_sequels, 
              fill = service)) +
   geom_bar(stat = "identity", 
            show.legend = FALSE) +
-  geom_text(aes(label = round(proportion_sequels, 5))) +
+  geom_text(aes(label = round(proportion_sequels, 4))) +
+  scale_fill_manual(values = colors) + 
   theme() + 
   labs(
      title = "Proportion of Sequels by Streaming Service",
@@ -625,8 +638,9 @@ bigger_beta_wide |>
   mutate(term = reorder(term, log_ratio)) |>
   ggplot(aes(log_ratio, term, fill = log_ratio > 0)) +
     geom_col(show.legend = FALSE) +
-    labs(x = "Log ratio of Beta values",
-         y = "Words in Genres") +
+    labs(x = "Log Ratio of Beta values",
+         y = "Words",
+         title = "Top 20 Words with Greatest Log Ratio between Topic 1 & 2") +
   theme_bw()
 ```
 
