@@ -226,8 +226,9 @@ supplement <- labels |>
 supple_publish <- supplement |>
   group_by(year) |>
   count(year) |>
-  ggplot(aes(x = as.factor(year), y = n, fill = n)) +
+  ggplot(aes(x = year, y = n, fill = n)) +
   geom_bar(stat = "identity", show.legend = FALSE) +
+  scale_fill_gradient2() +
   geom_text(aes(label = n)) +
   theme_bw() +
   labs(
@@ -239,8 +240,9 @@ supple_publish <- supplement |>
 supple_sold <- supplement |>
   group_by(year) |>
   summarize(total_sold = sum(n_sale)) |>
-  ggplot(aes(x = as.factor(year), y = total_sold)) +
-  geom_bar(stat = "identity", fill = "steelblue2") +
+  ggplot(aes(x = year, y = total_sold, fill = total_sold)) +
+  geom_bar(stat = "identity", show.legend = FALSE) +
+  scale_fill_gradient2() +
   geom_text(aes(label = total_sold)) +
   theme_bw() +
   labs(
@@ -258,7 +260,7 @@ More supplement designs were released in 2017; however, the year with the highes
 ```{r, echo = FALSE}
 supplement |> 
   ggplot(aes(x = as.numeric(price))) +
-  geom_boxplot(fill = "steelblue2") +
+  geom_boxplot(fill = "#b4a9e6") +
   labs(x = "Price") +
   theme_bw()
 ```
