@@ -157,8 +157,8 @@ genres_count |>
     scale_fill_manual(values = colors) +
   labs(
     title = "Top Genres 10 of Movies by Streaming Services",
-    y = "",
-    x = ""
+    y = "Genre",
+    x = "Count"
   ) + 
   theme_bw()
 
@@ -174,7 +174,9 @@ genres_count |>
     scale_y_reordered() +
     scale_fill_manual(values = colors) +
   labs(
-    title = "Top Genres 10 of TV Shows by Streaming Services"
+    title = "Top Genres 10 of TV Shows by Streaming Services",
+    y= "Genre",
+    x = "Count"
   ) + 
   theme_bw()
 ```
@@ -196,8 +198,9 @@ big_data |>
   unnest(country) |>
   count(country) |>
   slice_max(n, n = 10) |>
-  ggplot(aes(x = fct_reorder(country, -n), y = n)) +
-    geom_bar(stat = "identity", show.legend = FALSE, fill = "orange") +
+  ggplot(aes(x = fct_reorder(country, -n), y = n, fill = n)) +
+    geom_bar(stat = "identity", show.legend = FALSE) +
+  scale_fill_gradient_tableau() +
   labs(
     title = "Top 10 Locations",
     y = "Count",
@@ -222,8 +225,8 @@ big_data |>
     scale_fill_manual(values = colors) +
   labs(
     title = "Top 10 Locations for Titles Available by Service",
-    y = "Country",
-    x = "Count"
+    y = "Count",
+    x = "Country"
   ) + 
   theme_bw()
 ```
