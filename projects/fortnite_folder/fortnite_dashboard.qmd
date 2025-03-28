@@ -1,0 +1,420 @@
+---
+title: "Fortnite Dashboard"
+author: "Ziling Zhen"
+date: "2025-03-25"
+format: 
+  dashboard:
+    navbar: true
+    scrolling: true 
+    expandable: false
+    fullscreen: false
+editor_options: 
+  chunk_output_type: console
+---
+
+```{r, include = FALSE}
+library(tidyverse)
+library(stringr)
+library(rvest)
+library(polite)
+library(httr2)
+library(httr)
+library(lubridate)
+library(purrr)
+library(kableExtra)
+library(rjson)
+library(bslib)
+```
+
+```{r, include = FALSE}
+# API key
+fortniteapi <- Sys.getenv("fortniteapi")
+fortniteaccount <- Sys.getenv("fortniteaccount")
+
+response <- GET(
+  url = str_c("https://fortniteapi.io/v1/stats?account=", fortniteaccount),
+  add_headers("Authorization" = fortniteapi)
+)
+
+# Check response status
+print(response$status_code)
+
+# Parse JSON response
+details <- content(response, as = "text")
+
+details <- fromJSON(details)
+
+# Retrieve account level history
+lvl_history <- details$accountLevelHistory
+
+# Retrieve all stats
+global_stats <- details$global_stats
+```
+
+```{r}
+year <- today() |> year()
+month <-today() |> month()
+
+time_period <- paste(month, year)
+```
+
+```{r, include = FALSE}
+# Data Wrangling ACCOUNT LEVEL
+season = double()
+season_lvl = double()
+
+# Length of seasons played
+lvl_length <- length(lvl_history)
+
+# Retrieve information for each season
+for(i in 1:lvl_length){
+  season[i] <- lvl_history[[i]]$season
+  season_lvl[i] <- lvl_history[[i]]$level
+}
+
+lvl_tbl <- tibble(
+  season = season,
+  season_lvl = season_lvl
+)
+
+# Total seasons played
+total_szns <- lvl_tbl |>
+  count()
+
+# Total levels played
+total_lvls <- lvl_tbl |>
+  summarize(total_lvls = sum(season_lvl))
+
+# Isolate top 2 seasons
+top2szns <- lvl_tbl |>
+  slice_max(season_lvl, n = 2) 
+
+# Top Season Info
+top1szn <- top2szns |>
+  slice_max(season_lvl) |>
+  pull(season)
+
+top1sznlvl <- top2szns |>
+  slice_max(season_lvl) |>
+  pull(season_lvl)
+
+# #2 Season Info
+top2szn <- top2szns |>
+  slice_min(season_lvl) |>
+  pull(season)
+
+top2sznlvl <- top2szns |>
+  slice_min(season_lvl) |>
+  pull(season_lvl)
+
+# Most recent season
+current_season <- lvl_tbl |> 
+  slice_max(season) |> 
+  pull(season)
+
+current_lvl <- lvl_tbl |> 
+  slice_max(season) |> 
+  pull(season_lvl)
+```
+
+```{r, include = FALSE}
+# Data Wrangling GLOBAL STATS
+unlist_stats <- function(list, mode){
+  list |>
+  unlist() |>
+  t() |>
+  as_tibble() |>
+  mutate(mode = mode) |>
+  select(mode, placetop1:playersoutlived)
+}
+
+# Isolating gamemode stats from full dataset
+solo_stats <- unlist_stats(global_stats$solo, "solo")
+duo_stats <- unlist_stats(global_stats$duo, "duo")
+trio_stats <- unlist_stats(global_stats$trio, "trio")
+squad_stats <- unlist_stats(global_stats$squad, "squad")
+
+# Row bind together all gamemode stats
+gameplay_stats <- rbind(solo_stats, duo_stats, trio_stats, squad_stats)
+
+# Isolate total wins
+total_wins <- gameplay_stats |>
+  summarize(total_wins = sum(placetop1))
+
+# Isolate total kills
+total_kills <- gameplay_stats |>
+  summarize(total_kills = sum(kills))
+
+# Isolate total matches played
+total_matches <- gameplay_stats |>
+  summarize(total_matches = sum(matchesplayed))
+
+# Function for gamemode specific stats
+create_stats <- function(gamemode){
+  
+  mode_wins <- gameplay_stats |>
+    filter(mode == gamemode) |> 
+    pull(placetop1)
+  mode_winrate <- gameplay_stats |>
+    filter(mode == gamemode) |> 
+    mutate(winrate = winrate * 100,
+           winrate = str_c(winrate, "%")) |>
+    pull(winrate)
+  mode_kills <- gameplay_stats |>
+    filter(mode == gamemode) |> 
+    pull(kills)
+  mode_matches <- gameplay_stats |>
+    filter(mode == gamemode) |> 
+    pull(matchesplayed)
+
+c(mode_wins, mode_winrate, mode_kills, mode_matches)
+
+}
+
+# Create gamemode specific stats with function
+solo <- create_stats("solo")
+
+duo <- create_stats("duo")
+
+trio <- create_stats("trio")
+
+squad <- create_stats("squad")
+```
+
+# Gameplay Stats
+
+## Row {height="25%"}
+
+```{r}
+value_box(
+  title = "Total Wins",
+  value = total_wins |> pull(),
+  showcase = bsicons::bs_icon("trophy"),
+  theme = value_box_theme(bg = "#f3af19", fg = "white"),
+  fullscreen = FALSE
+)
+```
+
+```{r}
+value_box(
+  title = "Total Kills",
+  value = total_kills |> pull(),
+  showcase = bsicons::bs_icon("crosshair"),
+  theme = value_box_theme(bg = "#f3af19", fg = "white"),
+  fullscreen = FALSE
+)
+```
+
+```{r}
+value_box(
+  title = "Total Matches",
+  value = total_matches |> pull(),
+  showcase = bsicons::bs_icon("controller"),
+  theme = value_box_theme(bg = "#f3af19", fg = "white"),
+  fullscreen = FALSE
+)
+```
+
+
+## Row {height="15%"}
+```{r}
+value_box(
+  title = "Solo Wins",
+  value = solo[1],
+  showcase = bsicons::bs_icon("1-square"),
+  theme = value_box_theme(bg = "#1B90DD", fg = "white"),
+)
+
+value_box(
+  title = "Win Rate",
+  value = solo[2],
+  theme = value_box_theme(bg = "#1B90DD", fg = "white"),
+)
+
+value_box(
+  title = "Kills",
+  value = solo[3],
+  theme = value_box_theme(bg = "#1B90DD", fg = "white"),
+)
+
+value_box(
+  title = "Matches",
+  value = solo[4],
+  theme = value_box_theme(bg = "#1B90DD", fg = "white"),
+)
+```
+
+## Row {height="15%"}
+```{r}
+value_box(
+  title = "Duo Wins",
+  value = duo[1],
+  showcase = bsicons::bs_icon("2-square"),
+  theme = value_box_theme(bg = "#6DB8FA", fg = "white"),
+)
+
+value_box(
+  title = "Win Rate",
+  value = duo[2],
+  theme = value_box_theme(bg = "#6DB8FA", fg = "white"),
+)
+
+value_box(
+  title = "Kills",
+  value = duo[3],
+  theme = value_box_theme(bg = "#6DB8FA", fg = "white"),
+)
+
+value_box(
+  title = "Matches",
+  value = duo[4],
+  theme = value_box_theme(bg = "#6DB8FA", fg = "white"),
+)
+```
+
+## Row {height="15%"}
+```{r}
+value_box(
+  title = "Trio Wins",
+  value = trio[1],
+  showcase = bsicons::bs_icon("3-square"),
+  theme = value_box_theme(bg = "#5FCEEA", fg = "white"),
+)
+
+value_box(
+  title = "Win Rate",
+  value = trio[2],
+  theme = value_box_theme(bg = "#5FCEEA", fg = "white"),
+)
+
+value_box(
+  title = "Kills",
+  value = trio[3],
+  theme = value_box_theme(bg = "#5FCEEA", fg = "white"),
+)
+
+value_box(
+  title = "Matches",
+  value = trio[4],
+  theme = value_box_theme(bg = "#5FCEEA", fg = "white"),
+)
+```
+
+## Row {height="15%"}
+```{r}
+value_box(
+  title = "Squad Wins",
+  value = squad[1],
+  showcase = bsicons::bs_icon("4-square"),
+  theme = value_box_theme(bg = "#6AE2FD", fg = "white"),
+)
+
+value_box(
+  title = "Win Rate",
+  value = squad[2],
+  theme = value_box_theme(bg = "#6AE2FD", fg = "white"),
+)
+
+value_box(
+  title = "Kills",
+  value = squad[3],
+  theme = value_box_theme(bg = "#6AE2FD", fg = "white"),
+)
+
+value_box(
+  title = "Matches",
+  value = squad[4],
+  theme = value_box_theme(bg = "#6AE2FD", fg = "white"),
+)
+```
+
+# Account Level History
+
+## Row {height="25%"}
+```{r}
+value_box(
+  title = "Total Seasons Played",
+  value = total_szns |> pull(),
+  showcase = bsicons::bs_icon("calendar-check"),
+  theme = value_box_theme(bg = "#f3af19", fg = "white"),
+  fullscreen = FALSE
+)
+```
+
+```{r}
+value_box(
+  title = "Overall Account Level",
+  value = total_lvls |> pull(),
+  showcase = bsicons::bs_icon("cloud-upload"),
+  theme = value_box_theme(bg = "#f3af19", fg = "white"),
+  fullscreen = FALSE
+)
+```
+
+## Row {height="25%"}
+```{r}
+value_box(
+  title = "Highest Level Season",
+  value = top1szn,
+  theme = value_box_theme(bg = "#1B90DD", fg = "white"),
+)
+
+value_box(
+  title = "Season Level",
+  value = top1sznlvl,
+  theme = value_box_theme(bg = "#1B90DD", fg = "white"),
+)
+
+value_box(
+  title = "Second Highest Level Season",
+  value = top2szn,
+  theme = value_box_theme(bg = "#6DB8FA", fg = "white"),
+)
+
+value_box(
+  title = "Season Level",
+  value = top2sznlvl,
+  theme = value_box_theme(bg = "#6DB8FA", fg = "white"),
+)
+```
+
+
+## Row {height="45%"}
+### Value Boxes {width = "20%"}
+```{r}
+value_box(
+  title = "Current Season & Current Level",
+  value = paste(current_season, " & ", current_lvl),
+  showcase = bsicons::bs_icon("clock"),
+  theme = value_box_theme(bg = "#319236", fg = "white"),
+)
+```
+
+### {.tabset}
+```{r}
+#| title: Level Over Time Excluding Inactive Seasons
+lvl_tbl |>
+  mutate(season = as_factor(season)) |>
+  ggplot(aes(x = season, y = season_lvl, fill = season_lvl)) +
+  geom_bar(stat = "identity", show.legend = FALSE) +
+  geom_text(aes(label = season_lvl)) +
+  scale_fill_gradient2(low = "#6AE2FD", high = "#1B90DD") +
+  labs(x = "Season",
+       y = "Season Level",
+       title = "Account Level For Seasons Played") +
+  theme_minimal()
+```
+
+```{r}
+#| title: Account Level Over Time All Seasons
+lvl_tbl |>
+  ggplot(aes(x = season, y = season_lvl, fill = season_lvl)) +
+  geom_bar(stat = "identity", show.legend = FALSE) +
+  geom_text(aes(label = season_lvl)) +
+  scale_fill_gradient2(low = "#6AE2FD", high = "#1B90DD") +
+  labs(x = "Season",
+       y = "Season Level",
+       title = "Account Level Over All Seasons") +
+  theme_minimal()
+```
+

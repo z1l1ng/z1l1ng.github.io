@@ -2,6 +2,7 @@
 title: Projects
 listing:
     contents:
+        - fortnite_dashboard.qmd
         - text_analysis.qmd
         - shotchart.qmd
         - archived.qmd

@@ -11,7 +11,7 @@
     "href": "projects.html",
     "title": "Projects",
     "section": "",
-    "text": "Order By\n       Default\n         \n          Title\n        \n         \n          Date - Oldest\n        \n         \n          Date - Newest\n        \n         \n          Author\n        \n     \n  \n\n\n\n\n\n\n\n\n\n\nText Analysis of Movies & TV Shows of Streaming Services\n\n\nMini-project for SDS 264 - Data Science 2 where we use stingr functions and other text analysis methods\n\n\n\nZiling Zhen\n\n\nNov 20, 2024\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nShot Chart Analysis\n\n\nFinal project for STAT 322 - Statistical Theory where I analyzed my own basketball shot chart in attempt to replicate Brian J. Reich, James S. Hodges, Bradley P. Carlin, and…\n\n\n\nZiling Zhen\n\n\nMay 17, 2024\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nArchived Projects\n\n\nThis section includes projects from past courses that have been completed and are no longer actively updated. These works reflect the skills and knowledge gained during each…\n\n\n\n\n\n\n\n\n\n\n\n\nNo matching items"
+    "text": "Order By\n       Default\n         \n          Title\n        \n         \n          Date - Oldest\n        \n         \n          Date - Newest\n        \n         \n          Author\n        \n     \n  \n\n\n\n\n\n\n\n\n\n\nText Analysis of Movies & TV Shows of Streaming Services\n\n\nMini-project for SDS 264 - Data Science 2 where we use stingr functions and other text analysis methods\n\n\n\nZiling Zhen\n\n\nNov 20, 2024\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nShot Chart Analysis\n\n\nFinal project for STAT 322 - Statistical Theory where I analyzed my own basketball shot chart in attempt to replicate Brian J. Reich, James S. Hodges, Bradley P. Carlin, and…\n\n\n\nZiling Zhen\n\n\nMay 17, 2024\n\n\n\n\n\n\n\n\n\n\n\n\nFortnite Dashboard\n\n\n\n\n\n\nZiling Zhen\n\n\nMar 25, 2025\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nArchived Projects\n\n\nThis section includes projects from past courses that have been completed and are no longer actively updated. These works reflect the skills and knowledge gained during each…\n\n\n\n\n\n\n\n\n\n\n\n\nNo matching items"
   },
   {
     "objectID": "projects/archived.html",
@@ -173,5 +173,75 @@
     "title": "Ziling Zhen",
     "section": "",
     "text": "Hi! I’m Ziling, however most know me as Z! I’m currently a senior math major with a statistics and data science concentration at St. Olaf College. I’m also on the NCAA women’s basketball team. Outside of my commitments as a college student I love socializing with friends, playing pickleball and trying new foods! This is a place where I’ll be sharing some of my work!"
+  },
+  {
+    "objectID": "projects/fortnite_folder/fortnite.html",
+    "href": "projects/fortnite_folder/fortnite.html",
+    "title": "Ziling Zhen",
+    "section": "",
+    "text": "Total Wins\n\n\n96\n\n\n\n\n\n\n\n\n\n\n\n\nTotal Kills\n\n\n2789\n\n\n\n\n\n\n\n\n\n\n\n\nTotal Kills\n\n\n2789\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nThis dashboard displays statistics for:\n\n\n\nHospital\nGrey Sloan Memorial\n\n\nUnit\nLabor and Delivery\n\n\nMonth\n3 2025\n\n\n\n\nIn 3 2025 the staff breakdown in the unit was as follows:\n\n\n\nAttending physicians\n14\n\n\nResidents\n21\n\n\nNurses\n12\n\n\n\n\n\n\n\n\n\n\nDisclaimer\n\n\n\n\n\nThis is a fictional hospital. The data are simulated based on realistic birth characteristics and risk factors from this report by the CDC."
+  },
+  {
+    "objectID": "projects/fortnite_folder/fortnite_dashboard.html",
+    "href": "projects/fortnite_folder/fortnite_dashboard.html",
+    "title": "Fortnite Dashboard",
+    "section": "",
+    "text": "year &lt;- today() |&gt; year()\nmonth &lt;-today() |&gt; month()\n\ntime_period &lt;- paste(month, year)"
+  },
+  {
+    "objectID": "projects/fortnite_folder/fortnite_dashboard.html#row",
+    "href": "projects/fortnite_folder/fortnite_dashboard.html#row",
+    "title": "Fortnite Dashboard",
+    "section": "Row",
+    "text": "Row\n\nvalue_box(\n  title = \"Total Wins\",\n  value = total_wins |&gt; pull(),\n  showcase = bsicons::bs_icon(\"trophy\"),\n  theme = value_box_theme(bg = \"#f3af19\", fg = \"white\"),\n  fullscreen = FALSE\n)\n\n\n\n\n\n\nTotal Wins\n98\n\n\n\n\n\n\n\n\nvalue_box(\n  title = \"Total Kills\",\n  value = total_kills |&gt; pull(),\n  showcase = bsicons::bs_icon(\"crosshair\"),\n  theme = value_box_theme(bg = \"#f3af19\", fg = \"white\"),\n  fullscreen = FALSE\n)\n\n\n\n\n\n\nTotal Kills\n2820\n\n\n\n\n\n\n\n\nvalue_box(\n  title = \"Total Matches\",\n  value = total_matches |&gt; pull(),\n  showcase = bsicons::bs_icon(\"controller\"),\n  theme = value_box_theme(bg = \"#f3af19\", fg = \"white\"),\n  fullscreen = FALSE\n)\n\n\n\n\n\n\n\nTotal Matches\n3214"
+  },
+  {
+    "objectID": "projects/fortnite_folder/fortnite_dashboard.html#row-1",
+    "href": "projects/fortnite_folder/fortnite_dashboard.html#row-1",
+    "title": "Fortnite Dashboard",
+    "section": "Row",
+    "text": "Row\n\nvalue_box(\n  title = \"Solo Wins\",\n  value = solo[1],\n  showcase = bsicons::bs_icon(\"1-square\"),\n  theme = value_box_theme(bg = \"#1B90DD\", fg = \"white\"),\n)\n\n\n\n\n\n\n\nSolo Wins\n12\n\n\n\n\n\n\nvalue_box(\n  title = \"Win Rate\",\n  value = solo[2],\n  theme = value_box_theme(bg = \"#1B90DD\", fg = \"white\"),\n)\n\n\n\n\nWin Rate\n1%\n\n\n\n\n\nvalue_box(\n  title = \"Kills\",\n  value = solo[3],\n  theme = value_box_theme(bg = \"#1B90DD\", fg = \"white\"),\n)\n\n\n\n\nKills\n934\n\n\n\n\n\nvalue_box(\n  title = \"Matches\",\n  value = solo[4],\n  theme = value_box_theme(bg = \"#1B90DD\", fg = \"white\"),\n)\n\n\n\n\nMatches\n903"
+  },
+  {
+    "objectID": "projects/fortnite_folder/fortnite_dashboard.html#row-2",
+    "href": "projects/fortnite_folder/fortnite_dashboard.html#row-2",
+    "title": "Fortnite Dashboard",
+    "section": "Row",
+    "text": "Row\n\nvalue_box(\n  title = \"Duo Wins\",\n  value = duo[1],\n  showcase = bsicons::bs_icon(\"2-square\"),\n  theme = value_box_theme(bg = \"#6DB8FA\", fg = \"white\"),\n)\n\n\n\n\n\n\n\nDuo Wins\n33\n\n\n\n\n\n\nvalue_box(\n  title = \"Win Rate\",\n  value = duo[2],\n  theme = value_box_theme(bg = \"#6DB8FA\", fg = \"white\"),\n)\n\n\n\n\nWin Rate\n3%\n\n\n\n\n\nvalue_box(\n  title = \"Kills\",\n  value = duo[3],\n  theme = value_box_theme(bg = \"#6DB8FA\", fg = \"white\"),\n)\n\n\n\n\nKills\n1097\n\n\n\n\n\nvalue_box(\n  title = \"Matches\",\n  value = duo[4],\n  theme = value_box_theme(bg = \"#6DB8FA\", fg = \"white\"),\n)\n\n\n\n\nMatches\n1136"
+  },
+  {
+    "objectID": "projects/fortnite_folder/fortnite_dashboard.html#row-3",
+    "href": "projects/fortnite_folder/fortnite_dashboard.html#row-3",
+    "title": "Fortnite Dashboard",
+    "section": "Row",
+    "text": "Row\n\nvalue_box(\n  title = \"Trio Wins\",\n  value = trio[1],\n  showcase = bsicons::bs_icon(\"3-square\"),\n  theme = value_box_theme(bg = \"#5FCEEA\", fg = \"white\"),\n)\n\n\n\n\n\n\n\nTrio Wins\n21\n\n\n\n\n\n\nvalue_box(\n  title = \"Win Rate\",\n  value = trio[2],\n  theme = value_box_theme(bg = \"#5FCEEA\", fg = \"white\"),\n)\n\n\n\n\nWin Rate\n15%\n\n\n\n\n\nvalue_box(\n  title = \"Kills\",\n  value = trio[3],\n  theme = value_box_theme(bg = \"#5FCEEA\", fg = \"white\"),\n)\n\n\n\n\nKills\n267\n\n\n\n\n\nvalue_box(\n  title = \"Matches\",\n  value = trio[4],\n  theme = value_box_theme(bg = \"#5FCEEA\", fg = \"white\"),\n)\n\n\n\n\nMatches\n138"
+  },
+  {
+    "objectID": "projects/fortnite_folder/fortnite_dashboard.html#row-4",
+    "href": "projects/fortnite_folder/fortnite_dashboard.html#row-4",
+    "title": "Fortnite Dashboard",
+    "section": "Row",
+    "text": "Row\n\nvalue_box(\n  title = \"Squad Wins\",\n  value = squad[1],\n  showcase = bsicons::bs_icon(\"4-square\"),\n  theme = value_box_theme(bg = \"#6AE2FD\", fg = \"white\"),\n)\n\n\n\n\n\n\n\nSquad Wins\n32\n\n\n\n\n\n\nvalue_box(\n  title = \"Win Rate\",\n  value = squad[2],\n  theme = value_box_theme(bg = \"#6AE2FD\", fg = \"white\"),\n)\n\n\n\n\nWin Rate\n3%\n\n\n\n\n\nvalue_box(\n  title = \"Kills\",\n  value = squad[3],\n  theme = value_box_theme(bg = \"#6AE2FD\", fg = \"white\"),\n)\n\n\n\n\nKills\n522\n\n\n\n\n\nvalue_box(\n  title = \"Matches\",\n  value = squad[4],\n  theme = value_box_theme(bg = \"#6AE2FD\", fg = \"white\"),\n)\n\n\n\n\nMatches\n1037"
+  },
+  {
+    "objectID": "projects/fortnite_folder/fortnite_dashboard.html#row-5",
+    "href": "projects/fortnite_folder/fortnite_dashboard.html#row-5",
+    "title": "Fortnite Dashboard",
+    "section": "Row",
+    "text": "Row\n\nvalue_box(\n  title = \"Total Seasons Played\",\n  value = total_szns |&gt; pull(),\n  showcase = bsicons::bs_icon(\"calendar-check\"),\n  theme = value_box_theme(bg = \"#f3af19\", fg = \"white\"),\n  fullscreen = FALSE\n)\n\n\n\n\n\n\n\nTotal Seasons Played\n15\n\n\n\n\n\n\n\n\nvalue_box(\n  title = \"Overall Account Level\",\n  value = total_lvls |&gt; pull(),\n  showcase = bsicons::bs_icon(\"cloud-upload\"),\n  theme = value_box_theme(bg = \"#f3af19\", fg = \"white\"),\n  fullscreen = FALSE\n)\n\n\n\n\n\n\n\nOverall Account Level\n549"
+  },
+  {
+    "objectID": "projects/fortnite_folder/fortnite_dashboard.html#row-6",
+    "href": "projects/fortnite_folder/fortnite_dashboard.html#row-6",
+    "title": "Fortnite Dashboard",
+    "section": "Row",
+    "text": "Row\n\nvalue_box(\n  title = \"Highest Level Season\",\n  value = top1szn,\n  theme = value_box_theme(bg = \"#1B90DD\", fg = \"white\"),\n)\n\n\n\n\nHighest Level Season\n29\n\n\n\n\n\nvalue_box(\n  title = \"Season Level\",\n  value = top1sznlvl,\n  theme = value_box_theme(bg = \"#1B90DD\", fg = \"white\"),\n)\n\n\n\n\nSeason Level\n117\n\n\n\n\n\nvalue_box(\n  title = \"Second Highest Level Season\",\n  value = top2szn,\n  theme = value_box_theme(bg = \"#6DB8FA\", fg = \"white\"),\n)\n\n\n\n\nSecond Highest Level Season\n33\n\n\n\n\n\nvalue_box(\n  title = \"Season Level\",\n  value = top2sznlvl,\n  theme = value_box_theme(bg = \"#6DB8FA\", fg = \"white\"),\n)\n\n\n\n\nSeason Level\n100"
+  },
+  {
+    "objectID": "projects/fortnite_folder/fortnite_dashboard.html#row-7",
+    "href": "projects/fortnite_folder/fortnite_dashboard.html#row-7",
+    "title": "Fortnite Dashboard",
+    "section": "Row",
+    "text": "Row\n\nValue Boxes {width = “20%”}\n\nvalue_box(\n  title = \"Current Season & Current Level\",\n  value = paste(current_season, \" & \", current_lvl),\n  showcase = bsicons::bs_icon(\"clock\"),\n  theme = value_box_theme(bg = \"#319236\", fg = \"white\"),\n)\n\n\n\n\n\n\n\nCurrent Season & Current Level\n34  &  76\n\n\n\n\n\n\n\n\n\n\n\nlvl_tbl |&gt;\n  mutate(season = as_factor(season)) |&gt;\n  ggplot(aes(x = season, y = season_lvl, fill = season_lvl)) +\n  geom_bar(stat = \"identity\", show.legend = FALSE) +\n  geom_text(aes(label = season_lvl)) +\n  scale_fill_gradient2(low = \"#6AE2FD\", high = \"#1B90DD\") +\n  labs(x = \"Season\",\n       y = \"Season Level\",\n       title = \"Account Level For Seasons Played\") +\n  theme_minimal()\n\n\n\n\n\n\n\n\n\nlvl_tbl |&gt;\n  ggplot(aes(x = season, y = season_lvl, fill = season_lvl)) +\n  geom_bar(stat = \"identity\", show.legend = FALSE) +\n  geom_text(aes(label = season_lvl)) +\n  scale_fill_gradient2(low = \"#6AE2FD\", high = \"#1B90DD\") +\n  labs(x = \"Season\",\n       y = \"Season Level\",\n       title = \"Account Level Over All Seasons\") +\n  theme_minimal()"
   }
 ]
