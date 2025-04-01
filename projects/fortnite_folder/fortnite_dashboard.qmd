@@ -418,3 +418,18 @@ lvl_tbl |>
   theme_minimal()
 ```
 
+# About
+
+```{r}
+#| echo: false
+knitr::include_graphics("fornite.png")
+```
+
+
+Fortnite is an online battle royale game developed by Epic Games; players are dropped onto an island and compete to be the last one standing. In the game, you can collect weapons, build structures, and strategize to survive against other players. While the game encourages different playstyles, no matter how you decide to play, one of the most exciting aspects is outlasting all other opponents and securing a Victory Royale. Whether you prefer aggressive combat, stealthy tactics, or creative building, there are multiple ways to succeed in the game.
+
+This dashboard looks into my personal statistics for the game of Fortnite and was created and designed by myself, Ziling Zhen. I have played this game since Chapter 2: Season 3, which released in 2020. 
+
+The data was acquired from a third party API [Fortnite API IO](https://fortniteapi.io/). Gameplay statistics include my all-time total wins (Victory Royales), total kills, and total matches played. These stats are also broken down by game mode: solos, duos, trios, and squads. Account level history tracks the total number of seasons I've played, overall account level, additional information regarding highest level achieved in a season and my current account level.
+
+
