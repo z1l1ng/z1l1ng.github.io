@@ -181,6 +181,40 @@ duo <- create_stats("duo")
 trio <- create_stats("trio")
 
 squad <- create_stats("squad")
+
+# function for my value boxes, Mode, Winrate, Kills, Matches
+mode_value <- function(title, dataset, icon, color){
+value_box(
+  title = title,
+  value = dataset[1],
+  showcase = bsicons::bs_icon(icon),
+  theme = value_box_theme(bg = color, fg = "white"),
+)
+}
+
+winrate_value <- function(dataset, color){
+value_box(
+  title = "Win Rate",
+  value = dataset[2],
+  theme = value_box_theme(bg = color, fg = "white"),
+)
+}
+
+kills_value <- function(dataset, color){
+value_box(
+  title = "Kills",
+  value = dataset[3],
+  theme = value_box_theme(bg = color, fg = "white"),
+)
+}
+
+matches_value <- function(dataset, color){
+value_box(
+  title = "Matches",
+  value = dataset[4],
+  theme = value_box_theme(bg = color, fg = "white"),
+)
+}
 ```
 
 # Gameplay Stats
@@ -220,114 +254,34 @@ value_box(
 
 ## Row {height="15%"}
 ```{r}
-value_box(
-  title = "Solo Wins",
-  value = solo[1],
-  showcase = bsicons::bs_icon("1-square"),
-  theme = value_box_theme(bg = "#1B90DD", fg = "white"),
-)
-
-value_box(
-  title = "Win Rate",
-  value = solo[2],
-  theme = value_box_theme(bg = "#1B90DD", fg = "white"),
-)
-
-value_box(
-  title = "Kills",
-  value = solo[3],
-  theme = value_box_theme(bg = "#1B90DD", fg = "white"),
-)
-
-value_box(
-  title = "Matches",
-  value = solo[4],
-  theme = value_box_theme(bg = "#1B90DD", fg = "white"),
-)
+mode_value("Solo Wins", solo, "1-square", "#1B90DD")
+winrate_value(solo, "#1B90DD")
+kills_value(solo, "#1B90DD")
+matches_value(solo, "#1B90DD")
 ```
 
 ## Row {height="15%"}
 ```{r}
-value_box(
-  title = "Duo Wins",
-  value = duo[1],
-  showcase = bsicons::bs_icon("2-square"),
-  theme = value_box_theme(bg = "#6DB8FA", fg = "white"),
-)
-
-value_box(
-  title = "Win Rate",
-  value = duo[2],
-  theme = value_box_theme(bg = "#6DB8FA", fg = "white"),
-)
-
-value_box(
-  title = "Kills",
-  value = duo[3],
-  theme = value_box_theme(bg = "#6DB8FA", fg = "white"),
-)
-
-value_box(
-  title = "Matches",
-  value = duo[4],
-  theme = value_box_theme(bg = "#6DB8FA", fg = "white"),
-)
+mode_value("Duo Wins", duo, "2-square", "#6DB8FA")
+winrate_value(duo, "#6DB8FA")
+kills_value(duo, "#6DB8FA")
+matches_value(duo, "#6DB8FA")
 ```
 
 ## Row {height="15%"}
 ```{r}
-value_box(
-  title = "Trio Wins",
-  value = trio[1],
-  showcase = bsicons::bs_icon("3-square"),
-  theme = value_box_theme(bg = "#5FCEEA", fg = "white"),
-)
-
-value_box(
-  title = "Win Rate",
-  value = trio[2],
-  theme = value_box_theme(bg = "#5FCEEA", fg = "white"),
-)
-
-value_box(
-  title = "Kills",
-  value = trio[3],
-  theme = value_box_theme(bg = "#5FCEEA", fg = "white"),
-)
-
-value_box(
-  title = "Matches",
-  value = trio[4],
-  theme = value_box_theme(bg = "#5FCEEA", fg = "white"),
-)
+mode_value("Trio Wins", trio, "3-square", "#5FCEEA")
+winrate_value(trio, "#5FCEEA")
+kills_value(trio, "#5FCEEA")
+matches_value(trio, "#5FCEEA")
 ```
 
 ## Row {height="15%"}
 ```{r}
-value_box(
-  title = "Squad Wins",
-  value = squad[1],
-  showcase = bsicons::bs_icon("4-square"),
-  theme = value_box_theme(bg = "#6AE2FD", fg = "white"),
-)
-
-value_box(
-  title = "Win Rate",
-  value = squad[2],
-  theme = value_box_theme(bg = "#6AE2FD", fg = "white"),
-)
-
-value_box(
-  title = "Kills",
-  value = squad[3],
-  theme = value_box_theme(bg = "#6AE2FD", fg = "white"),
-)
-
-value_box(
-  title = "Matches",
-  value = squad[4],
-  theme = value_box_theme(bg = "#6AE2FD", fg = "white"),
-)
+mode_value("squad Wins", squad, "4-square", "#6AE2FD")
+winrate_value(squad, "#6AE2FD")
+kills_value(squad, "#6AE2FD")
+matches_value(squad, "#6AE2FD")
 ```
 
 # Account Level History
