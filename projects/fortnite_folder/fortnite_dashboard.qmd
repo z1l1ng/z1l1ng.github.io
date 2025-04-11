@@ -182,7 +182,7 @@ trio <- create_stats("trio")
 
 squad <- create_stats("squad")
 
-# function for my value boxes, Mode, Winrate, Kills, Matches
+# Function for my value boxes, Mode, Winrate, Kills, Matches
 mode_value <- function(title, dataset, icon, color){
 value_box(
   title = title,
@@ -215,6 +215,17 @@ value_box(
   theme = value_box_theme(bg = color, fg = "white"),
 )
 }
+
+# Function for gold value boxes
+gold_box <- function(title, dataset, icon){
+  value_box(
+  title = title,
+  value = dataset |> pull(),
+  showcase = bsicons::bs_icon(icon),
+  theme = value_box_theme(bg = "#f3af19", fg = "white"),
+  fullscreen = FALSE
+)
+}
 ```
 
 # Gameplay Stats
@@ -222,35 +233,12 @@ value_box(
 ## Row {height="25%"}
 
 ```{r}
-value_box(
-  title = "Total Wins",
-  value = total_wins |> pull(),
-  showcase = bsicons::bs_icon("trophy"),
-  theme = value_box_theme(bg = "#f3af19", fg = "white"),
-  fullscreen = FALSE
-)
-```
+gold_box("Total Wins", total_wins, "trophy")
 
-```{r}
-value_box(
-  title = "Total Kills",
-  value = total_kills |> pull(),
-  showcase = bsicons::bs_icon("crosshair"),
-  theme = value_box_theme(bg = "#f3af19", fg = "white"),
-  fullscreen = FALSE
-)
-```
+gold_box("Total Kills", total_kills, "crosshair")
 
-```{r}
-value_box(
-  title = "Total Matches",
-  value = total_matches |> pull(),
-  showcase = bsicons::bs_icon("controller"),
-  theme = value_box_theme(bg = "#f3af19", fg = "white"),
-  fullscreen = FALSE
-)
+gold_box("Total Matches", total_matches, "controller")
 ```
-
 
 ## Row {height="15%"}
 ```{r}
@@ -288,23 +276,9 @@ matches_value(squad, "#6AE2FD")
 
 ## Row {height="25%"}
 ```{r}
-value_box(
-  title = "Total Seasons Played",
-  value = total_szns |> pull(),
-  showcase = bsicons::bs_icon("calendar-check"),
-  theme = value_box_theme(bg = "#f3af19", fg = "white"),
-  fullscreen = FALSE
-)
-```
+gold_box("Total Seasons Played", total_szns, "calendar-check")
 
-```{r}
-value_box(
-  title = "Overall Account Level",
-  value = total_lvls |> pull(),
-  showcase = bsicons::bs_icon("cloud-upload"),
-  theme = value_box_theme(bg = "#f3af19", fg = "white"),
-  fullscreen = FALSE
-)
+gold_box("Overall Account Level", total_lvls, "cloud-upload")
 ```
 
 ## Row {height="25%"}
@@ -387,5 +361,4 @@ Fortnite is an online battle royale game developed by Epic Games; players are dr
 This dashboard looks into my personal statistics for the game of Fortnite and was created and designed by myself, Ziling Zhen. I have played this game since Chapter 2: Season 3, which released in 2020. Code for this dashboard can be found [here](https://github.com/z1l1ng/z1l1ng.github.io/blob/main/projects/fortnite_folder/fortnite_dashboard.qmd).
 
 The data was acquired from a third party API [Fortnite API IO](https://fortniteapi.io/). Gameplay statistics include my all-time total wins (Victory Royales), total kills, and total matches played. These stats are also broken down by game mode: solos, duos, trios, and squads. Account level history tracks the total number of seasons I've played, overall account level, additional information regarding highest level achieved in a season and my current account level.
-
 
