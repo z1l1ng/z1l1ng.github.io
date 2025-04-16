@@ -266,7 +266,7 @@ matches_value(trio, "#5FCEEA")
 
 ## Row {height="15%"}
 ```{r}
-mode_value("squad Wins", squad, "4-square", "#6AE2FD")
+mode_value("Squad Wins", squad, "4-square", "#6AE2FD")
 winrate_value(squad, "#6AE2FD")
 kills_value(squad, "#6AE2FD")
 matches_value(squad, "#6AE2FD")
