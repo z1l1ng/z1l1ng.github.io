@@ -1017,15 +1017,15 @@ map_shape <- st_polygon(list(map_ext, map_int))
 #class(map_shape)
 
 # save shapefile as rds
-#saveRDS(map_shape, "projects/archived_folder/stardew_data_folder/map_shape.rds")
+#saveRDS(map_shape, "projects/archived_folder/stardew_folder/stardew_data_folder/map_shape.rds")
 
 # load the image as a raster
-#img <- brick("projects/archived_folder/stardew_data_folder/stardewmap.png") 
+#img <- brick("projects/archived_folder/stardew_folder/stardew_data_folder/stardewmap.png") 
 
 # inspect the image dimensions
 #print(img)
 
-# extract bounds (xmin, xmax, ymin, ymax)
+# extract bounds(xmin, xmax, ymin, ymax)
 #bounds <- extent(img)
 #print(bounds)
 
@@ -1033,12 +1033,12 @@ map_shape <- st_polygon(list(map_ext, map_int))
 stardewmap_df <- data.frame(
   x = 612, 
   y = 371, 
-  image = "/Users/zilingzhen/z1l1ng.github.io/projects/archived_folder/stardew_data_folder/stardewmap.png"
+  image = "/Users/zilingzhen/z1l1ng.github.io/projects/archived_folder/stardew_folder/stardew_data_folder/stardewmap.png"
 )
 
 # write it in csv form 
-#write_csv(stardewmap_df, "projects/archived_folder/stardew_data_folder/stardewmap_df.csv")
-#stardewmap_df <-read_csv("projects/archived_folder/stardew_data_folder/stardewmap_df.csv")
+#write_csv(stardewmap_df, "projects/archived_folder/stardew_folder/stardew_data_folder/stardewmap_df.csv")
+#stardewmap_df <-read_csv("projects/archived_folder/stardew_folder/stardew_data_folder/stardewmap_df.csv")
 
 # testing map
 ggplot() +

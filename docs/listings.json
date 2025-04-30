@@ -12,11 +12,15 @@
     "listing": "/projects/archived.html",
     "items": [
       "/projects/archived_folder/mmonday2025week17_folder/mmonday2025week17.html",
-      "/projects/archived_folder/stardew_dashboard_folder/stardew_dashboard.html",
       "/projects/archived_folder/package_labels_folder/package_labels.html",
-      "/projects/archived_folder/package_labels_folder/package_labels.html",
-      "/projects/archived_folder/stardew_data_folder/stardew_data.html",
       "/projects/archived_folder/maps_folder/creatingmaps.html"
+    ]
+  },
+  {
+    "listing": "/projects/archived_folder/stardew.html",
+    "items": [
+      "/projects/archived_folder/stardew_folder/stardew_dashboard_folder/stardew_dashboard.html",
+      "/projects/archived_folder/stardew_folder/stardew_data_folder/stardew_data.html"
     ]
   }
 ]

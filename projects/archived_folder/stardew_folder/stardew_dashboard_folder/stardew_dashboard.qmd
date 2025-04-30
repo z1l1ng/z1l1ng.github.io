@@ -39,7 +39,7 @@ However, the data collection and a more interactive version of this dashboard we
 
 ```{r}
 # all things needed for crops page 
-crop_prices <- read_csv("/Users/zilingzhen/z1l1ng.github.io/projects/archived_folder/stardew_data_folder/final_crop_prices.csv")
+crop_prices <- read_csv("/Users/zilingzhen/z1l1ng.github.io/projects/archived_folder/stardew_folder/stardew_data_folder/final_crop_prices.csv")
 
 create_crop_barchart <-function(selected_season){
   
@@ -179,7 +179,7 @@ create_calendar("Special")
 
 ```{r}
 # all things needed for animal products
-animal_table <- read_csv("/Users/zilingzhen/z1l1ng.github.io/projects/archived_folder/stardew_data_folder/full_animal_table.csv")
+animal_table <- read_csv("/Users/zilingzhen/z1l1ng.github.io/projects/archived_folder/stardew_folder/stardew_data_folder/full_animal_table.csv")
 ```
 
 ## {.sidebar}
@@ -250,13 +250,13 @@ This graph shows how much the profit percentage increases after processing an an
 
 ```{r}
 # all things needed for fish
-xy <- read_csv("/Users/zilingzhen/z1l1ng.github.io/projects/archived_folder/stardew_data_folder/xy.csv")
+xy <- read_csv("/Users/zilingzhen/z1l1ng.github.io/projects/archived_folder/stardew_folder/stardew_data_folder/xy.csv")
 
-stardewmap_df <- read_csv("/Users/zilingzhen/z1l1ng.github.io/projects/archived_folder/stardew_data_folder/stardewmap_df.csv")
+stardewmap_df <- read_csv("/Users/zilingzhen/z1l1ng.github.io/projects/archived_folder/stardew_folder/stardew_data_folder/stardewmap_df.csv")
 
-fish_prices_sf <- readRDS("/Users/zilingzhen/z1l1ng.github.io/projects/archived_folder/stardew_data_folder/fish_prices_sf.rds")
+fish_prices_sf <- readRDS("/Users/zilingzhen/z1l1ng.github.io/projects/archived_folder/stardew_folder/stardew_data_folder/fish_prices_sf.rds")
 
-map_shape <- readRDS("/Users/zilingzhen/z1l1ng.github.io/projects/archived_folder/stardew_data_folder/map_shape.rds")
+map_shape <- readRDS("/Users/zilingzhen/z1l1ng.github.io/projects/archived_folder/stardew_folder/stardew_data_folder/map_shape.rds")
 
 distinct_locations <- fish_prices_sf |>
     # joining locations with our fish prices dataset
@@ -469,7 +469,7 @@ create_fish_map("Desert")
 
 ```{r}
 # things needed for minerals 
-mineral_prices <- read_csv("/Users/zilingzhen/z1l1ng.github.io/projects/archived_folder/stardew_data_folder/final_minerals_prices.csv")
+mineral_prices <- read_csv("/Users/zilingzhen/z1l1ng.github.io/projects/archived_folder/stardew_folder/stardew_data_folder/final_minerals_prices.csv")
 
 mineral_barchart <- function(type_mineral){
   #labs for title

@@ -1,14 +1,15 @@
 ---
-title: "Makeover Monday Week 17: Assessing the Current State of the Global Labor Market"
+title: "Makeover Monday 2025: Week 17"
 author: "Ziling Zhen"
 date: "2025-04-28"
 sidebar: false
 format:
   html:
     code-fold: true
+image: ilograph.png
 editor_options: 
   chunk_output_type: console
-description: "Makeover Monday for SDS 252 - Data Visualization"
+description: "SDS 252 - Data Visualization: Makeover Monday - 2025 Week 27: Assessing the Current State of the Global Labor Market"
 ---
 ```{r}
 #| include: FALSE

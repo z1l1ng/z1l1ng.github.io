@@ -1,7 +1,10 @@
 ---
 title: Archived Projects
 listing:
-    contents: archived_folder
+    contents: 
+    - mmonday2025week17.qmd
+    - creatingmaps.qmd
+    - package_labels.qmd
     type: grid
     sort: "date desc"
     sort-ui: true

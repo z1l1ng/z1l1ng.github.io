@@ -1,0 +1,11 @@
+---
+title: Stardew Projects
+listing:
+    contents: 
+    - stardew_folder
+    type: grid
+    sort: "date desc"
+    sort-ui: true
+description: "This section includes projects that are related to Stardew Valley"
+page-layout: full
+---
