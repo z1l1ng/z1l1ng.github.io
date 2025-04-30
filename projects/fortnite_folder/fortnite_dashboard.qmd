@@ -11,7 +11,7 @@ format:
 image: fornite.png
 editor_options: 
   chunk_output_type: console
-description: "Dashboard showing Fortnite player statistics for Ziling11."
+description: "Dashboard showing Fortnite player statistics for Ziling11"
 ---
 
 ```{r, include = FALSE}
