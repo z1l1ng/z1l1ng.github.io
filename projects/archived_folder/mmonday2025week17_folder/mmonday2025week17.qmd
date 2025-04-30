@@ -81,7 +81,7 @@ africa_pretty <- make_data_pretty(africa, "africa")
 unenployment_countries <- rbind(europe_asia_pretty, asia_pacific_pretty, arab_states_pretty, americas_pretty, africa_pretty)
 ```
 
-To view the qmd, click [here](https://github.com/z1l1ng/z1l1ng.github.io/blob/main/projects/archived_folder/mmonday2025wwk17_folder/mmonday2025wwk17.qmd).
+To view the qmd, click [here](https://github.com/z1l1ng/z1l1ng.github.io/blob/main/projects/archived_folder/mmonday2025week17_folder/mmonday2025week17.qmd).
 
 # Introduction
 
