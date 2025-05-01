@@ -171,14 +171,13 @@ target_year_plot <- function(selected_year) {
   legend.background = element_rect(fill = NA),
   plot.margin = margin(0, 0, 0, 0),
   panel.grid.major = element_line(color = "grey96"),
-  legend.direction = "vertical",
-  legend.position = "right") +
+  legend.position = "none") +
   labs(title = glue("Distance from 3% Unemployment Target 
 for {selected_year}"),
        color = "Distance")
 }
 
-plot_grid(target_year_plot(2020) + theme(legend.position = "none"), 
+plot_grid(target_year_plot(2020), 
           target_year_plot(2021), ncol = 1, align = "v")
 ```
 
