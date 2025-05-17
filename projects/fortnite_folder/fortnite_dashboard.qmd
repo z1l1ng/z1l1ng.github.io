@@ -339,9 +339,14 @@ lvl_tbl |>
 #| title: Account Level Over Time All Seasons
 lvl_tbl |>
   ggplot(aes(x = season, y = season_lvl, fill = season_lvl)) +
-  geom_bar(stat = "identity", show.legend = FALSE) +
-  geom_text(aes(label = season_lvl)) +
+  geom_bar(stat = "identity", show.legend = FALSE, width = 0.8) +
+  geom_text(aes(label = season_lvl), vjust = -0.5) +
   scale_fill_gradient2(low = "#6AE2FD", high = "#1B90DD") +
+  scale_x_continuous(
+    breaks = seq(0, max(lvl_tbl$season), by = 5),
+    expand = expansion(mult = c(0, 0.05)),
+    limits = c(0, NA)
+  ) +
   labs(x = "Season",
        y = "Season Level",
        title = "Account Level Over All Seasons") +
