@@ -51,7 +51,7 @@ global_stats <- details$data$stats$all
 details$data$battlePass
 ```
 
-```{r}
+```{r, include = FALSE}
 year <- today() |> year()
 month <-today() |> month()
 
