@@ -155,8 +155,8 @@ gold_box <- function(title, dataset, icon){
 # Gameplay Stats
 
 ## Lifetime Stats
-## Row {height="25%"}
 
+## Row {height="25%"}
 ```{r}
 gold_box("Total Wins", total_wins, "trophy")
 
