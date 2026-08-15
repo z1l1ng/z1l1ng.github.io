@@ -8,11 +8,11 @@ about:
   image-width: 20em
   links:
     - icon: envelope
-      href: mailto:zilingzhen11@gamil.com
+      href: mailto:zilingzhen11@gmail.com
     - icon: github
       href: https://github.com/z1l1ng
     - icon: linkedin
       href: https://www.linkedin.com/in/zilingzhen/
 ---
 
-Hi! I'm Ziling, however most know me as Z! I'm currently a senior math major with a statistics and data science concentration at St. Olaf College. I'm also on the NCAA women's basketball team. Outside of my commitments as a college student I love socializing with friends, playing pickleball and trying new foods! This is a place where I'll be sharing some of my work!
+Hi! I'm Ziling, however most know me as Z! I graduated from St. Olaf College with a degree in Mathematics and a concentration in Statistics and Data Science. I currently work in analytics at Ameriprise Financial, and I’ll also be returning to St. Olaf as an assistant coach for the women’s basketball team. Outside of work and basketball, I love spending time with friends, playing pickleball, going to sporting events and concerts, and trying new foods! This is a place where I’ll be sharing some of my work and a little bit about myself.
