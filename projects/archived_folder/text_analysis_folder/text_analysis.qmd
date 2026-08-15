@@ -45,11 +45,11 @@ library(kableExtra)
 ```
 
 ```{r, include = FALSE}
-hulu <- read_csv("~/z1l1ng.github.io/projects/text_analysis_folder/hulu_data.csv")
-netflix <- read_csv("~/z1l1ng.github.io/projects/text_analysis_folder/netflix_data.csv")
-appletv <- read_csv("~/z1l1ng.github.io/projects/text_analysis_folder/appletv_data.csv")
-amazonprime <- read_csv("~/z1l1ng.github.io/projects/text_analysis_folder/amazonprime_data.csv")
-hbo <- read_csv("~/z1l1ng.github.io/projects/text_analysis_folder/hbo_data.csv")
+hulu <- read_csv("hulu_data.csv")
+netflix <- read_csv("netflix_data.csv")
+appletv <- read_csv("appletv_data.csv")
+amazonprime <- read_csv("amazonprime_data.csv")
+hbo <- read_csv("hbo_data.csv")
 
 # new column for service so we know where each title is from
 hulu <- hulu |>

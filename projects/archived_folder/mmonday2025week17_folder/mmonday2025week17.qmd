@@ -23,6 +23,7 @@ library(glue)
 library(ggridges)
 library(cowplot)
 library(lubridate)
+library(gifski)
 ```
 
 ```{r, include = FALSE}
@@ -91,30 +92,46 @@ Makeover Monday is a weekly data visualization challenge where individuals and g
 
 ## Animated Area
 ```{r, warning = FALSE, message = FALSE}
-unemployment_pivot |>
-  mutate(region = recode_regions(region),
-         region = fct_recode(region, "World" = "world")) |>
+p <- unemployment_pivot |>
+  mutate(
+    region = recode_regions(region),
+    region = fct_recode(region, "World" = "world")
+  ) |>
   filter(year > 2014) |>
-  ggplot(aes(x = year, y = unemployment_rate, fill = region, color = region)) +
+  ggplot(aes(
+    x = year,
+    y = unemployment_rate,
+    fill = region,
+    color = region
+  )) +
   geom_area(stat = "identity", alpha = .90) +
   geom_line() +
   facet_wrap(~region) +
-  scale_x_continuous(breaks=seq(2015, 2025, 2)) +
-  scale_y_continuous(labels = label_percent(scale = 1),
-                     breaks = seq(0, 10, 2)) +
+  scale_x_continuous(breaks = seq(2015, 2025, 2)) +
+  scale_y_continuous(
+    labels = label_percent(scale = 1),
+    breaks = seq(0, 10, 2)
+  ) +
   theme_fivethirtyeight() +
-  theme(panel.spacing = unit(1.25, "lines"),
-        panel.background = element_rect(fill = NA),
-        plot.background = element_rect(fill = NA),
-        plot.margin = margin(0, 0, 0, 0),
-        axis.text.x = element_text(size = 9),
-        axis.text.y = element_text(size = 9),
-        panel.grid.major = element_line(color = "grey96"),
-        legend.position = "none") +
+  theme(
+    panel.spacing = unit(1.25, "lines"),
+    panel.background = element_rect(fill = NA),
+    plot.background = element_rect(fill = NA),
+    plot.margin = margin(0, 0, 0, 0),
+    axis.text.x = element_text(size = 9),
+    axis.text.y = element_text(size = 9),
+    panel.grid.major = element_line(color = "grey96"),
+    legend.position = "none"
+  ) +
   labs(
     title = "Unemployment Rate of Regions for Years 2014-2024"
   ) +
   transition_reveal(year)
+
+animate(
+  p,
+  renderer = gifski_renderer()
+)
 ```
 
 This plot uses an area graph to represent the unemployment rate over time for each region. Each region is color-coded, and the x-axis represents the years, while the y-axis shows the unemployment rate, ranging from 0% to 10%. The plot transitions through time, gradually revealing the  unemployment rates for each region. Faceting by region makes it easier to focus on individual trends and discourages direct comparisons between regions without understanding their underlying distributions.

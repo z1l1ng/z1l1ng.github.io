@@ -2,6 +2,7 @@
 title: Archived Projects
 listing:
     contents: 
+    - text_analysis.qmd
     - mmonday2025week17.qmd
     - creatingmaps.qmd
     - package_labels.qmd
