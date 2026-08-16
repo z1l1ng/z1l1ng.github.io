@@ -6,6 +6,7 @@ listing:
     - mmonday2025week17.qmd
     - creatingmaps.qmd
     - package_labels.qmd
+    - stardew.qmd
     type: grid
     sort: "date desc"
     sort-ui: true

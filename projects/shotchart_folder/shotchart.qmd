@@ -9,7 +9,7 @@ format:
 editor_options: 
   chunk_output_type: console
 image: shotchart.png
-description: "Final project for STAT 322 - Statistical Theory where I analyzed my own basketball shot chart in attempt to replicate Brian J. Reich, James S. Hodges, Bradley P. Carlin, and Adam M. Reich's Bayesian statistic methods. Code referenced off of Oliver Chabot's Ballbook for court & zones, [see here](https://github.com/olivierchabot17/ballbook)"
+description: "Final project for STAT 322 - Statistical Theory: Analyzing personal basketball shot data using Bayesian statistical methods, inspired by Reich et al. This project uses my own shot chart data to explore shooting patterns across different areas of the court, with court and zone code adapted from Oliver Chabot's Ballbook.[see here](https://github.com/olivierchabot17/ballbook)"
 bibliography: stattheory.bib
 freeze: true
 ---
