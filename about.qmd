@@ -1,7 +1,7 @@
 ---
 title: "About Me"
 description: "I’m Ziling—most people just call me Z! I graduated from St. Olaf College in 2025 with a B.A. in Mathematics and a concentration in Statistics and Data Science. I’m currently working at Ameriprise Financial through the Analytics Leadership Development Program, where I’m completing three rotations across the company. I’ve finished my first rotation in Enterprise Data, Analytics, and Insights and am currently in my second rotation with Risk Protection Services LFO, where I’ve been doing a lot of work in Power BI and passed my SIE. Some exciting news is that I will be returning to St. Olaf as an assistant coach for the women’s basketball team GO OLES! This about me page gives a glimpse into my work experience, college journey, and some things I love to do for fun. Scroll down to skip the *boring stuff* and check out the cool things about me!"
-toc: false
+toc: true
 about:
   template: solana
   id: intro-heading
@@ -51,7 +51,7 @@ Transfer \| Sept 2021 - June 2022
 
 ### Fun Facts!
 
-- I super enjoy going to sporting events, particularly basketball and baseball games. The atmosphere in the arena and the intensity of the competition is super fun. I went to my first MLB game this summer and was absolutely hooked. I also played Division 3 basketball, so I love playing as well! 
+- I super enjoy going to sporting events, particularly basketball and baseball games. The atmosphere in the arena and the intensity of the competition is super fun. I also played Division 3 basketball, so I love playing as well! 
 ```{r}
 #| echo: false
 knitr::include_graphics("images/sports.png")
