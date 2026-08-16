@@ -10,6 +10,7 @@ image: ilograph.png
 editor_options: 
   chunk_output_type: console
 description: "SDS 252 - Data Visualization: Makeover Monday - 2025 Week 27: Assessing the Current State of the Global Labor Market"
+freeze: true
 ---
 ```{r}
 #| include: FALSE

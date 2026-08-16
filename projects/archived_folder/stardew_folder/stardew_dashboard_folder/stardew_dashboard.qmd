@@ -10,6 +10,7 @@ format:
 editor_options: 
   chunk_output_type: console
 freeze: true
+draft: true
 ---
 
 ```{r, include = FALSE}
@@ -207,7 +208,7 @@ animal_plot <- animal_table |>
       title = "Animal Product Sell Price",
       x = "Item Name",
       y = "Profit Increase",
-      fill = "Quality")+
+      fill = "Quality") +
     theme_bw() +
     theme(axis.text.x = element_text(angle = 45, hjust = 1))
   ggplotly(animal_plot)

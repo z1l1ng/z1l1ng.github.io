@@ -10,6 +10,7 @@ image: stardewmap.png
 editor_options: 
   chunk_output_type: console
 freeze: true
+draft: true
 ---
 
 ```{r, include = FALSE}
