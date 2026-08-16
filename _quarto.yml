@@ -6,9 +6,7 @@ website:
   title: "Ziling Zhen"
   navbar:
     background: dark
-    right:
-      - href: index.qmd
-        text: Home
+    left:
       - href: about.qmd
         text: About Me
       - href: projects.qmd
