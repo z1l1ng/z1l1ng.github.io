@@ -11,7 +11,7 @@ editor_options:
 image: shotchart.png
 description: "Final project for STAT 322 - Statistical Theory: Analyzing personal basketball shot data using Bayesian statistical methods, inspired by Reich et al. This project uses my own shot chart data to explore shooting patterns across different areas of the court, with court and zone code adapted from Oliver Chabot's Ballbook. [See Here](https://github.com/olivierchabot17/ballbook)"
 bibliography: stattheory.bib
-freeze: false
+freeze: true
 ---
 
 To view the qmd of this project, click [here](https://github.com/z1l1ng/z1l1ng.github.io/blob/main/projects/shotchart_folder/shotchart.qmd).
@@ -583,7 +583,7 @@ $H_O$: No spatial autocorrelation, I is close to 0
 
 $H_A$: Spatial autocorrelation, I $\neq$ 0. 
 
-Calculating Moran's I for the number of shots taken in using Monte Carlo's simulations we get a Moran's I of 0.175 which is positive and weak. We got a p-value of 0.078. We can not reject the null hypothesis and conclude that there is not significant evidence that the number of shots taken is spatially autocorrelated. It is pretty apparent in my shot chart that I prefer to shoot more in some areas than others.
+Calculating Moran's I for the number of shots taken in using Monte Carlo's simulations we get a Moran's I of 0.175 which is positive and weak. We get a low p-value, thus we can not reject the null hypothesis and conclude that there is not significant evidence that the number of shots taken is spatially autocorrelated. It is pretty apparent in my shot chart that I prefer to shoot more in some areas than others.
 
 The record of the team this year was 4-20 so for the predictor "behind" we were pretty much behind in every game meaning that I was playing pretty much the same whether we were winning or losing. For home or away, the best two games I played this year were both away game, meaning I was pretty consistent playing well at home and away since most player do play significantly better in a place they're familiar with. In the future I would like to add my shots from the 23-24 and 24-25 season to see my overall percentages and see if my shots are still super clustered, hopefully with more data I will be able to run a mixed model since I'll hopefully have enough shots in every zone.
 
