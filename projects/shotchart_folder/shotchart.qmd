@@ -9,7 +9,7 @@ format:
 editor_options: 
   chunk_output_type: console
 image: shotchart.png
-description: "Final project for STAT 322 - Statistical Theory: Analyzing personal basketball shot data using Bayesian statistical methods, inspired by Reich et al. This project uses my own shot chart data to explore shooting patterns across different areas of the court, with court and zone code adapted from Oliver Chabot's Ballbook.[see here](https://github.com/olivierchabot17/ballbook)"
+description: "Final project for STAT 322 - Statistical Theory: Analyzing personal basketball shot data using Bayesian statistical methods, inspired by Reich et al. This project uses my own shot chart data to explore shooting patterns across different areas of the court, with court and zone code adapted from Oliver Chabot's Ballbook. [See Here](https://github.com/olivierchabot17/ballbook)"
 bibliography: stattheory.bib
 freeze: true
 ---
@@ -92,14 +92,14 @@ library(tidyverse)
 
 ```{r, include = FALSE}
 #Data
-shots <- readRDS("~/z1l1ng.github.io/projects/shotchart_folder/shotscleaned.rds")
+shots <- readRDS("shotscleaned.rds")
 
-court_sf <- readRDS(("~/z1l1ng.github.io/projects/shotchart_folder/court_sf.rds"))
-basic_polys <- readRDS("~/z1l1ng.github.io/projects/shotchart_folder/basic_polys.rds")
-point_polys <- readRDS("~/z1l1ng.github.io/projects/shotchart_folder/point_polys.rds")
-distance_polys <- readRDS("~/z1l1ng.github.io/projects/shotchart_folder/distance_polys.rds")
-angle_polys <- readRDS("~/z1l1ng.github.io/projects/shotchart_folder/angle_polys.rds")
-shots_sf <- readRDS("~/z1l1ng.github.io/projects/shotchart_folder/shots_sf.rds")
+court_sf <- readRDS("court_sf.rds")
+basic_polys <- readRDS("basic_polys.rds")
+point_polys <- readRDS("point_polys.rds")
+distance_polys <- readRDS("distance_polys.rds")
+angle_polys <- readRDS("angle_polys.rds")
+shots_sf <- readRDS("shots_sf.rds")
 ```
 
 ```{r, include = FALSE}
