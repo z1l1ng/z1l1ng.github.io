@@ -11,7 +11,7 @@ editor_options:
 image: shotchart.png
 description: "Final project for STAT 322 - Statistical Theory: Analyzing personal basketball shot data using Bayesian statistical methods, inspired by Reich et al. This project uses my own shot chart data to explore shooting patterns across different areas of the court, with court and zone code adapted from Oliver Chabot's Ballbook. [See Here](https://github.com/olivierchabot17/ballbook)"
 bibliography: stattheory.bib
-freeze: true
+freeze: false
 ---
 
 To view the qmd of this project, click [here](https://github.com/z1l1ng/z1l1ng.github.io/blob/main/projects/shotchart_folder/shotchart.qmd).
