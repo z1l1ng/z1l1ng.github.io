@@ -144,7 +144,7 @@ matches_value <- function(dataset, color){
 gold_box <- function(title, dataset, icon){
   value_box(
     title = title,
-    value = dataset |> pull(),
+    value = dataset |> dplyr::pull(),
     showcase = bsicons::bs_icon(icon),
     theme = value_box_theme(bg = "#f3af19", fg = "white"),
     fullscreen = FALSE
