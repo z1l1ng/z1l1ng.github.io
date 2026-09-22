@@ -4,6 +4,7 @@ project:
 
 website:
   title: "Ziling Zhen"
+  site-url: https://zilingzhen.com
   navbar:
     background: dark
     left:
